@@ -1,20 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { render } from 'preact';
-
-const App = () => {
-  const [x] = useState('default');
-
-  useEffect(() => {
-    console.log('generic');
-  });
-
-  useEffect(() => {
-    console.log('first');
-  }, []);
-
-  return (
-    <div>hi there {x}</div>
-  );
-};
+import App from './app';
 
 render(<App />, document.body);

@@ -20,7 +20,7 @@ module.exports = (_env, argv) => ({
 			react: 'preact/compat',
 			'react-dom': 'preact/compat'
 		},
-		extensions: ['.js']
+		extensions: ['.js', 'mjs']
 	},
 	module: {
 		rules: [
@@ -77,6 +77,11 @@ module.exports = (_env, argv) => ({
 					'css-loader',
 					'sass-loader'
 				]
+			},
+			{
+				test: /\.mjs$/,
+				include: /node_modules/,
+				type: 'javascript/auto'
 			}
 		]
 	},
