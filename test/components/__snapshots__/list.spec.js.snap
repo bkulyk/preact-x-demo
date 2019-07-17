@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should do things 1`] = `"<ul __source=\\"[object Object]\\" __self=\\"[object Object]\\"><span __source=\\"[object Object]\\" __self=\\"[object Object]\\">a</span><span __source=\\"[object Object]\\" __self=\\"[object Object]\\">b</span><span __source=\\"[object Object]\\" __self=\\"[object Object]\\">c</span><span __source=\\"[object Object]\\" __self=\\"[object Object]\\">d</span></ul>"`;
