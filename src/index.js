@@ -1,5 +1,5 @@
 import React from 'react';
 import { render } from 'preact';
-import App from './app';
+import App from './components/app';
 
 render(<App />, document.body);
