@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const doAnalysis = ({ analyze }) => {
   if (analyze) {
@@ -96,6 +97,11 @@ module.exports = (_env, argv) => ({
 	},
 	plugins: [
 		...doAnalysis(argv),
+		new CopyWebpackPlugin([
+			{ from: 'public', to: '' },
+			{ from: 'node_modules/preact-material-components/Theme/style.css', to: 'mat/theme' },
+			{ from: 'node_modules/preact-material-components/style.css', to: 'mat' },
+		]),
 		new HtmlWebpackPlugin()
 	],
 	optimization: {
