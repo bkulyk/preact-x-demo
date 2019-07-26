@@ -10,7 +10,14 @@ const doAnalysis = ({ analyze }) => {
   return [];
 };
 
+const setMode = ({ mode }) => {
+  process.env.NODE_ENV = mode || 'development';
+  process.env.BABEL_ENV = process.env.NODE_ENV;
+  return mode;
+};
+
 module.exports = (_env, argv) => ({
+	mode: setMode(argv),
 	context: __dirname,
 	entry: './src/index',
 	output: {
