@@ -1,37 +1,67 @@
-import React from 'react';
-import TopAppBar from 'preact-material-components/esm/TopAppBar';
-import FormField from 'preact-material-components/esm/FormField';
-import Switch from 'preact-material-components/esm/Switch';
-import 'preact-material-components/FormField/style.css';
-import 'preact-material-components/LayoutGrid/style.css';
-import 'preact-material-components/Switch/style.css';
-import 'preact-material-components/TopAppBar/style.css';
+import React, { Fragment, useEffect, useState } from 'react';
+import '@material/top-app-bar/dist/mdc.top-app-bar.min.css';
+import '@material/icon-button/dist/mdc.icon-button.min.css';
+import '@material/drawer/dist/mdc.drawer.min.css';
 
-const AppBar = () => (
-  <TopAppBar className="mdc-theme--dark">
-    <TopAppBar.Row>
-      <TopAppBar.Section align-start={true}>
-        <TopAppBar.Icon
-          menu={true}
-          href="#"
-          onClick={e => {
-            e.preventDefault();
-            this.menu.open();
-          }}>
-          menu
-        </TopAppBar.Icon>
-        <TopAppBar.Title>My Title</TopAppBar.Title>
-      </TopAppBar.Section>
-      <TopAppBar.Section align-end={true}>
-        <FormField className="field-darkmode">
-          Dark Mode
-          <Switch
-            className="switch-darkmode"
-          />
-        </FormField>
-      </TopAppBar.Section>
-    </TopAppBar.Row>
-</TopAppBar>
-);
+import { MDCTopAppBar } from "@material/top-app-bar";
+import { MDCDrawer } from "@material/drawer";
+
+const AppBar = () => {
+  const [open, setOpen] = useState(false);
+  let topAppBar;
+  let drawer;
+
+  useEffect(() => {
+    topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+    drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+  });
+
+  const doOpen = () => {
+    drawer.open = !drawer.open
+    setOpen(drawer.open);
+  }
+
+  return (
+    <Fragment>
+      <aside class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content">
+          <nav class="mdc-list">
+            <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+              <span class="mdc-list-item__text">Inbox</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+              <span class="mdc-list-item__text">Outgoing</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+              <span class="mdc-list-item__text">Drafts</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <div className="mdc-drawer-scrim"></div>
+
+      <div className="mdc-drawer-app-content">
+        <header className="mdc-top-app-bar app-bar" id="app-bar">
+          <div className="mdc-top-app-bar__row">
+            <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+              <a onClick={() => doOpen(!open)} href="#" className="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+              <span className="mdc-top-app-bar__title">Dismissible Drawer</span>
+            </section>
+          </div>
+        </header>
+      </div>
+
+      <main className="main-content" id="main-content">
+        <div className="mdc-top-app-bar--fixed-adjust">
+          App Content
+        </div>
+      </main>
+    </Fragment>
+  );
+};
 
 export default AppBar;

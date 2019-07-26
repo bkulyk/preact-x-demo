@@ -99,8 +99,7 @@ module.exports = (_env, argv) => ({
 		...doAnalysis(argv),
 		new CopyWebpackPlugin([
 			{ from: 'public', to: '' },
-			{ from: 'node_modules/preact-material-components/Theme/style.css', to: 'mat/theme' },
-			{ from: 'node_modules/preact-material-components/style.css', to: 'mat' },
+			{ from: 'node_modules/material-components-web/dist/material-components-web.min.css', to: '' },
 		]),
 		new HtmlWebpackPlugin()
 	],
