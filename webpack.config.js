@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const doAnalysis = ({ analyze }) => {
   if (analyze) {
@@ -108,7 +109,8 @@ module.exports = (_env, argv) => ({
 			{ from: 'public', to: '' },
 			{ from: 'node_modules/material-components-web/dist/material-components-web.min.css', to: '' },
 		]),
-		new HtmlWebpackPlugin()
+		new HtmlWebpackPlugin(),
+		new CompressionPlugin(),
 	],
 	optimization: {
     minimize: true,

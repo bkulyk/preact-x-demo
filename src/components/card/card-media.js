@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import "@material/card/dist/mdc.card.min.css";
 
 const Card = ({ title, url, ratio }) => (
   <div className="mdc-card__primary-action">

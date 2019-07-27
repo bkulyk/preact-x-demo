@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { MDCRipple } from '@material/ripple';
-import '@material/button/dist/mdc.button.min.css';
 
 const Button = ({
   type,

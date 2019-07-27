@@ -1,9 +1,5 @@
 import React, { useEffect, useRef, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import '@material/top-app-bar/dist/mdc.top-app-bar.min.css';
-import '@material/icon-button/dist/mdc.icon-button.min.css';
-import '@material/drawer/dist/mdc.drawer.min.css';
-
 import { MDCTopAppBar } from "@material/top-app-bar";
 
 const AppBar = ({ title, onNav }) => {

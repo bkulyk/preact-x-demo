@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "@material/card/dist/mdc.card.min.css";
-import "@material/typography/dist/mdc.typography.min.css";
 
 const CardMedia = ({ title, subtitle, content, media, height, width, children }) => (
   <div className="mdc-card" style={{ height, width }}>

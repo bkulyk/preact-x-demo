@@ -9,6 +9,7 @@ import CardActionIcon from '../card/card-action-icon';
 
 const CardDemo = () => (
   <Fragment>
+    <h2>Cards</h2>
     <h3>Simple</h3>
     <Card
       width="21rem"
