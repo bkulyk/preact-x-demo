@@ -16,6 +16,17 @@ export default () => (
           </div>
         )}
       />
+      <ExpansionPanel
+        summary="Expansion Panel 3"
+        disabled
+        details={(
+          <div>
+            <h4>details section with content</h4>
+            <p>blah blah</p>
+            <p>blah blah blah blah blah blah blah blah</p>
+          </div>
+        )}
+      />
     </div>
   </Fragment>
 );

@@ -4,6 +4,12 @@ export const panelStyles = {
     margin: '0px 0px',
     backgroundColor: 'white',
   },
+  disabled: {
+    transition: `margin 0.25s ease-in-out`,
+    margin: '0px 0px',
+    backgroundColor: 'rgba(0, 0, 0, 0.08)',
+    color: 'rgba(0, 0, 0, 0.47)',
+  },
   entering: { margin: '0px 0px' },
   entered: { margin: '0px 0px' },
   exiting: { margin: '16px 0px' },

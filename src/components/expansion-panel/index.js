@@ -9,24 +9,35 @@ import {
   detailsStyles,
 } from './style';
 
-const ExpansionPanel = ({ onChange, summary, details }) => {
+const ExpansionPanel = ({
+  onChange,
+  summary,
+  details,
+  disabled,
+}) => {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef();
   const [height, setHeight] = useState();
 
   const handleOpen = () => {
-    setOpen(!open);
-    onChange(open);
+    if (!disabled) {
+      setOpen(!open);
+      onChange(open);
+    }
   };
 
   useEffect(() => {
     setHeight(wrapperRef.current.clientHeight);
   });
 
+  const mainPanelStyles = disabled
+    ? panelStyles.disabled
+    : panelStyles.default;
+
   return (
     <Transition in={!open}>
       {state => (
-        <div className="expansionPanel mdc-elevation--z1" style={{ ...panelStyles.default, ...panelStyles[state] }}>
+        <div className="expansionPanel mdc-elevation--z1" style={{ ...mainPanelStyles, ...panelStyles[state] }}>
           <ExpansionSummary
             onOpen={handleOpen}
             buttonStyle={{ ...buttonStyles.default, ...buttonStyles[state] }}
@@ -50,10 +61,12 @@ ExpansionPanel.propTypes = {
   summary: PropTypes.node.isRequired,
   details: PropTypes.node.isRequired,
   onChange: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
 ExpansionPanel.defaultProps = {
   onChange: () => undefined,
+  disabled: false,
 };
 
 export default ExpansionPanel;
