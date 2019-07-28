@@ -15,8 +15,10 @@ const Drawer = ({
     const activated = drawerRef.current.getElementsByClassName('mdc-list-item--activated').length;
     if (!activated) {
       const allItems = drawerRef.current.getElementsByClassName('mdc-list-item');
-      // if nothing is activated, the the drawer will throw an error
-      allItems[0].className += "  mdc-list-item--activated";
+      if (allItems.length) {
+        // if nothing is activated, the the drawer will throw an error
+        allItems[0].className += "  mdc-list-item--activated";
+      }
     }
 
     drawer = MDCDrawer.attachTo(drawerRef.current);
@@ -41,7 +43,6 @@ Drawer.propTypes = {
   open: PropTypes.bool,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
-  header: PropTypes.node,
   children: PropTypes.node,
 }
 
@@ -49,7 +50,6 @@ Drawer.defaultProps = {
   open: false,
   onClose: () => {},
   onOpen: () => {},
-  header: '',
   children: ''
 }
 
