@@ -3,12 +3,13 @@ import AppBarDemo from './demo/app-bar-demo';
 import CardDemo from './demo/card-demo';
 import ButtonDemo from './demo/button-demo';
 import ExpansionDemo from './demo/expansion-demo';
+import ThemeDemo from './demo/theme-demo';
 
 const App = () => (
   <div>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href="/material-components-web.min.css" rel="stylesheet" />
+    <ThemeDemo />
     <link href="/whatever.css" rel="stylesheet" />
 
     <AppBarDemo />

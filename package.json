@@ -18,6 +18,7 @@
     "@material/button": "^3.1.0",
     "@material/drawer": "^3.1.0",
     "@material/icon-button": "^3.1.0",
+    "@material/theme": "^3.1.0",
     "@material/top-app-bar": "^3.1.0",
     "clsx": "^1.0.4",
     "css-loader": "^3.1.0",

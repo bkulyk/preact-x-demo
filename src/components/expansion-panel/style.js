@@ -1,11 +1,11 @@
 export const panelStyles = {
   default: {
-    transition: `margin 0.25s ease-in-out`,
+    transition: `margin 0.15s ease-in-out`,
     margin: '0px 0px',
     backgroundColor: 'white',
   },
   disabled: {
-    transition: `margin 0.25s ease-in-out`,
+    transition: `margin 0.15s ease-in-out`,
     margin: '0px 0px',
     backgroundColor: 'rgba(0, 0, 0, 0.08)',
     color: 'rgba(0, 0, 0, 0.47)',
@@ -21,7 +21,7 @@ export const buttonStyles = {
     position: 'absolute',
     right: '16px',
     top: '8px',
-    transition: `transform 0.25s ease-in-out`,
+    transition: `transform 0.15s ease-in-out`,
     transform: 'rotateX(0deg)'
   },
   entering: { transform: 'rotateX(0deg)' },
@@ -32,7 +32,7 @@ export const buttonStyles = {
 
 export const summaryStyles = {
   default: {
-    transition: `padding 0.25s ease-in-out`,
+    transition: `padding 0.15s ease-in-out`,
     padding: '10px 10px',
     position: 'relative',
   },
@@ -44,7 +44,7 @@ export const summaryStyles = {
 
 export const detailsStyles = {
   default: {
-    transition: `all 0.25s ease-in-out`,
+    transition: `all 0.15s ease-in-out`,
     padding: '0px 16px',
     paddingBottom: '0px',
     overflow: 'hidden',
