@@ -1,31 +1,31 @@
 import React, { Fragment } from 'react';
 import ExpansionPanel from '../expansion-panel';
+import Typography from '../typography';
+
+const SampleContent = () => (
+  <div>
+    <Typography component="p">details section with content</Typography>
+    <Typography component="p" use="body1">
+      blah blah
+      <br/>
+      blah blah blah blah blah blah blah blah
+    </Typography>
+  </div>
+);
 
 export default () => (
   <Fragment>
     <h2>Expansion Panel Demo</h2>
     <div>
-      <ExpansionPanel summary="Expansion Panel 1" details="A very simple details section" />
+      <ExpansionPanel summary="Expansion Panel 1" details={(<Typography>A very simple details section</Typography>)} />
       <ExpansionPanel
         summary="Expansion Panel 2"
-        details={(
-          <div>
-            <h4>details section with content</h4>
-            <p>blah blah</p>
-            <p>blah blah blah blah blah blah blah blah</p>
-          </div>
-        )}
+        details={(<SampleContent />)}
       />
       <ExpansionPanel
         summary="Expansion Panel 3"
         disabled
-        details={(
-          <div>
-            <h4>details section with content</h4>
-            <p>blah blah</p>
-            <p>blah blah blah blah blah blah blah blah</p>
-          </div>
-        )}
+        details={(<SampleContent />)}
       />
     </div>
   </Fragment>
