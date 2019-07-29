@@ -1,8 +1,9 @@
 /* eslint react/button-has-type: off */
-import React, { useEffect, useRef } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { MDCRipple } from '@material/ripple';
+
+import Ripple from'./ripple';
 
 const Button = ({
   type,
@@ -17,8 +18,6 @@ const Button = ({
   unelevated,
   href,
 }) => {
-  const ref = useRef();
-
   const classes = clsx(
     'mdc-button',
     className,
@@ -30,18 +29,16 @@ const Button = ({
     }
   );
 
-  useEffect(() => {
-    if (ripple) {
-      new MDCRipple(ref.current);
-    }
-  });
+  const Wrapper = ripple ? Ripple : Fragment;
 
   return (
-    <button className={classes} type={type} onClick={onClick} disabled={disabled} ref={ref}>
-      <span className="mdc-button__label">
-        {children}
-      </span>
-    </button>
+    <Wrapper>
+      <button className={classes} type={type} onClick={onClick} disabled={disabled}>
+        <span className="mdc-button__label">
+          {children}
+        </span>
+      </button>
+    </Wrapper>
   );
 };
 
