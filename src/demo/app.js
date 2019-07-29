@@ -1,9 +1,9 @@
 import React from 'react';
-import AppBarDemo from './demo/app-bar-demo';
-import CardDemo from './demo/card-demo';
-import ButtonDemo from './demo/button-demo';
-import ExpansionDemo from './demo/expansion-demo';
-import ThemeDemo from './demo/theme-demo';
+import AppBarDemo from './app-bar-demo';
+import CardDemo from './card-demo';
+import ButtonDemo from './button-demo';
+import ExpansionDemo from './expansion-demo';
+import ThemeDemo from './theme-demo';
 
 const App = () => (
   <div>

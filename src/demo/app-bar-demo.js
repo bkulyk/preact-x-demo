@@ -1,8 +1,8 @@
 import React, { useState, Fragment } from 'react';
-import AppBar from '../app-bar';
-import Drawer from '../drawer';
-import List from '../list';
-import NavLink from '../nav-link';
+import AppBar from '../components/app-bar';
+import Drawer from '../components/drawer';
+import List from '../components/list';
+import NavLink from '../components/nav-link';
 
 export default () => {
   const [open, setOpen] = useState(false);

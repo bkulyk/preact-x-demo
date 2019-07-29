@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Button from '../button';
-import ButtonIcon from '../button-icon';
+import Button from '../components/button';
+import ButtonIcon from '../components/button-icon';
 
 const ButtonDemo = () => (
   <Fragment>

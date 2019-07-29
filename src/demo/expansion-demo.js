@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import ExpansionPanel from '../expansion-panel';
-import Typography from '../typography';
+import ExpansionPanel from '../components/expansion-panel';
+import Typography from '../components/typography';
 
 const SampleContent = () => (
   <div>
