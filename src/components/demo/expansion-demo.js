@@ -5,7 +5,7 @@ import Typography from '../typography';
 const SampleContent = () => (
   <div>
     <Typography component="p">details section with content</Typography>
-    <Typography component="p" use="body1">
+    <Typography component="p">
       blah blah
       <br/>
       blah blah blah blah blah blah blah blah

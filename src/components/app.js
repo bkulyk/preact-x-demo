@@ -7,10 +7,8 @@ import ThemeDemo from './demo/theme-demo';
 
 const App = () => (
   <div>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <ThemeDemo />
     <link href="/whatever.css" rel="stylesheet" />
+    <ThemeDemo />
 
     <AppBarDemo />
 
