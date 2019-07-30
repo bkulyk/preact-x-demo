@@ -30,8 +30,6 @@ const ThemePage = () => {
           </div>
         </aside>
       </div>
-
-
     </div>
   );
 };
