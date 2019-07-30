@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
-import Card from '@bitchin/react-material-web/esm/card'
-import CardMedia from '@bitchin/react-material-web/esm/card/card-media'
-import CardActions from '@bitchin/react-material-web/esm/card/card-actions'
-import CardActionButtons from '@bitchin/react-material-web/esm/card/card-action-buttons'
-import CardActionIcons from '@bitchin/react-material-web/esm/card/card-action-icons'
-import CardActionButton from '@bitchin/react-material-web/esm/card/card-action-button'
-import CardActionIcon from '@bitchin/react-material-web/esm/card/card-action-icon'
+import {
+  Card,
+  CardMedia,
+  CardActions,
+  CardActionButtons,
+  CardActionButton,
+  CardActionIcon,
+} from '@bitchin/react-material-web';
 
 const CardDemo = () => (
   <Fragment>
@@ -39,11 +40,11 @@ const CardDemo = () => (
           <CardActionButton>Bookmark</CardActionButton>
         </CardActionButtons>
 
-        <CardActionIcons>
+        {/* <CardActionIcons>
           <CardActionIcon>favorite</CardActionIcon>
           <CardActionIcon>share</CardActionIcon>
           <CardActionIcon>more_vert</CardActionIcon>
-        </CardActionIcons>
+        </CardActionIcons> */}
       </CardActions>
     </Card>
   </Fragment>

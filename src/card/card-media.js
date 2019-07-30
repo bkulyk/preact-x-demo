@@ -11,7 +11,7 @@ const Card = ({ title, url, ratio }) => (
 
 Card.propTypes = {
   title: PropTypes.string,
-  url: PropTypes.string,
+  url: PropTypes.string.isRequired,
   ratio: PropTypes.oneOf(['square', '16-9'])
 }
 

@@ -5,7 +5,6 @@ const IconButton = ({ className, children, style }) => (
   <i
     className={`material-icons mdc-button__icon ${className}`}
     title={children}
-    type="button"
     style={style}
   >
     {children}
@@ -13,13 +12,12 @@ const IconButton = ({ className, children, style }) => (
 );
 
 IconButton.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   style: PropTypes.shape,
 };
 
 IconButton.defaultProps = {
-  type: 'button',
   className: '',
   style: {},
 };

@@ -6,6 +6,8 @@
   "sideEffects": false,
   "scripts": {
     "prebuild": "rm -rf dist/",
+    "prebuild:a": "rm -rf dist/",
+    "prebuild:analyze": "rm -rf dist/",
     "build": "webpack --mode production",
     "build:a": "webpack --mode production --analyze",
     "build:analyze": "webpack --mode production --analyze",
@@ -16,8 +18,11 @@
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@bitchin/react-material-web": "file:../react-material-web",
-    "preact": "10.0.0-rc.0"
+    "@bitchin/react-material-web": "0.0.1-prealpha-4",
+    "preact": "10.0.0-rc.0",
+    "clsx": "^1.0.4",
+    "material-components-web": "^3.1.0",
+    "react-transition-group": "^4.2.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.5.4",

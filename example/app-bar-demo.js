@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import { AppBar, Drawer, List, NavLink } from '@bitchin/react-material-web'
 
-export default () => {
+const AppBarDemo = () => {
   const [open, setOpen] = useState(false);
   return (
     <Fragment>
@@ -19,3 +19,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default AppBarDemo;

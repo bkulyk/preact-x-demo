@@ -12,7 +12,7 @@ const SampleContent = () => (
   </div>
 );
 
-export default () => (
+const ExpansionDemo = () => (
   <Fragment>
     <h2>Expansion Panel Demo</h2>
     <div>
@@ -29,3 +29,5 @@ export default () => (
     </div>
   </Fragment>
 );
+
+export default ExpansionDemo;

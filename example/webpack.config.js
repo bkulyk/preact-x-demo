@@ -112,10 +112,10 @@ module.exports = (_env, argv) => ({
 		new HtmlWebpackPlugin(),
 		new CompressionPlugin(),
 	],
-	// optimization: {
-  //   // minimize: true,
-  //   // minimizer: [new TerserPlugin()],
-  //   usedExports: true,
-  //   sideEffects: true,
-  // },
+	optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+    usedExports: true,
+    sideEffects: true,
+  },
 });

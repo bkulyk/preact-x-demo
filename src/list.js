@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const List = ({
   className,
@@ -13,8 +13,9 @@ const List = ({
 );
 
 List.propTypes = {
-  component: PropTypes.component,
-  children: PropTypes.node,
+  component: propTypes.component,
+  children: propTypes.node,
+  className: propTypes.string,
 };
 
 List.defaultProps = {

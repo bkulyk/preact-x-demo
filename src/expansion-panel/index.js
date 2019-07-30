@@ -65,7 +65,7 @@ ExpansionPanel.propTypes = {
 };
 
 ExpansionPanel.defaultProps = {
-  onChange: () => undefined,
+  onChange: () => {},
   disabled: false,
 };
 
