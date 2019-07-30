@@ -1,3 +1,3 @@
-# preact-x-demo
+# React Material Web
 
-A very basic preact 10 app that has just enough to make a GraphQL query so I could see how big the bundle size would be.
+A simple wrapper around `material-components-web` that's compatible with (p)React hooks.

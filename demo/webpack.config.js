@@ -13,14 +13,15 @@ const doAnalysis = ({ analyze }) => {
 
 const setMode = ({ mode }) => {
   process.env.NODE_ENV = mode || 'development';
-  process.env.BABEL_ENV = process.env.NODE_ENV;
+	process.env.BABEL_ENV = process.env.NODE_ENV;
+	console.log('----------------------------------------------------------------', mode);
   return mode;
 };
 
 module.exports = (_env, argv) => ({
 	mode: setMode(argv),
 	context: __dirname,
-	entry: './src/demo/index',
+	entry: './index',
 	output: {
 		publicPath: '/'
 	},

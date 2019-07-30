@@ -1,0 +1,21 @@
+{
+  "name": "@bitchin/react-material-web",
+  "version": "0.0.3",
+  "description": "",
+  "main": "esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "esm"
+  ],
+  "dependencies": {
+    "@material/button": "^3.1.0",
+    "@material/drawer": "^3.1.0",
+    "@material/icon-button": "^3.1.0",
+    "@material/theme": "^3.1.0",
+    "@material/top-app-bar": "^3.1.0",
+    "clsx": "^1.0.4",
+    "material-components-web": "^3.1.0",
+    "prop-types": "^15.7.2",
+    "react-transition-group": "^4.2.1"
+  }
+}

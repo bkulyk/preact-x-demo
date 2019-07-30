@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react';
-import Card from '../components/card';
-import CardMedia from '../components/card/card-media';
-import CardActions from '../components/card/card-actions';
-import CardActionButtons from '../components/card/card-action-buttons';
-import CardActionIcons from '../components/card/card-action-icons';
-import CardActionButton from '../components/card/card-action-button';
-import CardActionIcon from '../components/card/card-action-icon';
+import {
+  Card,
+  CardMedia,
+  CardActions,
+  CardActionButtons,
+  CardActionIcons,
+  CardActionButton,
+  CardActionIcon,
+} from '@bitchin/react-material-web/esm';
 
 const CardDemo = () => (
   <Fragment>
