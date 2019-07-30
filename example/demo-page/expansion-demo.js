@@ -14,7 +14,7 @@ const SampleContent = () => (
 
 const ExpansionDemo = () => (
   <Fragment>
-    <h2>Expansion Panel Demo</h2>
+    <Typography component="h2" use="headline4">Expansion Panel Demo</Typography>
     <div>
       <ExpansionPanel summary="Expansion Panel 1" details={(<Typography>A very simple details section</Typography>)} />
       <ExpansionPanel

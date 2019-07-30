@@ -7,12 +7,13 @@ import {
   CardActionButton,
   CardActionIcon,
   CardActionIcons,
+  Typography,
 } from '@bitchin/react-material-web';
 
 const CardDemo = () => (
   <Fragment>
-    <h2>Cards</h2>
-    <h3>Simple</h3>
+    <Typography component="h2" use="headline4">Cards</Typography>
+    <Typography component="h3" use="headline5">Simple</Typography>
     <Card
       width="21rem"
       title="Our Changing Planet"
@@ -20,7 +21,7 @@ const CardDemo = () => (
       content="Visit ten places on our planet that are undergoing the biggest changes today."
     />
 
-    <h3>With Media</h3>
+    <Typography component="h3" use="headline5">With Media</Typography>
     <Card
       title="Our Changing Planet"
       subtitle="by Kurt Wagner"
@@ -28,7 +29,7 @@ const CardDemo = () => (
       media={(<CardMedia url="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" />)}
     />
 
-    <h3>With Media and actions</h3>
+    <Typography component="h3" use="headline5">With Media and actions</Typography>
     <Card
       title="Our Changing Planet"
       subtitle="by Kurt Wagner"

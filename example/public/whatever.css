@@ -1,3 +1,8 @@
 body {
   margin: 0px !important;
 }
+
+.mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic,
+.mdc-drawer .mdc-list-item--activated {
+  color: var(--mdc-theme-secondary);
+}

@@ -19,9 +19,10 @@
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "@bitchin/react-material-web": "0.0.1-prealpha-4",
-    "preact": "10.0.0-rc.0",
     "clsx": "^1.0.4",
     "material-components-web": "^3.1.0",
+    "preact": "10.0.0-rc.0",
+    "preact-router": "^3.0.1",
     "react-transition-group": "^4.2.1"
   },
   "devDependencies": {
