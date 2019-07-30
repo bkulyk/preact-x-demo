@@ -16,13 +16,10 @@ if (process.env.BABEL_ENV === 'es') {
   ];
 }
 
-const defaultAlias = {
-  'react': 'preact/compat',
-  'react-dom': 'preact/compat',
- };
+const defaultAlias = {};
 
 const productionPlugins = [
-  'babel-plugin-transform-react-constant-elements',
+  // 'babel-plugin-transform-react-constant-elements',
   [
     'babel-plugin-transform-react-remove-prop-types',
     {
@@ -38,11 +35,11 @@ module.exports = {
   ],
   plugins: [
     ['@babel/plugin-transform-react-jsx', { pragma: 'createElement', pragmaFrag: 'Fragment' }],
-    'babel-plugin-optimize-clsx',
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
-    ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
-    '@babel/plugin-transform-runtime',
-    '@babel/plugin-transform-object-assign', // for IE 11 support
+    // 'babel-plugin-optimize-clsx',
+    // ['@babel/plugin-proposal-class-properties', { loose: true }],
+    // ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
+    // '@babel/plugin-transform-runtime',
+    // '@babel/plugin-transform-object-assign', // for IE 11 support
   ],
   ignore: [/@babel[\\|/]runtime/], // Fix a Windows issue.
   env: {
@@ -53,7 +50,7 @@ module.exports = {
       plugins: [
         [
           'babel-plugin-module-resolver',
-          { alias: { modules: './modules' } },
+          // { alias: { modules: './modules' } },
         ],
       ],
     },
@@ -61,7 +58,7 @@ module.exports = {
       plugins: [...productionPlugins, ['@babel/plugin-transform-runtime', { useESModules: true }],
       [
         'babel-plugin-module-resolver',
-        { alias: { modules: './modules' } },
+        // { alias: { modules: './modules' } },
       ]
     ],
     },

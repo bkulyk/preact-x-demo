@@ -1,5 +1,6 @@
 export { default as AppBar } from './app-bar';
 export { default as BaseFonts } from './base-fonts';
+export { default as Button } from './button';
 export { default as ButtonIcon } from './button-icon';
 export { default as ExpansionPanel } from './expansion-panel';
 export { default as Drawer } from './drawer';

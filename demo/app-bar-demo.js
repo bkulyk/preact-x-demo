@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from 'react';
-import { AppBar, Drawer, List, NavLink } from '@bitchin/react-material-web/esm/index'
+import { AppBar, Drawer, List, NavLink } from '@bitchin/react-material-web'
 
 export default () => {
   const [open, setOpen] = useState(false);

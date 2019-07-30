@@ -14,7 +14,6 @@ const doAnalysis = ({ analyze }) => {
 const setMode = ({ mode }) => {
   process.env.NODE_ENV = mode || 'development';
 	process.env.BABEL_ENV = process.env.NODE_ENV;
-	console.log('----------------------------------------------------------------', mode);
   return mode;
 };
 
@@ -52,7 +51,7 @@ module.exports = (_env, argv) => ({
 					],
 					plugins: [
 						[require.resolve('@babel/plugin-transform-runtime')],
-						[require.resolve('@babel/plugin-transform-react-jsx'), { pragma: 'h', pragmaFrag: 'Fragment' }],
+						[require.resolve('@babel/plugin-transform-react-jsx'), { pragma: 'h', pragmaFrag: 'Fragment', pragmaseState: 'useState', pragmaEffect: 'useEffect', pragmaRef: 'useRef' }],
 						[require.resolve('@babel/plugin-proposal-decorators'), { legacy: true }],
 						[require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }],
 					]
@@ -113,10 +112,10 @@ module.exports = (_env, argv) => ({
 		new HtmlWebpackPlugin(),
 		new CompressionPlugin(),
 	],
-	optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-    usedExports: true,
-    sideEffects: true,
-  },
+	// optimization: {
+  //   // minimize: true,
+  //   // minimizer: [new TerserPlugin()],
+  //   usedExports: true,
+  //   sideEffects: true,
+  // },
 });

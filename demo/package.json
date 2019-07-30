@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@bitchin/react-material-web": "../components/build",
+    "@bitchin/react-material-web": "file:../react-material-web",
     "preact": "10.0.0-rc.0"
   },
   "devDependencies": {

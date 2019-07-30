@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-import Theme from '@bitchin/react-material-web/esm/theme';
-import BaseFonts from '@bitchin/react-material-web/esm/base-fonts';
+import { Theme, BaseFonts } from '@bitchin/react-material-web';
 
 export default () => (
   <Fragment>

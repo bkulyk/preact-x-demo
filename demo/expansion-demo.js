@@ -1,10 +1,5 @@
 import React, { Fragment } from 'react';
-// import ExpansionPanel from '@bitchin/react-material-web/esm/expansion-panel';
-// import Typography from '@bitchin/react-material-web/esm/typography';
-import {
-  ExpansionPanel,
-  Typography
-} from '@bitchin/react-material-web/esm';
+import { Typography, ExpansionPanel } from '@bitchin/react-material-web';
 
 const SampleContent = () => (
   <div>

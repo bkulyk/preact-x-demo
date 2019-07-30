@@ -2,11 +2,12 @@
   "name": "@bitchin/react-material-web",
   "version": "0.0.3",
   "description": "",
-  "main": "esm/index.js",
+  "main": "main.js",
   "sideEffects": false,
-  "files": [
-    "esm"
-  ],
+  "peerDependencies": {
+    "react": ">=16.6.0",
+    "react-dom": ">=16.6.0"
+  },
   "dependencies": {
     "@material/button": "^3.1.0",
     "@material/drawer": "^3.1.0",
