@@ -6,6 +6,7 @@ import {
   CardActionButtons,
   CardActionButton,
   CardActionIcon,
+  CardActionIcons,
 } from '@bitchin/react-material-web';
 
 const CardDemo = () => (
@@ -40,11 +41,11 @@ const CardDemo = () => (
           <CardActionButton>Bookmark</CardActionButton>
         </CardActionButtons>
 
-        {/* <CardActionIcons>
+        <CardActionIcons>
           <CardActionIcon>favorite</CardActionIcon>
           <CardActionIcon>share</CardActionIcon>
           <CardActionIcon>more_vert</CardActionIcon>
-        </CardActionIcons> */}
+        </CardActionIcons>
       </CardActions>
     </Card>
   </Fragment>

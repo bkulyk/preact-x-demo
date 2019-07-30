@@ -22,7 +22,6 @@ Card.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   content: PropTypes.node,
-  media: PropTypes.string,
   width: PropTypes.number,
   height: PropTypes.number,
   media: PropTypes.node,
@@ -30,7 +29,6 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  media: null,
   title: '',
   subtitle: '',
   content: '',
