@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const doAnalysis = ({ analyze }) => {
   if (analyze) {
@@ -9,9 +11,16 @@ const doAnalysis = ({ analyze }) => {
   return [];
 };
 
+const setMode = ({ mode }) => {
+  process.env.NODE_ENV = mode || 'development';
+	process.env.BABEL_ENV = process.env.NODE_ENV;
+  return mode;
+};
+
 module.exports = (_env, argv) => ({
+	mode: setMode(argv),
 	context: __dirname,
-	entry: './src/index',
+	entry: './index',
 	output: {
 		publicPath: '/'
 	},
@@ -42,7 +51,7 @@ module.exports = (_env, argv) => ({
 					],
 					plugins: [
 						[require.resolve('@babel/plugin-transform-runtime')],
-						[require.resolve('@babel/plugin-transform-react-jsx'), { pragma: 'h', pragmaFrag: 'Fragment' }],
+						[require.resolve('@babel/plugin-transform-react-jsx'), { pragma: 'h', pragmaFrag: 'Fragment', pragmaseState: 'useState', pragmaEffect: 'useEffect', pragmaRef: 'useRef' }],
 						[require.resolve('@babel/plugin-proposal-decorators'), { legacy: true }],
 						[require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }],
 					]
@@ -96,7 +105,12 @@ module.exports = (_env, argv) => ({
 	},
 	plugins: [
 		...doAnalysis(argv),
-		new HtmlWebpackPlugin()
+		new CopyWebpackPlugin([
+			{ from: 'public', to: '' },
+			{ from: 'node_modules/material-components-web/dist/material-components-web.min.css', to: '' },
+		]),
+		new HtmlWebpackPlugin(),
+		new CompressionPlugin(),
 	],
 	optimization: {
     minimize: true,
