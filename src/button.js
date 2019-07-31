@@ -1,6 +1,12 @@
 /* eslint react/button-has-type: off */
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import {
+  node,
+  func,
+  bool,
+  string as str,
+  oneOf,
+} from 'prop-types';
 import clsx from 'clsx';
 import Ripple from'./ripple';
 
@@ -15,6 +21,7 @@ const Button = ({
   outlined,
   dense,
   unelevated,
+  secondary,
   href,
 }) => {
   const classes = clsx(
@@ -25,6 +32,8 @@ const Button = ({
       'mdc-button--outlined': outlined,
       'mdc-button--dense': dense,
       'mdc-button--unelevated': unelevated,
+      'mdc-theme--on-secondary': raised && secondary,
+      'mdc-theme--secondary': secondary,
     }
   );
 
@@ -42,17 +51,18 @@ const Button = ({
 };
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  children: PropTypes.node,
-  onClick: PropTypes.func,
-  className: PropTypes.string,
-  raised: PropTypes.bool,
-  ripple: PropTypes.bool,
-  disabled: PropTypes.bool,
-  outlined: PropTypes.bool,
-  dense: PropTypes.bool,
-  unelevated: PropTypes.bool,
-  href: PropTypes.string,
+  type: oneOf(['button', 'submit', 'reset']),
+  children: node,
+  onClick: func,
+  className: str,
+  raised: bool,
+  ripple: bool,
+  disabled: bool,
+  outlined: bool,
+  dense: bool,
+  unelevated: bool,
+  secondary: bool,
+  href: str,
 };
 
 Button.defaultProps = {
@@ -67,6 +77,7 @@ Button.defaultProps = {
   dense: false,
   unelevated: false,
   href: null,
+  secondary: false,
 };
 
 export default Button;

@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
 import { BaseFonts } from '@bitchin/react-material-web';
 
-export default () => (
+const ThemeDemo = () => (
   <Fragment>
     <BaseFonts />
     <link href="/material-components-web.min.css" rel="stylesheet" />
   </Fragment>
 );
+
+export default ThemeDemo;

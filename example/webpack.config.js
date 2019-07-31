@@ -20,7 +20,7 @@ const setMode = ({ mode }) => {
 module.exports = (_env, argv) => ({
 	mode: setMode(argv),
 	context: __dirname,
-	entry: './index',
+	entry: './src/index',
 	output: {
 		publicPath: '/'
 	},
