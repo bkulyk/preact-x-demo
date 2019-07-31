@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography } from '@bitchin/react-material-web';
+import { Typography, Theme } from '@bitchin/react-material-web';
 
 const ColorForm = () => {
   const [primary, setPrimary] = useState('#5d1049');
@@ -69,20 +69,16 @@ const ColorForm = () => {
         </label>
       </form>
 
-      <style type="text/css">
-        {`
-        :root {
-          --mdc-theme-primary: ${primary}; /* The theme primary color */
-          --mdc-theme-secondary: ${secondary}; /* The theme secondary color */
-          --mdc-theme-background: ${background}; /* The theme background color */
-          --mdc-theme-surface: ${surface}; /* The theme surface color */
-          --mdc-theme-on-primary: ${onPrimary}; /* Text color on top of a primary background */
-          --mdc-theme-on-secondary: ${onSecondary}; /* Text color on top of a secondary background  */
-          --mdc-theme-on-surface: ${onSurface}; /* Text color on top of a surface background */
-          --mdc-theme-on-error: ${onError}; /* Text color on top of a error background */
-        }
-        `}
-      </style>
+      <Theme
+        primary={primary}
+        secondary={secondary}
+        background={background}
+        surface={surface}
+        onPrimary={onPrimary}
+        onSecondary={onSecondary}
+        onSurface={onSurface}
+        onError={onError}
+      />
 
       <pre style={{ border: '1px solid black' }}>
         {`

@@ -1,35 +1,41 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { string as stringType } from 'prop-types';
 
-const Theme = () => {
-  return (
-    <Fragment>
-      <link href="/material-components-web.min.css" rel="stylesheet" />
-      <style type="text/css" dangerouslySetInnerHTML={{__html: `
-        :root {
-          --mdc-theme-primary: #fcb8ab; /* The theme primary color */
-          --mdc-theme-secondary: #feeae6; /* The theme secondary color */
-          --mdc-theme-background: asdf; /* The theme background color */
-          --mdc-theme-surface: asdf; /* The theme surface color */
-          --mdc-theme-on-primary: asdf; /* Text color on top of a primary background */
-          --mdc-theme-on-secondary: asdf; /* Text color on top of a secondary background  */
-          --mdc-theme-on-surface: asdf; /* Text color on top of a surface background */
-          --mdc-theme-text-primary-on-light: asdf; /* Text color for TEXT_STYLE on top of light background. */
-          --mdc-theme-text-primary-on-dark: asdf; /* Text color for TEXT_STYLE on top of dark background. */
-          --mdc-theme-text-secondary-on-light: asdf; /* Text color for TEXT_STYLE on top of light background. */
-          --mdc-theme-text-secondary-on-dark: asdf; /* Text color for TEXT_STYLE on top of dark background. */
-          --mdc-theme-text-hint-on-light: asdf; /* Text color for TEXT_STYLE on top of light background. */
-          --mdc-theme-text-hint-on-dark: asdf; /* Text color for TEXT_STYLE on top of dark background. */
-          --mdc-theme-text-disabled-on-light: asdf; /* Text color for TEXT_STYLE on top of light background. */
-          --mdc-theme-text-disabled-on-dark: asdf; /* Text color for TEXT_STYLE on top of dark background. */
-          --mdc-theme-text-icon-on-light: asdf; /* Text color for TEXT_STYLE on top of light background. */
-          --mdc-theme-text-icon-on-dark: asdf; /* Text color for TEXT_STYLE on top of dark background. */
-          /* <TEXT_STYLE> is one of primary, secondary, hint, disabled, icon
-          https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=a78fd6&secondary.color=a31616
-          */
-        }
-      `}} />
-    </Fragment>
-  );
-};
+const Theme = ({
+  primary,
+  secondary,
+  background,
+  surface,
+  onPrimary,
+  onSecondary,
+  onSurface,
+  onError,
+}) => (
+  <style type="text/css">
+    {`
+    :root {
+      --mdc-theme-primary: ${primary}; /* The theme primary color */
+      --mdc-theme-secondary: ${secondary}; /* The theme secondary color */
+      --mdc-theme-background: ${background}; /* The theme background color */
+      --mdc-theme-surface: ${surface}; /* The theme surface color */
+      --mdc-theme-on-primary: ${onPrimary}; /* Text color on top of a primary background */
+      --mdc-theme-on-secondary: ${onSecondary}; /* Text color on top of a secondary background  */
+      --mdc-theme-on-surface: ${onSurface}; /* Text color on top of a surface background */
+      --mdc-theme-on-error: ${onError}; /* Text color on top of a error background */
+    }
+    `}
+  </style>
+);
+
+Theme.propTypes = {
+  primary: stringType.isRequired,
+  secondary: stringType.isRequired,
+  background: stringType.isRequired,
+  surface: stringType.isRequired,
+  onPrimary: stringType.isRequired,
+  onSecondary: stringType.isRequired,
+  onSurface: stringType.isRequired,
+  onError: stringType.isRequired,
+}
 
 export default Theme;

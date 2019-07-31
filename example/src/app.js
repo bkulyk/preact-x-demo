@@ -1,7 +1,7 @@
 import React, { Fragment, Suspense} from 'react';
 import { Router } from 'preact-router';
 import AppBarDemo from './app-bar';
-import ThemeDemo from './theme';
+import ThemeDemo from './theme-demo';
 import DemoPage from './demo-page';
 import ThemePage from'./theme-page';
 

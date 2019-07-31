@@ -2,7 +2,7 @@
   "name": "react-material-web-demo",
   "version": "0.0.1",
   "description": "",
-  "main": "./index.js",
+  "main": "./src/index.js",
   "sideEffects": false,
   "scripts": {
     "prebuild": "rm -rf dist/",
@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@bitchin/react-material-web": "0.0.1-prealpha-4",
+    "@bitchin/react-material-web": "0.0.1-prealpha-5",
     "clsx": "^1.0.4",
     "material-components-web": "^3.1.0",
     "preact": "10.0.0-rc.0",
@@ -26,10 +26,10 @@
     "react-transition-group": "^4.2.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
     "@babel/core": "^7.5.4",
     "@babel/plugin-proposal-class-properties": "^7.5.0",
     "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
     "@babel/plugin-transform-react-constant-elements": "^7.5.0",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/plugin-transform-runtime": "^7.5.0",

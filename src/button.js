@@ -1,6 +1,12 @@
 /* eslint react/button-has-type: off */
 import React, { Fragment } from 'react';
-import propTypes from 'prop-types';
+import {
+  node,
+  func,
+  bool,
+  string as str,
+  oneOf,
+} from 'prop-types';
 import clsx from 'clsx';
 import Ripple from'./ripple';
 
@@ -45,18 +51,18 @@ const Button = ({
 };
 
 Button.propTypes = {
-  type: propTypes.oneOf(['button', 'submit', 'reset']),
-  children: propTypes.node,
-  onClick: propTypes.func,
-  className: propTypes.string,
-  raised: propTypes.bool,
-  ripple: propTypes.bool,
-  disabled: propTypes.bool,
-  outlined: propTypes.bool,
-  dense: propTypes.bool,
-  unelevated: propTypes.bool,
-  secondary: propTypes.bool,
-  href: propTypes.string,
+  type: oneOf(['button', 'submit', 'reset']),
+  children: node,
+  onClick: func,
+  className: str,
+  raised: bool,
+  ripple: bool,
+  disabled: bool,
+  outlined: bool,
+  dense: bool,
+  unelevated: bool,
+  secondary: bool,
+  href: str,
 };
 
 Button.defaultProps = {
