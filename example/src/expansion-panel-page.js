@@ -15,11 +15,7 @@ const SampleContent = () => (
 
 const ExpansionPanelPage = () => {
   const [active, setActive] = useState();
-
-  const handleChange = (val) => {
-    console.log(val);
-    setActive(val)
-  }
+  const handleChange = val => setActive(val);
 
   return (
     <Fragment>
