@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Typography, ExpansionPanel } from '@bitchin/react-material-web';
-import Example from './example';
+import Example from '../example';
 
 const SampleContent = () => (
   <div>

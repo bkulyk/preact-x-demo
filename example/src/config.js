@@ -5,4 +5,5 @@ export const menu = [
   { title: 'Theme Editor', path: '/theme' },
   { title: 'Drawers', path: '/drawers' },
   { title: 'Expansion Panels', path: '/expansion-panels' },
+  { title: 'Layout Grids', path: '/grid' },
 ];

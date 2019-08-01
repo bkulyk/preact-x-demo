@@ -15,7 +15,7 @@ const AppBar = () => {
 
   return (
     <Fragment>
-      <AppBarBase onNav={() => setOpen(!open)} title={appTitle} />
+      <AppBarBase onNav={() => setOpen(!open)} title={appName} />
       <Drawer
         open={open}
         onClose={() => setOpen(false)}

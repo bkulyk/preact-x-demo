@@ -6,6 +6,7 @@ import DemoPage from './demo-page';
 import ThemePage from'./theme-page';
 import DrawerPage from './drawer-page';
 import ExpansionPanelPage from './expansion-panel-page';
+import GridPage from './grid-page.js';
 
 const Loading = () => (<span>Loading ...</span>);
 
@@ -22,6 +23,7 @@ const App = () => {
             <ExpansionPanelPage path="/expansion-panels" />
             <DrawerPage path="/drawers" />
             <ThemePage path="/theme" />
+            <GridPage path="/grid" />
             <DemoPage path="/" default />
           </Router>
         </Suspense>
