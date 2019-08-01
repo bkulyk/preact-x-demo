@@ -40,7 +40,7 @@ const DrawerPage = () => {
         </Typography>
       </div>
 
-        <Typography use="headline5" component="h3">Dismissable Drawer</Typography>
+      <Typography use="headline5" component="h3">Dismissable Drawer</Typography>
 
       <Example>
         <div style={{ height: '300px', overflow: 'hidden', position: 'relative' }}>
