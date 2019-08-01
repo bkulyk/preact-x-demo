@@ -3,7 +3,7 @@ import {
   bool,
   func,
   node,
-  str,
+  string as str,
 } from 'prop-types';
 import clsx from 'clsx';
 import { MDCDrawer } from "@material/drawer";

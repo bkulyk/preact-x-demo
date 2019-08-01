@@ -1,13 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import { AppBar as AppBarBase, Drawer, List, NavLink } from '@bitchin/react-material-web'
 import { route } from 'preact-router';
-
-const menu = [
-  { title: 'Demos', path: '/' },
-  { title: 'Theme Editor', path: '/theme' },
-  { title: 'Drawers', path: '/drawers' },
-  { title: 'Expansion Panels', path: '/expansion-panels' },
-];
+import { menu, appName } from './config';
 
 const AppBar = () => {
   const [open, setOpen] = useState(false);
@@ -21,7 +15,7 @@ const AppBar = () => {
 
   return (
     <Fragment>
-      <AppBarBase onNav={() => setOpen(!open)} title="Preacting" />
+      <AppBarBase onNav={() => setOpen(!open)} title={appTitle} />
       <Drawer
         open={open}
         onClose={() => setOpen(false)}
