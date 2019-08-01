@@ -22,7 +22,7 @@ const App = () => {
             <ExpansionPanelPage path="/expansion-panels" />
             <DrawerPage path="/drawers" />
             <ThemePage path="/theme" />
-            <DemoPage default />
+            <DemoPage path="/" default />
           </Router>
         </Suspense>
       </main>
