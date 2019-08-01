@@ -3,8 +3,10 @@ import { AppBar as AppBarBase, Drawer, List, NavLink } from '@bitchin/react-mate
 import { route } from 'preact-router';
 
 const menu = [
-  { icon: 'dashboard', title: 'Demos', path: '/' },
-  { icon: 'style', title: 'Theme Editor', path: '/theme' },
+  { title: 'Demos', path: '/' },
+  { title: 'Theme Editor', path: '/theme' },
+  { title: 'Drawers', path: '/drawers' },
+  { title: 'Expansion Panels', path: '/expansion-panels' },
 ];
 
 const AppBar = () => {
@@ -23,10 +25,11 @@ const AppBar = () => {
       <Drawer
         open={open}
         onClose={() => setOpen(false)}
+        modal
       >
         <List component="nav">
-          {menu.map(({ icon, path, title }) => (
-            <NavLink icon={icon} onClick={() => handleNav(path)} active={active === path}>
+          {menu.map(({ path, title }) => (
+            <NavLink onClick={() => handleNav(path)} active={active === path}>
               {title}
             </NavLink>
           ))}

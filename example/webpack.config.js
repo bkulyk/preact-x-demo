@@ -27,7 +27,7 @@ module.exports = (_env, argv) => ({
 	resolve: {
 		alias: {
 			react: 'preact/compat',
-			'react-dom': 'preact/compat'
+			'react-dom': 'preact/compat',
 		},
 		extensions: ['.js', 'mjs']
 	},
@@ -112,10 +112,10 @@ module.exports = (_env, argv) => ({
 		new HtmlWebpackPlugin(),
 		new CompressionPlugin(),
 	],
-	optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-    usedExports: true,
-    sideEffects: true,
-  },
+	// optimization: {
+  //   minimize: true,
+  //   minimizer: [new TerserPlugin()],
+  //   usedExports: true,
+  //   sideEffects: true,
+  // },
 });

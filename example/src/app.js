@@ -4,6 +4,8 @@ import AppBarDemo from './app-bar';
 import ThemeDemo from './theme-demo';
 import DemoPage from './demo-page';
 import ThemePage from'./theme-page';
+import DrawerPage from './drawer-page';
+import ExpansionPanelPage from './expansion-panel-page';
 
 const Loading = () => (<span>Loading ...</span>);
 
@@ -17,6 +19,8 @@ const App = () => {
       <main style={{ backgroundColor: '#f5f5f5', padding: '16px' }}>
         <Suspense fallback={Loading}>
           <Router>
+            <ExpansionPanelPage path="/expansion-panels" />
+            <DrawerPage path="/drawers" />
             <ThemePage path="/theme" />
             <DemoPage default />
           </Router>
