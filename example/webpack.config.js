@@ -27,7 +27,7 @@ module.exports = (_env, argv) => ({
 	resolve: {
 		alias: {
 			react: 'preact/compat',
-			'react-dom': 'preact/compat'
+			'react-dom': 'preact/compat',
 		},
 		extensions: ['.js', 'mjs']
 	},

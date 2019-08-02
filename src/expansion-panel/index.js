@@ -10,19 +10,21 @@ import {
 } from './style';
 
 const ExpansionPanel = ({
-  onChange,
+  onChange = () => {},
   summary,
   details,
-  disabled,
+  disabled = false,
+  open,
+  children = '',
 }) => {
-  const [open, setOpen] = useState(false);
+  const [opened, setOpened] = useState(open);
   const wrapperRef = useRef();
   const [height, setHeight] = useState();
 
-  const handleOpen = () => {
+  const handleOpened = () => {
     if (!disabled) {
-      setOpen(!open);
-      onChange(open);
+      setOpened(!opened);
+      onChange(opened);
     }
   };
 
@@ -30,16 +32,20 @@ const ExpansionPanel = ({
     setHeight(wrapperRef.current.clientHeight);
   });
 
+  useEffect(() => {
+    setOpened(open);
+  }, [open]);
+
   const mainPanelStyles = disabled
     ? panelStyles.disabled
     : panelStyles.default;
 
   return (
-    <Transition in={!open}>
+    <Transition in={!opened}>
       {state => (
         <div className="expansionPanel mdc-elevation--z1" style={{ ...mainPanelStyles, ...panelStyles[state] }}>
           <ExpansionSummary
-            onOpen={handleOpen}
+            onOpen={handleOpened}
             buttonStyle={{ ...buttonStyles.default, ...buttonStyles[state] }}
             style={{ ...summaryStyles.default, ...summaryStyles[state] }}
           >
@@ -49,7 +55,7 @@ const ExpansionPanel = ({
             className="expansionDetails"
             style={{ ...detailsStyles.default, ...detailsStyles.transition(height)[state] }}
           >
-            <div ref={wrapperRef}>{details}</div>
+            <div ref={wrapperRef}>{details}{children}</div>
           </div>
        </div>
       )}
@@ -62,11 +68,7 @@ ExpansionPanel.propTypes = {
   details: PropTypes.node.isRequired,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
-};
-
-ExpansionPanel.defaultProps = {
-  onChange: () => {},
-  disabled: false,
+  children: PropTypes.node,
 };
 
 export default ExpansionPanel;

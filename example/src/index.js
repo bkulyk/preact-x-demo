@@ -1,5 +1,4 @@
-import React from 'react';
-import { render } from 'preact';
+import { render, createElement } from 'preact';
 import App from './app';
 
-render(<App />, document.body);
+render(createElement(App), document.body);

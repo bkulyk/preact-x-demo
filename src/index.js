@@ -12,6 +12,7 @@ export { default as CardActionIcons } from './card/card-action-icons';
 export { default as CardActions } from './card/card-actions';
 export { default as CardMedia } from './card/card-media';
 export { default as List } from './list';
+export { default as ListItem } from './list-item';
 export { default as NavLink } from './nav-link';
 export { default as Ripple } from './ripple';
 export { default as Theme } from './theme';
