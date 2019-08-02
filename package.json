@@ -16,7 +16,6 @@
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "build": "mkdir src && cp -r example/@bitchin/* src/ && rollup -c && rm -rf src",
-    "start": "mkdir src && cp -r example/@bitchin/* src/ && rollup -c -w  && rm -rf src",
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build"

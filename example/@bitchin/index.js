@@ -15,5 +15,6 @@ export { default as List } from './list';
 export { default as ListItem } from './list-item';
 export { default as NavLink } from './nav-link';
 export { default as Ripple } from './ripple';
+export { default as TextField } from './form-control/text-field';
 export { default as Theme } from './theme';
 export { default as Typography } from './typography';
