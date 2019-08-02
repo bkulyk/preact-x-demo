@@ -15,8 +15,8 @@ const ExpansionSummary = ({ onOpen, children, style, buttonStyle }) => (
 ExpansionSummary.propTypes = {
   onOpen: propTypes.func,
   children: propTypes.node.isRequired,
-  style: propTypes.shape(),
-  buttonStyle: propTypes.shape(),
+  style: propTypes.object,
+  buttonStyle: propTypes.object,
 };
 
 ExpansionSummary.defaultProps = {

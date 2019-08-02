@@ -1,5 +1,5 @@
 import React, { Fragment, Suspense} from 'react';
-import { Router } from 'preact-router';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import AppBarDemo from './app-bar';
 import ThemeDemo from './theme-demo';
 import DemoPage from './demo-page';
@@ -11,22 +11,21 @@ const Loading = () => (<span>Loading ...</span>);
 
 const App = () => {
   return (
-    <Fragment>
+    <Router>
       <ThemeDemo />
       <link href="/whatever.css" rel="stylesheet" />
+
       <AppBarDemo />
 
       <main style={{ backgroundColor: '#f5f5f5', padding: '16px' }}>
         <Suspense fallback={Loading}>
-          <Router>
-            <ExpansionPanelPage path="/expansion-panels" />
-            <DrawerPage path="/drawers" />
-            <ThemePage path="/theme" />
-            <DemoPage path="/" default />
-          </Router>
+          <Route component={ExpansionPanelPage} path="/expansion-panels" />
+          <Route component={DrawerPage} path="/drawers" />
+          <Route component={ThemePage} path="/theme" />
+          <Route component={DemoPage} path="/" exact />
         </Suspense>
       </main>
-    </Fragment>
+    </Router>
   );
 };
 

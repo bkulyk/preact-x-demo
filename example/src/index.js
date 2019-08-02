@@ -1,4 +1,8 @@
-import { render, createElement } from 'preact';
+import React from 'react';
+import { render } from 'react-dom';
 import App from './app';
 
-render(createElement(App), document.body);
+const root = document.createElement('div');
+document.body.appendChild(root);
+
+render((<App />), root);

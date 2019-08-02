@@ -1,21 +1,20 @@
 import React from 'react';
 import {
-  shape,
   string as str,
-  number as num,
   node,
+  object as obj,
 } from 'prop-types';
 import Typography from './typography';
 
 const Card = ({
-  title,
-  subtitle,
-  content,
-  media,
-  height,
-  width,
-  children,
-  style,
+  title = '',
+  subtitle = '',
+  content = '',
+  media = '',
+  height = 'auto',
+  width = '350px',
+  children = '',
+  style = {},
 }) => (
   <div className="mdc-card" style={{ height, width, ...style }}>
     <div className="mdc-card__primary-action">
@@ -36,22 +35,11 @@ Card.propTypes = {
   title: str,
   subtitle: str,
   content: node,
-  width: num,
-  height: num,
+  width: str,
+  height: str,
   media: node,
   children: node,
-  style: shape,
-};
-
-Card.defaultProps = {
-  title: '',
-  subtitle: '',
-  content: '',
-  width: 350,
-  height: 'auto',
-  media: '',
-  children: '',
-  style: {},
+  style: obj,
 };
 
 export default Card;

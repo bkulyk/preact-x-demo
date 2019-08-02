@@ -1,28 +1,24 @@
 import React from 'react';
 import {
-  component as comp,
   string as str,
   node,
+  component as comp,
+  oneOf,
 } from 'prop-types';
 
 const ListItem = ({
-  component: Component,
-  className,
+  component: Comp = 'li',
+  className = '',
   children,
   ...props,
 }) => (
-  <Component className={`mdc-list-item ${className}`} {...props}>{children}</Component>
+  <Comp className={`mdc-list-item ${className}`} {...props}>{children}</Comp>
 );
 
 ListItem.propTypes = {
-  component: comp,
+  component: oneOf([str, comp]),
   children: node.isRequired,
   className: str,
-};
-
-ListItem.defaultProps = {
-  component: 'li',
-  className: '',
 };
 
 export default ListItem;

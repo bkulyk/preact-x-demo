@@ -19,47 +19,35 @@ const typographyStyles = [
 ];
 
 const Typography = ({
-  component: Component,
+  component: Comp = 'span',
   children,
-  use,
-  ellipsis,
-  className,
-  style,
+  use = 'body1',
+  ellipsis = false,
+  className = '',
   ...props
 }) => {
+
   const classNames = clsx(
+    className,
     'mdc-typography-base',
     `mdc-typography--${use}`,
     { 'mdc-typography-overflow-ellipsis': ellipsis },
-    className,
   );
 
   return (
-    <Component className={classNames} style={style} {...props}>
+    <Comp className={classNames} {...props}>
       {children}
-    </Component>
+    </Comp>
   );
 }
 
 Typography.propTypes = {
+  component: propTypes.oneOf([propTypes.string, propTypes.component]).isRequired,
   children: propTypes.node.isRequired,
-  component: propTypes.component,
+  component: propTypes.string,
   use: propTypes.oneOf(typographyStyles),
   ellipsis: propTypes.bool,
-  topDistance: propTypes.number,
-  bottomDistance: propTypes.number,
   className: propTypes.string,
-  style: propTypes.shape,
-};
-
-Typography.defaultProps = {
-  component: 'span',
-  ellipsis: false,
-  topDistance: 0,
-  bottomDistance: 0,
-  className: '',
-  style: {},
-  use: 'body1',
 };
 
 export default Typography
