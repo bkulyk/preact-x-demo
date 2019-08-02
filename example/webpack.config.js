@@ -12,8 +12,6 @@ const doAnalysis = ({ analyze }) => {
   return [];
 };
 
-console.log(path.join(__dirname, '@bitchin'));
-
 const setMode = ({ mode }) => {
   process.env.NODE_ENV = mode || 'development';
 	process.env.BABEL_ENV = process.env.NODE_ENV;
