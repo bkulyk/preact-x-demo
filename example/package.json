@@ -20,8 +20,7 @@
     "@babel/runtime": "^7.5.5",
     "clsx": "^1.0.4",
     "material-components-web": "^3.1.0",
-    "react-router-dom": "^5.0.1",
-    "react-transition-group": "^4.2.1"
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
