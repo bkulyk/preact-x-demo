@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Typography, TextField } from '@bitchin/react-material-web';
+import { Typography, TextField, Icon } from '@bitchin/react-material-web';
 import Example from '../example';
 
 const Eg = ({ children }) => (<div style={{ margin: '10px 0px' }}>{children}</div>);
@@ -22,7 +22,7 @@ const TextFieldPage = () => (
       <Eg>
         <TextField
           id="filled-2"
-          icon="event"
+          leadingIcon={(<Icon icon="event" />)}
           label="Standard"
           help="Helper Text"
         />
@@ -31,10 +31,9 @@ const TextFieldPage = () => (
       <Eg>
         <TextField
           id="filled-3"
-          icon="event"
+          trailingIcon={(<Icon icon="event" />)}
           label="Standard"
           help="Helper Text"
-          iconPosition="trailing"
         />
       </Eg>
     </Example>
@@ -56,7 +55,7 @@ const TextFieldPage = () => (
           id="outlined-2"
           outlined
           placeholder="placeholder text"
-          icon="favorite"
+          leadingIcon={(<Icon icon="favorite" />)}
           label="Standard"
           help="Helper Text"
         />
@@ -67,10 +66,123 @@ const TextFieldPage = () => (
           id="outlined-2"
           outlined
           placeholder="placeholder text"
-          icon="favorite"
+          trailingIcon={(<Icon icon="favorite" />)}
           label="Standard"
           help="Helper Text"
-          iconPosition="trailing"
+        />
+      </Eg>
+    </Example>
+
+    <Typography use="headline5" component="h3">Required Text Input</Typography>
+    <Example>
+      <Eg>
+        <TextField
+          id="outlined-1"
+          outlined
+          placeholder="placeholder text"
+          label="Standard"
+          help="Helper Text"
+          required
+        />
+      </Eg>
+
+      <Eg>
+        <TextField
+          id="required-2"
+          outlined
+          placeholder="placeholder text"
+          leadingIcon={(<Icon icon="favorite" />)}
+          label="Standard"
+          help="Helper Text"
+          required
+        />
+      </Eg>
+
+      <Eg>
+        <TextField
+          id="required-2"
+          outlined
+          placeholder="placeholder text"
+          trailingIcon={(<Icon icon="favorite" />)}
+          label="Standard"
+          help="Helper Text"
+          required
+        />
+      </Eg>
+    </Example>
+
+    <Typography use="headline5" component="h3">Text Input with error</Typography>
+    <Example>
+      <Eg>
+        <TextField
+          id="invalid-1"
+          outlined
+          placeholder="placeholder text"
+          label="Standard"
+          help="I've made a huge mistake!"
+          invalid
+        />
+      </Eg>
+
+      <Eg>
+        <TextField
+          id="invalid-2"
+          outlined
+          placeholder="placeholder text"
+          leadingIcon={(<Icon icon="favorite" />)}
+          label="Standard"
+          help="I've made a huge mistake!"
+          invalid
+        />
+      </Eg>
+
+      <Eg>
+        <TextField
+          id="invalid-3"
+          outlined
+          placeholder="placeholder text"
+          trailingIcon={(<Icon icon="favorite" />)}
+          label="Standard"
+          help="I've made a huge mistake!"
+          invalid
+        />
+      </Eg>
+    </Example>
+
+    <Typography use="headline5" component="h3">TextAreas</Typography>
+    <Example>
+      <Eg>
+        <TextField
+          textarea
+          id="textarea-1"
+          outlined
+          placeholder="placeholder text"
+          label="Standard"
+          help="Helper Text"
+        />
+      </Eg>
+
+      <Eg>
+        <TextField
+          textarea
+          id="textarea-2"
+          outlined
+          placeholder="placeholder text"
+          leadingIcon={(<Icon icon="favorite" />)}
+          label="Standard"
+          help="Helper Text"
+        />
+      </Eg>
+
+      <Eg>
+        <TextField
+          textarea
+          id="textarea-2"
+          outlined
+          placeholder="placeholder text"
+          trailingIcon={(<Icon icon="favorite" />)}
+          label="Standard"
+          help="Helper Text"
         />
       </Eg>
     </Example>

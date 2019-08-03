@@ -1,4 +1,5 @@
 import React from 'react';
+import { node } from 'prop-types';
 
 const HelperLine = ({ children }) => (
   <div className="mdc-text-field-helper-line">
@@ -7,5 +8,9 @@ const HelperLine = ({ children }) => (
     </p>
   </div>
 );
+
+HelperLine.propTypes = {
+  children: node.isRequired,
+};
 
 export default HelperLine;

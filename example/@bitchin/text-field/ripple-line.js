@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RippleStuff = ({ children }) => (
+const RippleLine = ({ children }) => (
   <div className="mdc-line-ripple">
     <div className="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg">
       {children}
@@ -8,4 +8,4 @@ const RippleStuff = ({ children }) => (
   </div>
 );
 
-export default RippleStuff;
+export default RippleLine;
