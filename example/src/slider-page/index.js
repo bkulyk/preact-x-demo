@@ -3,8 +3,8 @@ import { Typography, Slider } from '@bitchin/react-material-web';
 import Example from '../example';
 
 const SliderPage = () => {
-  const [continuousVal, setContinuousVal] = useState(0);
-  const [discreteVal, setDiscreteVal] = useState(0);
+  const [continuousVal, setContinuousVal] = useState(10.25);
+  const [discreteVal, setDiscreteVal] = useState(100);
 
   return (
     <Fragment>
@@ -17,6 +17,7 @@ const SliderPage = () => {
           max={200}
           value={continuousVal}
           onChange={setContinuousVal}
+          label="some label"
         />
         <Typography component="p">Value: {continuousVal}</Typography>
       </Example>

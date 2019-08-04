@@ -7,4 +7,5 @@ export const menu = [
   { title: 'Expansion Panels', path: '/expansion-panels' },
   { title: 'Text Fields', path: '/text-field' },
   { title: 'Sliders', path: '/sliders' },
+  { title: 'Switches', path: '/switches' },
 ];

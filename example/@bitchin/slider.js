@@ -1,4 +1,10 @@
 import React, { useRef, useEffect } from 'react';
+import {
+  string as str,
+  bool,
+  number as num,
+  func,
+} from 'prop-types';
 import clsx from 'clsx';
 import { MDCSlider } from '@material/slider';
 
@@ -37,8 +43,8 @@ const Slider = ({
       aria-valuemax={max}
       aria-valuenow={value}
       aria-disabled={disabled ? 'true' : null}
-      {...( step ? { 'data-step': step } : {})}
-      aria-label={label}
+      {...(step ? { 'data-step': step } : {})}
+      {...(label ? { 'aria-label': label } : {})}
     >
       <div className="mdc-slider__track-container">
         <div className="mdc-slider__track" />
@@ -65,5 +71,18 @@ const Slider = ({
     </div>
   );
 };
+
+Slider.propTypes = {
+  label: str,
+  discrete: bool,
+  min: num,
+  max: num,
+  value: num,
+  tabIndex: num,
+  step: num,
+  markers: bool,
+  disabled: bool,
+  onChange: func,
+}
 
 export default Slider;
