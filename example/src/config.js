@@ -5,5 +5,6 @@ export const menu = [
   { title: 'Theme Editor', path: '/theme' },
   { title: 'Drawers', path: '/drawers' },
   { title: 'Expansion Panels', path: '/expansion-panels' },
-  { title: 'Text Field', path: '/text-field' },
+  { title: 'Text Fields', path: '/text-field' },
+  { title: 'Sliders', path: '/sliders' },
 ];
