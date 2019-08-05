@@ -11,6 +11,7 @@ export { default as CardActionIcon } from './card/card-action-icon';
 export { default as CardActionIcons } from './card/card-action-icons';
 export { default as CardActions } from './card/card-actions';
 export { default as CardMedia } from './card/card-media';
+export { default as Elevation } from './elevation';
 export { default as Icon } from './icon';
 export { default as List } from './list';
 export { default as ListItem } from './list-item';

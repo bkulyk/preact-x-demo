@@ -1,7 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import { AppBar as AppBarBase, Drawer, List, NavLink } from '@bitchin/react-material-web'
-import { menu, appName } from './config';
+import { appName } from './config';
 import { withRouter } from 'react-router-dom';
+import menu from './menu';
 
 const AppBar = ({ history }) => {
   const [open, setOpen] = useState(false);

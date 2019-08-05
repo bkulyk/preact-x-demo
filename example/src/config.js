@@ -1,11 +1,12 @@
-export const appName = 'Bitchin React Material Web';
+export const appName = '@Bitchin/React Material Web';
 
-export const menu = [
-  { title: 'Demos', path: '/' },
-  { title: 'Theme Editor', path: '/theme' },
-  { title: 'Drawers', path: '/drawers' },
-  { title: 'Expansion Panels', path: '/expansion-panels' },
-  { title: 'Text Fields', path: '/text-field' },
-  { title: 'Sliders', path: '/sliders' },
-  { title: 'Switches', path: '/switches' },
-];
+export const theme = {
+  primary: '#14DAE9',
+  secondary: '#E97514',
+  background: '#eee',
+  surface: '#fff',
+  onPrimary: '#fff',
+  onSecondary: '#fff',
+  onSurface: '#000',
+  onError: '#C73A3A',
+};

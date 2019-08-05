@@ -109,13 +109,13 @@ module.exports = (_env, argv) => ({
 			{ from: 'public', to: '' },
 			{ from: 'node_modules/material-components-web/dist/material-components-web.min.css', to: '' },
 		]),
-		new HtmlWebpackPlugin(),
+		new HtmlWebpackPlugin({ title: "@Bitchin/React Material Web" }),
 		new CompressionPlugin(),
 	],
-	// optimization: {
-  //   minimize: true,
-  //   minimizer: [new TerserPlugin()],
-  //   usedExports: true,
-  //   sideEffects: true,
-  // },
+	optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+    usedExports: true,
+    sideEffects: true,
+  },
 });

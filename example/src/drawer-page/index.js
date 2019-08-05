@@ -59,7 +59,7 @@ const DrawerPage = () => {
           />
 
           <p style={{ textAlign: 'center' }}>
-            <Button onClick={() => setDismissibleOpen(!dismissibleOpen)}>Toggle Drawer</Button>
+            <Button secondary onClick={() => setDismissibleOpen(!dismissibleOpen)}>Toggle Drawer</Button>
           </p>
         </div>
       </Example>
