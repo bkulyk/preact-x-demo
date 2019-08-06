@@ -1,5 +1,7 @@
 export const appName = '@Bitchin/React Material Web';
 
+export const baseName = `/${process.env.PUBLIC_PATH || ''}`;
+
 export const theme = {
   primary: '#14DAE9',
   secondary: '#E97514',

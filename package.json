@@ -18,7 +18,7 @@
     "test:watch": "react-scripts test --env=jsdom",
     "build": "mkdir src && cp -r example/@bitchin/* src/ && rollup -c && rm -rf src",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
+    "predeploy": "cd example && npm install && cross-env PUBLIC_PATH=react-material-web npm run build",
     "deploy": "gh-pages -d example/dist",
     "gh-pages": "gh-pages"
   },

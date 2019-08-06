@@ -3,7 +3,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const DotEnvPlugin = require('dotenv-webpack');
 const path = require('path');
+
+const publicPath = `/${process.env.PUBLIC_PATH || ''}`;
 
 const doAnalysis = ({ analyze }) => {
   if (analyze) {
@@ -23,7 +26,7 @@ module.exports = (_env, argv) => ({
 	context: __dirname,
 	entry: './src/index',
 	output: {
-		publicPath: '/'
+		publicPath,
 	},
 	resolve: {
 		alias: {
@@ -105,6 +108,7 @@ module.exports = (_env, argv) => ({
 	},
 	plugins: [
 		...doAnalysis(argv),
+		new DotEnvPlugin({ systemvars: true }),
 		new CopyWebpackPlugin([
 			{ from: 'public', to: '' },
 			{ from: 'node_modules/material-components-web/dist/material-components-web.min.css', to: '' },
