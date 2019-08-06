@@ -33,7 +33,10 @@ const ExpansionPanelPage = () => {
 
       <Typography use="headline5" component="h3">Multiple Panels</Typography>
       <Example>
-        <ExpansionPanel summary="Expansion Panel 1" details={(<Typography>A very simple details section</Typography>)} />
+        <ExpansionPanel
+          summary="Expansion Panel 1"
+          details={(<Typography>A very simple details section</Typography>)}
+        />
         <ExpansionPanel
           summary="Expansion Panel 2"
           details={(<SampleContent />)}
