@@ -8,11 +8,13 @@ import SliderPage from './slider-page';
 import SwitchPage from './switch-page';
 import ThemePage from'./theme-page';
 import ButtonPage from './button-page';
+import CheckboxPage from './checkbox-page';
 
 export default [
   { title: 'Home', path: '/', component: HomePage },
   { title: 'Buttons', path: '/buttons', component: ButtonPage },
   { title: 'Cards', path: '/cards', component: CardPage },
+  { title: 'Checkboxes', path: '/checkboxes', component: CheckboxPage },
   { title: 'Drawers', path: '/drawers', component: DrawerPage },
   { title: 'Elevation', path: '/elevation', component: ElevationPage },
   { title: 'Expansion Panels', path: '/expansion-panels', component: ExpansionPanelPage },
