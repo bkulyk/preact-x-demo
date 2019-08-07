@@ -12,8 +12,6 @@ const doAnalysis = ({ analyze }) => {
   return [];
 };
 
-console.log(path.join(__dirname, '@bitchin'));
-
 const setMode = ({ mode }) => {
   process.env.NODE_ENV = mode || 'development';
 	process.env.BABEL_ENV = process.env.NODE_ENV;
@@ -114,10 +112,10 @@ module.exports = (_env, argv) => ({
 		new HtmlWebpackPlugin(),
 		new CompressionPlugin(),
 	],
-	// optimization: {
-  //   minimize: true,
-  //   minimizer: [new TerserPlugin()],
-  //   usedExports: true,
-  //   sideEffects: true,
-  // },
+	optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+    usedExports: true,
+    sideEffects: true,
+  },
 });

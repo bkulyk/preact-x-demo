@@ -6,4 +6,5 @@ export const menu = [
   { title: 'Drawers', path: '/drawers' },
   { title: 'Expansion Panels', path: '/expansion-panels' },
   { title: 'Text Field', path: '/text-field' },
+  { title: 'Layout Grids', path: '/grid' },
 ];
