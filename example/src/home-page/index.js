@@ -25,7 +25,6 @@ const DemoPage = ({ history }) => {
 
       <Typography use="headline5" component="h3">Components Coming Soon</Typography>
       <List>
-        <ListItem>Checkbox</ListItem>
         <ListItem>Chips</ListItem>
         <ListItem>Data Table</ListItem>
         <ListItem>Dialog</ListItem>

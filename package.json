@@ -5,6 +5,7 @@
   "author": "",
   "license": "MIT",
   "repository": "https://github.com/bkulyk/react-material-web",
+  "homepage": "https://bkulyk.github.io/react-material-web/",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
