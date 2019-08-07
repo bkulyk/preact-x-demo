@@ -1,25 +1,34 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, cloneElement } from 'react';
 import clsx from 'clsx';
 import {
   string as str,
   bool,
-  oneOf,
+  node,
 } from 'prop-types';
 import { MDCTextField } from '@material/textfield';
-import OutlineStuff from './outline-stuff';
-import RippleStuff from './ripple-stuff';
+import OutlineLabel from './outline-label';
+import RippleLine from './ripple-line';
 import HelperLine from './helper-line';
+import Input from './input';
+
+const makeIcon = icon => (icon
+  ? cloneElement(icon, { className: 'mdc-text-field__icon' })
+  : ''
+);
 
 const TextField = ({
   id,
+  invalid = false,
   className = '',
   fullWidth = false,
   placeholder = null,
   outlined = false,
   label = '',
   help = '',
-  icon = '',
-  iconPosition = 'leading',
+  leadingIcon = '',
+  trailingIcon = '',
+  children = '',
+  textarea = false,
   ...props
 }) => {
   const ref = useRef();
@@ -32,28 +41,26 @@ const TextField = ({
     className,
     'mdc-text-field',
     {
+      'mdc-text-field--textarea': textarea,
       'mdc-text-field--fullwidth': fullWidth,
       'mdc-text-field--outlined': outlined && !fullWidth,
-      [`mdc-text-field--with-${iconPosition}-icon`]: icon !== '',
-      'mdc-text-field--no-label': fullWidth,
+      'mdc-text-field--with-leading-icon': leadingIcon,
+      'mdc-text-field--with-trailing-icon': trailingIcon,
+      'mdc-text-field--no-label': fullWidth || !label,
+      'mdc-text-field--invalid': invalid,
     }
   );
 
   return (
     <div className="text-field-container">
       <div className={classNames} {...props} ref={ref}>
+        {makeIcon(leadingIcon)}
+        {makeIcon(trailingIcon)}
         {
-          icon
-            ? <i className="material-icons mdc-text-field__icon">{icon}</i>
-            : ''
+          children
+            ? children
+            : (<Input {...props} textarea={textarea} />)
         }
-
-        <input className="mdc-text-field__input"
-          type="text"
-          placeholder={placeholder}
-          aria-label={label}
-          {...props}
-        />
         {
           label && !outlined && !fullWidth
             ? (<label className="mdc-floating-label" htmlFor={id}>{label}</label>)
@@ -61,8 +68,8 @@ const TextField = ({
         }
         {
           outlined
-            ? <OutlineStuff id={id}>{label}</OutlineStuff>
-            : <RippleStuff>{label}</RippleStuff>
+            ? <OutlineLabel id={id}>{label}</OutlineLabel>
+            : <RippleLine>{label}</RippleLine>
         }
       </div>
       {
@@ -77,13 +84,15 @@ const TextField = ({
 TextField.propTypes = {
   className: str,
   id: str.isRequired,
+  invalid: bool,
   placeholder: str,
   fullWidth: bool,
   outlined: bool,
   label: str,
   help: str,
-  icon: str,
-  iconPosition: oneOf(['leading', 'trailing']),
+  trailingIcon: node,
+  leadingIcon: node,
+  children: node,
 };
 
 export default TextField;

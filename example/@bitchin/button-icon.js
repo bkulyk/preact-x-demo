@@ -1,23 +1,10 @@
 import React from 'react';
-import { string as str, node } from 'prop-types';
+import Icon from './icon';
 
-const IconButton = ({
-  className = '',
-  children,
-  ...props
-}) => (
-  <i
-    className={`material-icons mdc-button__icon ${className}`}
-    title={children}
-    {...props}
-  >
-    {children}
-  </i>
+const IconButton = ({ className, ...props }) => (
+  <Icon className="mdc-button__icon" {...props} />
 );
 
-IconButton.propTypes = {
-  children: node.isRequired,
-  className: str,
-};
+IconButton.propTypes = Icon.propTypes;
 
 export default IconButton;
