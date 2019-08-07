@@ -4,9 +4,9 @@ import clsx from 'clsx';
 import ButtonIcon from './button-icon';
 
 const NavLink = ({
-  icon,
   children,
-  active,
+  icon = null,
+  active = false,
   ...props
 }) => {
   const classes = clsx(
@@ -33,11 +33,6 @@ NavLink.propTypes = {
   icon: propTypes.string,
   children: propTypes.node.isRequired,
   active: propTypes.bool,
-};
-
-NavLink.defaultProps = {
-  active: false,
-  icon: null,
 };
 
 export default NavLink;
