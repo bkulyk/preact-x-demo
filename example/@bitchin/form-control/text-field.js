@@ -12,7 +12,7 @@ import HelperLine from './helper-line';
 
 const TextField = ({
   id,
-  className,
+  className = '',
   fullWidth = false,
   placeholder = null,
   outlined = false,
@@ -75,6 +75,7 @@ const TextField = ({
 };
 
 TextField.propTypes = {
+  className: str,
   id: str.isRequired,
   placeholder: str,
   fullWidth: bool,
