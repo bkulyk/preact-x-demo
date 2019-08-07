@@ -1,14 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node } from 'prop-types';
 
-const CardActionButtons = ({ children }) => (
-  <div className="mdc-card__action-buttons">
-    {children}
-  </div>
+const CardActionButtons = ({ ...props }) => (
+  <div {...props} className="mdc-card__action-buttons" />
 );
 
 CardActionButtons.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: node.isRequired,
 };
 
 export default CardActionButtons;

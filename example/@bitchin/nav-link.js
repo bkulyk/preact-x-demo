@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import { string as str, node, bool } from 'prop-types';
 import clsx from 'clsx';
 import ButtonIcon from './button-icon';
 
@@ -30,9 +30,9 @@ const NavLink = ({
 };
 
 NavLink.propTypes = {
-  icon: propTypes.string,
-  children: propTypes.node.isRequired,
-  active: propTypes.bool,
+  icon: str,
+  children: node.isRequired,
+  active: bool,
 };
 
 export default NavLink;
