@@ -22,7 +22,11 @@ const SwitchPage = () => {
           onChange={() => setToggled(!toggled)}
           id="controlled"
         />
-        <Typography component="p">Toggled to: {toggled? 'on' : 'off'}</Typography>
+        <Typography component="p">
+          Toggled to:
+          {' '}
+          {toggled? 'on' : 'off'}
+        </Typography>
       </Example>
 
       <Typography use="headline5" component="h3">Disabled</Typography>

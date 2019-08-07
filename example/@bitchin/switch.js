@@ -8,8 +8,8 @@ import clsx from 'clsx';
 import Typography from './typography';
 
 const Switch = ({
-  label,
   id,
+  label = '',
   checked = null,
   disabled = false,
   className = '',

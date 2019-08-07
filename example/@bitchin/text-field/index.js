@@ -82,6 +82,7 @@ const TextField = ({
 };
 
 TextField.propTypes = {
+  className: str,
   id: str.isRequired,
   invalid: bool,
   placeholder: str,
