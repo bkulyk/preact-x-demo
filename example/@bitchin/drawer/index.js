@@ -6,7 +6,7 @@ import {
   string as str,
 } from 'prop-types';
 import clsx from 'clsx';
-import { MDCDrawer } from "@material/drawer";
+import { MDCDrawer } from '@material/drawer';
 import Header from './header';
 
 const fixNoneSelectedIssue = (drawerRef) => {
@@ -15,23 +15,23 @@ const fixNoneSelectedIssue = (drawerRef) => {
     const allItems = drawerRef.current.getElementsByClassName('mdc-list-item');
     if (allItems.length) {
       // if nothing is activated, the the drawer will throw an error
-      allItems[0].className += "  mdc-list-item--activated";
+      allItems[0].className += '  mdc-list-item--activated';
     }
   }
 };
 
 const Drawer = ({
-  open,
-  onClose,
-  onOpen,
-  children,
-  modal,
-  dismissible,
-  title,
-  subtitle,
-  className,
-  drawerContent,
-  appContent,
+  open = false,
+  onClose = () => {},
+  onOpen = () => {},
+  children = '',
+  modal = false,
+  dismissible = false,
+  title = null,
+  subtitle = null,
+  className = '',
+  drawerContent = '',
+  appContent = '',
 }) => {
   const drawerRef = useRef();
 
@@ -52,22 +52,22 @@ const Drawer = ({
     {
       'mdc-drawer--modal': modal,
       'mdc-drawer--dismissible': dismissible,
-    }
+    },
   ]);
 
   return (
     <Fragment>
       <aside className={classNames} ref={drawerRef}>
         {
-          title ?
-            (<Header title={title} subtitle={subtitle} />)
+          title
+            ? (<Header title={title} subtitle={subtitle} />)
             : ''
         }
         <div className="mdc-drawer__content">
-          {children}{drawerContent}
+          {children || drawerContent}
         </div>
-
       </aside>
+
       {
         dismissible && appContent
           ? (<div className="mdc-drawer-app-content">{appContent}</div>)
@@ -87,23 +87,13 @@ Drawer.propTypes = {
   onClose: func,
   onOpen: func,
   children: node,
+  drawerContent: node,
+  appContent: node,
   modal: bool,
   dismissible: bool,
   title: str,
   subtitle: str,
   className: str,
-}
-
-Drawer.defaultProps = {
-  open: false,
-  onClose: () => {},
-  onOpen: () => {},
-  children: '',
-  modal: false,
-  dismissible: false,
-  title: null,
-  subtitle: null,
-  className: '',
-}
+};
 
 export default Drawer;

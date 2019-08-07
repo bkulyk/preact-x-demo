@@ -1,3 +1,4 @@
+/* eslint import/no-cycle: off */
 import HomePage from './home-page';
 import CardPage from './card-page';
 import DrawerPage from './drawer-page';
@@ -6,7 +7,7 @@ import ExpansionPanelPage from './expansion-panel-page';
 import TextFieldPage from './text-field-page';
 import SliderPage from './slider-page';
 import SwitchPage from './switch-page';
-import ThemePage from'./theme-page';
+import ThemePage from './theme-page';
 import ButtonPage from './button-page';
 import CheckboxPage from './checkbox-page';
 import GridPage from './grid-page.js';

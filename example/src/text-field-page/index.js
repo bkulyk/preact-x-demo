@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react';
+import { node } from 'prop-types';
 import { Typography, TextField, Icon } from '@bitchin/react-material-web';
 import Example from '../example';
 
 const Eg = ({ children }) => (<div style={{ margin: '10px 0px' }}>{children}</div>);
+Eg.propTypes = {
+  children: node.isRequired,
+};
 
 const TextFieldPage = () => (
   <Fragment>

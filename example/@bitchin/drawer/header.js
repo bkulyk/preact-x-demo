@@ -3,9 +3,10 @@ import { node } from 'prop-types';
 
 const Header = ({
   title,
-  subtitle
+  subtitle = '',
+  ...props
 }) => (
-  <div className="mdc-drawer__header">
+  <div className="mdc-drawer__header" {...props}>
     <div className="mdc-drawer__title">{title}</div>
     <div className="mdc-drawer__subtitle">{subtitle}</div>
   </div>
@@ -14,10 +15,6 @@ const Header = ({
 Header.propTypes = {
   title: node.isRequired,
   subtitle: node,
-}
-
-Header.defaultProps = {
-  subtitle: '',
-}
+};
 
 export default Header;

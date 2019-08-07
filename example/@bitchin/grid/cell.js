@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import {
   oneOf,
-  num,
+  number as num,
   bool,
   string as str,
 } from 'prop-types';
@@ -16,7 +16,7 @@ const Cell = ({
   className = '',
   align = 'top',
   fixedWidth = false,
-  ...props,
+  ...props
 }) => {
   const classNames = clsx([
     className,
@@ -29,10 +29,10 @@ const Cell = ({
       [`mdc-layout-grid__cell--order-${order}`]: order,
       [`mdc-layout-grid__cell--align-${align}`]: align,
       'mdc-layout-grid--fixed-column-width': fixedWidth,
-    }
+    },
   ]);
   return (
-    <div className={classNames} {...props}></div>
+    <div className={classNames} {...props} />
   );
 };
 
@@ -44,7 +44,7 @@ Cell.propTypes = {
   phone: bool,
   order: num,
   className: str,
-  fixedWidth: bool
+  fixedWidth: bool,
 };
 
 export default Cell;

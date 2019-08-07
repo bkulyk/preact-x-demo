@@ -41,7 +41,7 @@ const CheckboxPage = () => {
         <Checkbox
           label="on/off"
           disabled
-          id='disabled'
+          id="disabled"
         />
       </Example>
     </Fragment>

@@ -11,7 +11,7 @@ const SliderPage = () => {
       <Typography use="headline4" component="h2">Sliders</Typography>
 
       <Typography use="headline5" component="h3">Continuous Slider</Typography>
-      <Example>
+      <Example style={{ padding: '32px 32px 16px 16px' }}>
         <Slider
           min={0}
           max={200}
@@ -19,11 +19,15 @@ const SliderPage = () => {
           onChange={setContinuousVal}
           label="some label"
         />
-        <Typography component="p">Value: {continuousVal}</Typography>
+        <Typography component="p">
+          Value:
+          {' '}
+          {continuousVal}
+        </Typography>
       </Example>
 
       <Typography use="headline5" component="h3">Discrete Slider</Typography>
-      <Example>
+      <Example style={{ padding: '32px 32px 16px 16px' }}>
         <Slider
           min={50}
           max={200}
@@ -31,11 +35,15 @@ const SliderPage = () => {
           value={discreteVal}
           onChange={setDiscreteVal}
         />
-        <Typography component="p">Value: {discreteVal}</Typography>
+        <Typography component="p">
+          Value:
+          {' '}
+          {discreteVal}
+        </Typography>
       </Example>
 
       <Typography use="headline5" component="h3">Discrete Slider with step</Typography>
-      <Example>
+      <Example style={{ padding: '32px 32px 16px 16px' }}>
         <Slider
           min={50}
           max={200}
@@ -45,7 +53,7 @@ const SliderPage = () => {
       </Example>
 
       <Typography use="headline5" component="h3">Discrete Slider with step and markers</Typography>
-      <Example>
+      <Example style={{ padding: '32px 32px 16px 16px' }}>
         <Slider
           min={50}
           max={200}
@@ -56,7 +64,7 @@ const SliderPage = () => {
       </Example>
 
       <Typography use="headline5" component="h3">Disabled</Typography>
-      <Example>
+      <Example style={{ padding: '32px 32px 16px 16px' }}>
         <Slider
           min={50}
           max={200}

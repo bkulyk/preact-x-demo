@@ -13,11 +13,12 @@ const Switch = ({
   checked = null,
   disabled = false,
   className = '',
-  ...props,
+  ...props
 }) => {
   const ref = useRef();
 
   useEffect(() => {
+    /* eslint no-new: off */
     new MDCSwitch(ref.current);
   }, []);
 
@@ -28,7 +29,7 @@ const Switch = ({
       'mdc-switch--disabled': disabled,
       'mdc-switch--checked': checked,
     },
-  )
+  );
 
   return (
     <div>
@@ -41,7 +42,7 @@ const Switch = ({
               id={id}
               className="mdc-switch__native-control"
               role="switch"
-              {...(checked !== null ? { checked } : {} )}
+              {...(checked !== null ? { checked } : {})}
               {...props}
             />
           </div>

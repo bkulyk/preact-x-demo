@@ -15,61 +15,60 @@ const ColorForm = () => {
   return (
     <div>
       <form>
-        <label>
-          <Typography>The theme primary color</Typography>
-          <br/>
-          <SketchPicker color={primary} onChangeComplete={({ hex }) => setPrimary(hex)} />
-        </label>
+        <Typography component="label" htmlFor="picker-primary">
+          The theme primary color
+        </Typography>
+        <br />
+        <SketchPicker id="picker-primary" color={primary} onChangeComplete={({ hex }) => setPrimary(hex)} />
         <p />
 
-
-        <label>
-          <Typography>The theme secondary color</Typography>
-          <br/>
-          <SketchPicker color={secondary} onChangeComplete={({ hex }) => setSecondary(hex)} />
-        </label>
+        <Typography component="label" htmlFor="picker-secondary">
+          The theme secondary color
+        </Typography>
+        <br />
+        <SketchPicker id="picker-secondary" color={secondary} onChangeComplete={({ hex }) => setSecondary(hex)} />
         <p />
 
-        <label>
-          <Typography>The theme background color</Typography>
-          <br/>
-          <SketchPicker color={background} onChangeComplete={({ hex }) => setBackground(hex)} />
-        </label>
+        <Typography component="label" htmlFor="picker-background">
+          The theme background color
+        </Typography>
+        <br />
+        <SketchPicker id="picker-background" color={background} onChangeComplete={({ hex }) => setBackground(hex)} />
         <p />
 
-        <label>
-          <Typography>The theme surface color</Typography>
-          <br/>
-          <SketchPicker color={surface} onChangeComplete={({ hex }) => setSurface(hex)} />
-        </label>
+        <Typography component="label" htmlFor="picker-surface">
+          The theme surface color
+        </Typography>
+        <br />
+        <SketchPicker id="picker-surface" color={surface} onChangeComplete={({ hex }) => setSurface(hex)} />
         <p />
 
-        <label>
-          <Typography>Text color on top of a primary background color</Typography>
-          <br/>
-          <SketchPicker color={onPrimary} onChangeComplete={({ hex }) => setOnPrimary(hex)} />
-        </label>
+        <Typography component="label" htmlFor="picker-onPrimary">
+          Text color on top of a primary background color
+        </Typography>
+        <br />
+        <SketchPicker id="picker-onPrimary" color={onPrimary} onChangeComplete={({ hex }) => setOnPrimary(hex)} />
         <p />
 
-        <label>
-          <Typography>Text color on top of a secondary background</Typography>
-          <br/>
-          <SketchPicker color={onSecondary} onChangeComplete={({ hex }) => setOnSecondary(hex)} />
-        </label>
+        <Typography component="label" htmlFor="picker-onSecondary">
+          Text-onSecondary color on top of a secondary background
+        </Typography>
+        <br />
+        <SketchPicker id="picker-onSecondary" color={onSecondary} onChangeComplete={({ hex }) => setOnSecondary(hex)} />
         <p />
 
-        <label>
-          <Typography>Text color on top of a surface background</Typography>
-          <br/>
-          <SketchPicker color={onSurface} onChangeComplete={({ hex }) => setOnSurface(hex)} />
-        </label>
+        <Typography component="label" htmlFor="picker-onSurface">
+          Text color on top of a surface background
+        </Typography>
+        <br />
+        <SketchPicker id="picker-onSurface" color={onSurface} onChangeComplete={({ hex }) => setOnSurface(hex)} />
         <p />
 
-        <label>
-          <Typography>Text color on top of a error background</Typography>
-          <br/>
-          <SketchPicker color={onError} onChangeComplete={({ hex }) => setOnError(hex)} />
-        </label>
+        <Typography component="label" htmlFor="picker-onError">
+          Text color on top of a error background
+        </Typography>
+        <br />
+        <SketchPicker id="picker-onError" color={onError} onChangeComplete={({ hex }) => setOnError(hex)} />
       </form>
 
       <Theme

@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import { Button, ButtonIcon, Typography } from '@bitchin/react-material-web';
 import Example from '../example';
 
-const Eg = ({ children }) => (
-  <span style={{ marginRight: '20px' }}>{children}</span>
+const Eg = ({ ...props }) => (
+  <span style={{ marginRight: '20px' }} {...props} />
 );
 
 const ButtonDemo = () => (

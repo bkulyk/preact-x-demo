@@ -1,7 +1,13 @@
 import React, { useState, Fragment } from 'react';
-import { AppBar as AppBarBase, Drawer, List, NavLink } from '@bitchin/react-material-web'
-import { appName } from './config';
+import {
+  AppBar as AppBarBase,
+  Drawer,
+  List,
+  NavLink,
+} from '@bitchin/react-material-web';
 import { withRouter } from 'react-router-dom';
+import { history as historyType } from 'react-router-prop-types';
+import { appName } from './config';
 import menu from './menu';
 
 const AppBar = ({ history }) => {
@@ -32,6 +38,10 @@ const AppBar = ({ history }) => {
       </Drawer>
     </Fragment>
   );
+};
+
+AppBar.propTypes = {
+  history: historyType.isRequired,
 };
 
 export default withRouter(AppBar);

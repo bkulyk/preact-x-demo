@@ -1,5 +1,12 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import {
+  oneOfType,
+  oneOf,
+  bool,
+  string as str,
+  func,
+  node,
+} from 'prop-types';
 import clsx from 'clsx';
 
 const typographyStyles = [
@@ -26,7 +33,6 @@ const Typography = ({
   className = '',
   ...props
 }) => {
-
   const classNames = clsx(
     className,
     'mdc-typography-base',
@@ -39,15 +45,14 @@ const Typography = ({
       {children}
     </Comp>
   );
-}
-
-Typography.propTypes = {
-  component: propTypes.oneOf([propTypes.string, propTypes.component]).isRequired,
-  children: propTypes.node.isRequired,
-  component: propTypes.string,
-  use: propTypes.oneOf(typographyStyles),
-  ellipsis: propTypes.bool,
-  className: propTypes.string,
 };
 
-export default Typography
+Typography.propTypes = {
+  component: oneOfType([str, func]),
+  children: node.isRequired,
+  use: oneOf(typographyStyles),
+  ellipsis: bool,
+  className: str,
+};
+
+export default Typography;

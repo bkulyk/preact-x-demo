@@ -25,7 +25,7 @@ const SwitchPage = () => {
         <Typography component="p">
           Toggled to:
           {' '}
-          {toggled? 'on' : 'off'}
+          {toggled ? 'on' : 'off'}
         </Typography>
       </Example>
 
@@ -33,7 +33,7 @@ const SwitchPage = () => {
       <Example>
         <Switch
           label="on/off"
-          checked={true}
+          checked
           onChange={() => {}}
           disabled
           id="disabled"

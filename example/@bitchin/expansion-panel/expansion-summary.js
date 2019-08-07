@@ -4,12 +4,16 @@ import ButtonIcon from '../button-icon';
 import Typography from '../typography';
 
 const ExpansionSummary = ({
-  onOpen = () => {},
   children,
   style = {},
   buttonStyle = {},
+  ...props
 }) => (
-  <div className="panel-summary" onClick={onOpen} style={style}>
+  <div
+    className="panel-summary"
+    style={style}
+    {...props}
+  >
     <Typography use="body1">
       {children}
     </Typography>
@@ -18,10 +22,13 @@ const ExpansionSummary = ({
 );
 
 ExpansionSummary.propTypes = {
-  onOpen: func,
   children: node.isRequired,
   style: shape(),
   buttonStyle: shape(),
+  onOpen: func,
+  onKeyDown: func,
+  onKeyUp: func,
+  onKeyPress: func,
 };
 
 export default ExpansionSummary;

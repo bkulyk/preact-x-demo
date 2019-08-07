@@ -1,10 +1,6 @@
 import React, { useRef, useEffect, cloneElement } from 'react';
 import clsx from 'clsx';
-import {
-  string as str,
-  bool,
-  node,
-} from 'prop-types';
+import { string as str, bool, node } from 'prop-types';
 import { MDCTextField } from '@material/textfield';
 import OutlineLabel from './outline-label';
 import RippleLine from './ripple-line';
@@ -21,7 +17,6 @@ const TextField = ({
   invalid = false,
   className = '',
   fullWidth = false,
-  placeholder = null,
   outlined = false,
   label = '',
   help = '',
@@ -34,6 +29,7 @@ const TextField = ({
   const ref = useRef();
 
   useEffect(() => {
+    /* eslint no-new: off */
     new MDCTextField(ref.current);
   }, []);
 
@@ -48,7 +44,7 @@ const TextField = ({
       'mdc-text-field--with-trailing-icon': trailingIcon,
       'mdc-text-field--no-label': fullWidth || !label,
       'mdc-text-field--invalid': invalid,
-    }
+    },
   );
 
   return (
@@ -57,9 +53,9 @@ const TextField = ({
         {makeIcon(leadingIcon)}
         {makeIcon(trailingIcon)}
         {
-          children
-            ? children
-            : (<Input {...props} textarea={textarea} />)
+          !children
+            ? (<Input {...props} textarea={textarea} label={label} />)
+            : children
         }
         {
           label && !outlined && !fullWidth
@@ -78,14 +74,13 @@ const TextField = ({
           : ''
       }
     </div>
-  )
+  );
 };
 
 TextField.propTypes = {
   className: str,
   id: str.isRequired,
   invalid: bool,
-  placeholder: str,
   fullWidth: bool,
   outlined: bool,
   label: str,
@@ -93,6 +88,7 @@ TextField.propTypes = {
   trailingIcon: node,
   leadingIcon: node,
   children: node,
+  textarea: bool,
 };
 
 export default TextField;

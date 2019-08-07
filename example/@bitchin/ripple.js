@@ -1,11 +1,12 @@
 import { useRef, useEffect, cloneElement } from 'react';
-import propTypes from 'prop-types';
+import { node } from 'prop-types';
 import { MDCRipple } from '@material/ripple';
 
 const Ripple = ({ children }) => {
   const ref = useRef();
 
   useEffect(() => {
+    /* eslint no-new: off */
     new MDCRipple(ref.current);
   });
 
@@ -13,7 +14,7 @@ const Ripple = ({ children }) => {
 };
 
 Ripple.propTypes = {
-  children: propTypes.node.isRequired,
+  children: node.isRequired,
 };
 
 export default Ripple;
