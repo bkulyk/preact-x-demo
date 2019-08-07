@@ -41,7 +41,7 @@ const Typography = ({
 };
 
 Typography.propTypes = {
-  component: propTypes.oneOf([propTypes.string, propTypes.component]).isRequired,
+  component: propTypes.oneOfType([propTypes.string, propTypes.func]),
   children: propTypes.node.isRequired,
   use: propTypes.oneOf(typographyStyles),
   ellipsis: propTypes.bool,

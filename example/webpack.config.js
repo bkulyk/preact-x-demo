@@ -21,6 +21,18 @@ const setMode = ({ mode }) => {
   return mode;
 };
 
+const optimization = ({ mode }) => (mode === 'development'
+  ? {}
+  : ({
+    optimization: {
+      minimize: true,
+      minimizer: [new TerserPlugin()],
+      usedExports: true,
+      sideEffects: true,
+    },
+  })
+);
+
 module.exports = (_env, argv) => ({
   mode: setMode(argv),
   context: __dirname,
@@ -116,16 +128,10 @@ module.exports = (_env, argv) => ({
     ...doAnalysis(argv),
     new DotEnvPlugin({ systemvars: true }),
     new CopyWebpackPlugin([
-      { from: 'public', to: '' },
       { from: 'node_modules/material-components-web/dist/material-components-web.min.css', to: '' },
     ]),
     new HtmlWebpackPlugin({ title: '@Bitchin/React Material Web' }),
     new CompressionPlugin(),
   ],
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-    usedExports: true,
-    sideEffects: true,
-  },
+  ...optimization(argv),
 });

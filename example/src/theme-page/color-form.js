@@ -15,42 +15,58 @@ const ColorForm = () => {
   return (
     <div>
       <form>
-        <Typography component="label" htmlFor="picker-primary">The theme primary color</Typography>
+        <Typography component="label" htmlFor="picker-primary">
+          The theme primary color
+        </Typography>
         <br />
         <SketchPicker id="picker-primary" color={primary} onChangeComplete={({ hex }) => setPrimary(hex)} />
         <p />
 
-        <Typography component="label" htmlFor="picker-secondary">The theme secondary color</Typography>
+        <Typography component="label" htmlFor="picker-secondary">
+          The theme secondary color
+        </Typography>
         <br />
         <SketchPicker id="picker-secondary" color={secondary} onChangeComplete={({ hex }) => setSecondary(hex)} />
         <p />
 
-        <Typography component="label" htmlFor="picker-background">The theme background color</Typography>
+        <Typography component="label" htmlFor="picker-background">
+          The theme background color
+        </Typography>
         <br />
         <SketchPicker id="picker-background" color={background} onChangeComplete={({ hex }) => setBackground(hex)} />
         <p />
 
-        <Typography component="label" htmlFor="picker-surface">The theme surface color</Typography>
+        <Typography component="label" htmlFor="picker-surface">
+          The theme surface color
+        </Typography>
         <br />
         <SketchPicker id="picker-surface" color={surface} onChangeComplete={({ hex }) => setSurface(hex)} />
         <p />
 
-        <Typography component="label" htmlFor="picker-onPrimary">Text color on top of a primary background color</Typography>
+        <Typography component="label" htmlFor="picker-onPrimary">
+          Text color on top of a primary background color
+        </Typography>
         <br />
         <SketchPicker id="picker-onPrimary" color={onPrimary} onChangeComplete={({ hex }) => setOnPrimary(hex)} />
         <p />
 
-        <Typography component="label" htmlFor="">Text-onSecondary color on top of a secondary background</Typography>
+        <Typography component="label" htmlFor="picker-onSecondary">
+          Text-onSecondary color on top of a secondary background
+        </Typography>
         <br />
         <SketchPicker id="picker-onSecondary" color={onSecondary} onChangeComplete={({ hex }) => setOnSecondary(hex)} />
         <p />
 
-        <Typography component="label" htmlFor="picker-onSurface">Text color on top of a surface background</Typography>
+        <Typography component="label" htmlFor="picker-onSurface">
+          Text color on top of a surface background
+        </Typography>
         <br />
         <SketchPicker id="picker-onSurface" color={onSurface} onChangeComplete={({ hex }) => setOnSurface(hex)} />
         <p />
 
-        <Typography component="label" htmlFor="picker-onError">Text color on top of a error background</Typography>
+        <Typography component="label" htmlFor="picker-onError">
+          Text color on top of a error background
+        </Typography>
         <br />
         <SketchPicker id="picker-onError" color={onError} onChangeComplete={({ hex }) => setOnError(hex)} />
       </form>

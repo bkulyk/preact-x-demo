@@ -57,10 +57,10 @@ const Slider = ({
       <div className="mdc-slider__thumb-container">
         { discrete
           ? (
-              <div className="mdc-slider__pin">
-                <span className="mdc-slider__pin-value-marker" />
-              </div>
-            )
+            <div className="mdc-slider__pin">
+              <span className="mdc-slider__pin-value-marker" />
+            </div>
+          )
           : ''
         }
         <svg className="mdc-slider__thumb" width="21" height="21">
@@ -83,6 +83,6 @@ Slider.propTypes = {
   markers: bool,
   disabled: bool,
   onChange: func,
-}
+};
 
 export default Slider;

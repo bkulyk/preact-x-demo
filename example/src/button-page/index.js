@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import ButtonDemo from '../button-page/button-demo';
 import { Typography } from '@bitchin/react-material-web';
+import ButtonDemo from './button-demo';
 
 const ButtonPage = () => (
   <Fragment>

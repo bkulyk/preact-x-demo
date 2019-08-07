@@ -10,7 +10,7 @@ const ListItem = ({
   component: Comp = 'li',
   className = '',
   children,
-  ...props,
+  ...props
 }) => (
   <Comp className={`mdc-list-item ${className}`} {...props}>{children}</Comp>
 );

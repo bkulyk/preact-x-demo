@@ -5,7 +5,7 @@ const List = ({
   className = '',
   component: Comp = 'ul',
   children = '',
-  ...props,
+  ...props
 }) => (
   <Comp className={`${className} mdc-list`} {...props}>
     {children}

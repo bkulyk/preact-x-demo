@@ -1,10 +1,10 @@
 import React from 'react';
 import Icon from './icon';
 
-const IconButton = ({ className, ...props }) => (
-  <Icon className="mdc-button__icon" {...props} />
+const ButtonIcon = ({ className, ...props }) => (
+  <Icon className={`${className} mdc-button__icon`} {...props} />
 );
 
-IconButton.propTypes = Icon.propTypes;
+ButtonIcon.propTypes = Icon.propTypes;
 
-export default IconButton;
+export default ButtonIcon;

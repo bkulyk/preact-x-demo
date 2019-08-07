@@ -8,7 +8,7 @@ import {
   oneOf,
 } from 'prop-types';
 import clsx from 'clsx';
-import Ripple from'./ripple';
+import Ripple from './ripple';
 
 const Button = ({
   type,
@@ -34,7 +34,7 @@ const Button = ({
       'mdc-button--unelevated': unelevated,
       'mdc-theme--on-secondary': raised && secondary && !href && !outlined,
       'mdc-theme--secondary': secondary,
-    }
+    },
   );
 
   const Wrapper = ripple ? Ripple : Fragment;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../button';
 
-const CardActionButton = (props) => (
+const CardActionButton = props => (
   <Button {...props} className="mdc-card__action--button" raised={false} />
 );
 

@@ -6,6 +6,7 @@ const Ripple = ({ children }) => {
   const ref = useRef();
 
   useEffect(() => {
+    /* eslint no-new: off */
     new MDCRipple(ref.current);
   });
 

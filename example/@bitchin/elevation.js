@@ -5,7 +5,7 @@ const Elevation = ({
   z = 1,
   className = '',
   children,
-  ...props,
+  ...props
 }) => (
   <div
     className={`mdc-elevation-transition mdc-elevation--z${z} ${className}`.trimRight()}

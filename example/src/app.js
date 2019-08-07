@@ -2,6 +2,8 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppBarDemo from './app-bar';
 import ThemeDemo from './theme-demo';
+import { baseName } from './config';
+import menu from './menu';
 
 const Loading = () => (<span>Loading ...</span>);
 

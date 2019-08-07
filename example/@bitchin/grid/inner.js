@@ -9,6 +9,6 @@ const GridInner = ({ children, ...props }) => (
 
 GridInner.propTypes = {
   children: node.isRequired,
-}
+};
 
 export default GridInner;

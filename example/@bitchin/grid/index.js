@@ -12,7 +12,7 @@ const Grid = ({
   children,
   fixedColumnWidth = false,
   className = '',
-  ...props,
+  ...props
 }) => {
   const classNames = clsx(
     className,

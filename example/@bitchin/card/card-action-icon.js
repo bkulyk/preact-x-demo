@@ -1,21 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, node } from 'prop-types';
+import Button from '../button';
 
-const CardActionIcon = ({ children, onClick }) => (
-  <button className="mdc-icon-button mdc-card__action mdc-card__action--icon" onClick={onClick}>
+const CardActionIcon = ({
+  children,
+  onClick = () => {},
+}) => (
+  <Button className="mdc-icon-button mdc-card__action mdc-card__action--icon" onClick={onClick}>
     <i className="material-icons mdc-icon-button__icon">
       {children}
     </i>
-  </button>
+  </Button>
 );
 
 CardActionIcon.propTypes = {
-  children: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
-};
-
-CardActionIcon.defaultProps = {
-  onClick: () => {},
+  children: node.isRequired,
+  onClick: func,
 };
 
 export default CardActionIcon;

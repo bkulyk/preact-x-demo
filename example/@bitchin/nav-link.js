@@ -5,20 +5,19 @@ import ButtonIcon from './button-icon';
 
 const NavLink = ({
   icon,
-  onClick,
   children,
   active,
-  ...props,
+  ...props
 }) => {
   const classes = clsx(
     'mdc-list-item',
     { 'mdc-list-item--activated': active },
-  )
+  );
+
   return (
     <a
-      onClick={onClick}
+      role="link"
       className={classes}
-      tabIndex="-1"
       {...props}
     >
       {icon
@@ -31,16 +30,14 @@ const NavLink = ({
 };
 
 NavLink.propTypes = {
-  onClick: propTypes.func,
   icon: propTypes.string,
   children: propTypes.node.isRequired,
   active: propTypes.bool,
 };
 
 NavLink.defaultProps = {
-  onClick: () => {},
   active: false,
   icon: null,
-}
+};
 
 export default NavLink;
