@@ -26,7 +26,6 @@ const Typography = ({
   className = '',
   ...props
 }) => {
-
   const classNames = clsx(
     className,
     'mdc-typography-base',
@@ -39,15 +38,14 @@ const Typography = ({
       {children}
     </Comp>
   );
-}
+};
 
 Typography.propTypes = {
   component: propTypes.oneOf([propTypes.string, propTypes.component]).isRequired,
   children: propTypes.node.isRequired,
-  component: propTypes.string,
   use: propTypes.oneOf(typographyStyles),
   ellipsis: propTypes.bool,
   className: propTypes.string,
 };
 
-export default Typography
+export default Typography;

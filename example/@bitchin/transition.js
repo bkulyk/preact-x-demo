@@ -8,6 +8,6 @@ const Transition = ({
 Transition.propTypes = {
   on: bool,
   children: func,
-}
+};
 
 export default Transition;

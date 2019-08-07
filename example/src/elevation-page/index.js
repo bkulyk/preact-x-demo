@@ -10,6 +10,8 @@ const style = {
   padding: '30px 0px',
 };
 
+const makeKey = i => `el-${i}`;
+
 const ElevationPage = () => {
   const [elevation, setElevation] = useState(0);
 
@@ -20,22 +22,26 @@ const ElevationPage = () => {
       <Typography use="headline5" component="h3">25 levels of depth</Typography>
       <Example>
         {[...(new Array(25))].map((_, i) => (
-          <Elevation style={style} z={i} key={`el-${i}`}>
-            z &rarr; {i}
+          <Elevation style={style} z={i} key={makeKey(i)}>
+            z &rarr;
+            {' '}
+            {i}
           </Elevation>
         ))}
       </Example>
 
       <Typography use="headline5" component="h3">Transitions</Typography>
       <Example>
-          <Elevation
-            style={{ ...style, width: '100px' }}
-            z={elevation}
-            onMouseOver={() => setElevation(24)}
-            onMouseOut={() => setElevation(0)}
-          >
-            <Typography>Hover over this!</Typography>
-          </Elevation>
+        <Elevation
+          style={{ ...style, width: '100px' }}
+          z={elevation}
+          onMouseOver={() => setElevation(24)}
+          onMouseOut={() => setElevation(0)}
+          onFocus={() => {}}
+          onBlur={() => {}}
+        >
+          <Typography>Hover over this!</Typography>
+        </Elevation>
       </Example>
     </Fragment>
   );

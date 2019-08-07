@@ -19,7 +19,11 @@ const SliderPage = () => {
           onChange={setContinuousVal}
           label="some label"
         />
-        <Typography component="p">Value: {continuousVal}</Typography>
+        <Typography component="p">
+          Value:
+          {' '}
+          {continuousVal}
+        </Typography>
       </Example>
 
       <Typography use="headline5" component="h3">Discrete Slider</Typography>
@@ -31,7 +35,11 @@ const SliderPage = () => {
           value={discreteVal}
           onChange={setDiscreteVal}
         />
-        <Typography component="p">Value: {discreteVal}</Typography>
+        <Typography component="p">
+          Value:
+          {' '}
+          {discreteVal}
+        </Typography>
       </Example>
 
       <Typography use="headline5" component="h3">Discrete Slider with step</Typography>

@@ -1,6 +1,13 @@
+/* eslint import/no-cycle: off */
 import React, { Fragment } from 'react';
-import { Typography, List, ListItem, NavLink } from '@bitchin/react-material-web';
+import {
+  Typography,
+  List,
+  ListItem,
+  NavLink,
+} from '@bitchin/react-material-web';
 import { withRouter } from 'react-router-dom';
+import { history as historyType } from 'react-router-prop-types';
 import menu from '../menu';
 
 const DemoPage = ({ history }) => {
@@ -10,7 +17,10 @@ const DemoPage = ({ history }) => {
 
   return (
     <Fragment>
-      <Typography use="headline4"><i>@Bitchin</i>/React Material Web</Typography>
+      <Typography use="headline4">
+        <i>@Bitchin</i>
+        /React Material Web
+      </Typography>
 
       <Typography use="headline5" component="h3">Components Available</Typography>
       <List>
@@ -39,6 +49,10 @@ const DemoPage = ({ history }) => {
       </List>
     </Fragment>
   );
+};
+
+DemoPage.propTypes = {
+  history: historyType.isRequired,
 };
 
 export default withRouter(DemoPage);

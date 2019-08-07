@@ -55,6 +55,6 @@ Theme.propTypes = {
   onSecondary: stringType.isRequired,
   onSurface: stringType.isRequired,
   onError: stringType.isRequired,
-}
+};
 
 export default Theme;

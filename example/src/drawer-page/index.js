@@ -4,7 +4,7 @@ import {
   List,
   ListItem,
   Button,
-  Drawer
+  Drawer,
 } from '@bitchin/react-material-web';
 import Example from '../example';
 
@@ -50,8 +50,15 @@ const DrawerPage = () => {
             appContent={(
               <Typography component="div" style={{ margin: '0px -16px' }}>
                 <div style={{ padding: '20px' }}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure.</p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt
+                  </p>
+                  <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure.
+                  </p>
                 </div>
               </Typography>
             )}
@@ -59,7 +66,9 @@ const DrawerPage = () => {
           />
 
           <p style={{ textAlign: 'center' }}>
-            <Button secondary onClick={() => setDismissibleOpen(!dismissibleOpen)}>Toggle Drawer</Button>
+            <Button secondary onClick={() => setDismissibleOpen(!dismissibleOpen)}>
+              Toggle Drawer
+            </Button>
           </p>
         </div>
       </Example>
