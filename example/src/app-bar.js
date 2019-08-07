@@ -1,16 +1,16 @@
 import React, { useState, Fragment } from 'react';
 import { AppBar as AppBarBase, Drawer, List, NavLink } from '@bitchin/react-material-web'
-import { route } from 'preact-router';
 import { menu, appName } from './config';
+import { withRouter } from 'react-router-dom';
 
-const AppBar = () => {
+const AppBar = ({ history }) => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('/');
 
   const handleNav = (path) => {
     setOpen(false);
     setActive(path);
-    route(path);
+    history.push(path);
   };
 
   return (
@@ -23,7 +23,7 @@ const AppBar = () => {
       >
         <List component="nav">
           {menu.map(({ path, title }) => (
-            <NavLink onClick={() => handleNav(path)} active={active === path}>
+            <NavLink onClick={() => handleNav(path)} active={active === path} key={path}>
               {title}
             </NavLink>
           ))}
@@ -33,4 +33,4 @@ const AppBar = () => {
   );
 };
 
-export default AppBar;
+export default withRouter(AppBar);

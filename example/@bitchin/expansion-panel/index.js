@@ -12,7 +12,7 @@ import {
 const ExpansionPanel = ({
   onChange = () => {},
   summary,
-  details,
+  details = '',
   disabled = false,
   open,
   children = '',
@@ -41,7 +41,7 @@ const ExpansionPanel = ({
     : panelStyles.default;
 
   return (
-    <Transition in={!opened}>
+    <Transition in={!opened} timeout={300}>
       {state => (
         <div className="expansionPanel mdc-elevation--z1" style={{ ...mainPanelStyles, ...panelStyles[state] }}>
           <ExpansionSummary
@@ -65,7 +65,7 @@ const ExpansionPanel = ({
 
 ExpansionPanel.propTypes = {
   summary: PropTypes.node.isRequired,
-  details: PropTypes.node.isRequired,
+  details: PropTypes.node,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   children: PropTypes.node,

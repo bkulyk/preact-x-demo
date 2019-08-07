@@ -3,6 +3,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const path = require('path');
 
 const doAnalysis = ({ analyze }) => {
   if (analyze) {
@@ -26,10 +27,9 @@ module.exports = (_env, argv) => ({
 	},
 	resolve: {
 		alias: {
-			react: 'preact/compat',
-			'react-dom': 'preact/compat',
+			'@bitchin/react-material-web': path.join(__dirname, '@bitchin'),
 		},
-		extensions: ['.js', 'mjs']
+		extensions: ['.js', 'mjs'],
 	},
 	module: {
 		rules: [
@@ -73,7 +73,7 @@ module.exports = (_env, argv) => ({
 						[require.resolve('@babel/preset-react')],
 					],
 					plugins: [
-						[require.resolve('@babel/plugin-transform-react-jsx'), { pragma: 'createElement', pragmaFrag: 'Fragment' }],
+						[require.resolve('@babel/plugin-transform-react-jsx')],
 						[require.resolve('@babel/plugin-proposal-class-properties')],
 						[require.resolve('@babel/plugin-transform-react-constant-elements')],
 					]
