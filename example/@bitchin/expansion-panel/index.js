@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Transition } from 'react-transition-group';
+import Transition from '../transition';
 import ExpansionSummary from './expansion-summary'
 import {
   panelStyles,
@@ -41,7 +41,7 @@ const ExpansionPanel = ({
     : panelStyles.default;
 
   return (
-    <Transition in={!opened} timeout={300}>
+    <Transition on={!opened}>
       {state => (
         <div className="expansionPanel mdc-elevation--z1" style={{ ...mainPanelStyles, ...panelStyles[state] }}>
           <ExpansionSummary
