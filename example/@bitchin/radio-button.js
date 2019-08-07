@@ -1,4 +1,9 @@
 import React, { useRef, useEffect } from 'react';
+import {
+  string as str,
+  bool,
+  shape,
+} from 'prop-types';
 import { MDCFormField } from '@material/form-field';
 import { MDCRadio } from '@material/radio';
 import clsx from 'clsx';
@@ -48,6 +53,14 @@ const RadioButton = ({
       }
     </div>
   );
+};
+
+RadioButton.propTypes = {
+  disabled: bool,
+  className: str,
+  style: shape(),
+  label: str,
+  id: str.isRequired,
 };
 
 export default RadioButton;
