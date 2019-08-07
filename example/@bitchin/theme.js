@@ -33,12 +33,6 @@ const Theme = ({
       color: var(--mdc-theme-secondary);
     }
 
-    .mdc-theme--secondary.mdc-button--raised:not(:disabled),
-    .mdc-theme--secondary.mdc-button--unelevated:not(:disabled) {
-      background-color: var(--mdc-theme-secondary);
-      color: var(--mdc-theme-on-secondary);
-    }
-
     .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
       color: var(--mdc-theme-primary);
     }
