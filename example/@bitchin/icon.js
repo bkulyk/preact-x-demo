@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node, string as str } from 'prop-types';
 
 const Icon = ({
   icon = '',
@@ -17,9 +17,9 @@ const Icon = ({
 );
 
 Icon.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  icon: PropTypes.string,
+  children: node,
+  className: str,
+  icon: str,
 };
 
 export default Icon;
