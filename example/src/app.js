@@ -9,6 +9,7 @@ import ExpansionPanelPage from './expansion-panel-page';
 import TextFieldPage from './text-field-page';
 import SliderPage from './slider-page';
 import SwitchPage from './switch-page';
+import GridPage from './grid-page.js';
 
 const Loading = () => (<span>Loading ...</span>);
 
@@ -28,6 +29,7 @@ const App = () => {
           <Route component={TextFieldPage} path="/text-field" />
           <Route component={SliderPage} path="/sliders" />
           <Route component={SwitchPage} path="/switches" />
+          <Route component={GridPage} path="/layout-grids" />
           <Route component={DemoPage} path="/" exact />
         </Suspense>
       </main>

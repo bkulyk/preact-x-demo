@@ -8,4 +8,5 @@ export const menu = [
   { title: 'Text Fields', path: '/text-field' },
   { title: 'Sliders', path: '/sliders' },
   { title: 'Switches', path: '/switches' },
+  { title: 'Layout Grids', path: '/grid' },
 ];
