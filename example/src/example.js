@@ -1,14 +1,16 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { node, shape } from 'prop-types';
+import { Elevation } from '@bitchin/react-material-web';
 
-const Example = ({ children }) => (
-  <div style={{ backgroundColor: '#d1b2fe', padding: '16px', margin: '0px -16px' }}>
+const Example = ({ children, style = {} }) => (
+  <Elevation style={{ backgroundColor: 'white', padding: '16px', margin: '0px 32px', ...style }}>
     {children}
-  </div>
+  </Elevation>
 );
 
 Example.propTypes = {
   children: node.isRequired,
+  style: shape(),
 };
 
 export default Example;

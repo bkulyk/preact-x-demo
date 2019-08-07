@@ -9,6 +9,7 @@ export { default as CardActionIcon } from './card/card-action-icon';
 export { default as CardActionIcons } from './card/card-action-icons';
 export { default as CardActions } from './card/card-actions';
 export { default as CardMedia } from './card/card-media';
+export { default as Elevation } from './elevation';
 export { default as Icon } from './icon';
 export { default as Drawer } from './drawer';
 export { default as ExpansionPanel } from './expansion-panel';

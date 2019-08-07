@@ -15,13 +15,11 @@ const Loading = () => (<span>Loading ...</span>);
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={baseName}>
       <ThemeDemo />
-      <link href="/whatever.css" rel="stylesheet" />
-
       <AppBarDemo />
 
-      <main style={{ backgroundColor: '#f5f5f5', padding: '16px' }}>
+      <main style={{ backgroundColor: 'var(--mdc-theme-background)', padding: '16px' }}>
         <Suspense fallback={Loading}>
           <Route component={ExpansionPanelPage} path="/expansion-panels" />
           <Route component={DrawerPage} path="/drawers" />

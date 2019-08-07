@@ -32,7 +32,7 @@ const Button = ({
       'mdc-button--outlined': outlined,
       'mdc-button--dense': dense,
       'mdc-button--unelevated': unelevated,
-      'mdc-theme--on-secondary': raised && secondary,
+      'mdc-theme--on-secondary': raised && secondary && !href && !outlined,
       'mdc-theme--secondary': secondary,
     }
   );

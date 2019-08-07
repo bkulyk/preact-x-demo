@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, Theme } from '@bitchin/react-material-web';
+import { SketchPicker } from 'react-color';
 
 const ColorForm = () => {
   const [primary, setPrimary] = useState('#5d1049');
@@ -17,55 +18,57 @@ const ColorForm = () => {
         <label>
           <Typography>The theme primary color</Typography>
           <br/>
-          <input type="text" placeholder="primary" value={primary} onChange={(e) => setPrimary(e.target.value)} />
+          <SketchPicker color={primary} onChangeComplete={({ hex }) => setPrimary(hex)} />
         </label>
         <p />
+
 
         <label>
           <Typography>The theme secondary color</Typography>
           <br/>
-          <input type="text" placeholder="secondary" value={secondary} onChange={(e) => setSecondary(e.target.value)} />
+          <SketchPicker color={secondary} onChangeComplete={({ hex }) => setSecondary(hex)} />
         </label>
         <p />
 
         <label>
-          <Typography>The theme background color</Typography><br/>
-          <input type="text" placeholder="background" value={background} onChange={(e) => setBackground(e.target.value)} />
+          <Typography>The theme background color</Typography>
+          <br/>
+          <SketchPicker color={background} onChangeComplete={({ hex }) => setBackground(hex)} />
         </label>
         <p />
 
         <label>
           <Typography>The theme surface color</Typography>
           <br/>
-          <input type="text" placeholder="surface" value={surface} onChange={(e) => setSurface(e.target.value)} />
+          <SketchPicker color={surface} onChangeComplete={({ hex }) => setSurface(hex)} />
         </label>
         <p />
 
         <label>
           <Typography>Text color on top of a primary background color</Typography>
           <br/>
-          <input type="text" placeholder="on primary" value={onPrimary} onChange={(e) => setOnPrimary(e.target.value)} />
+          <SketchPicker color={onPrimary} onChangeComplete={({ hex }) => setOnPrimary(hex)} />
         </label>
         <p />
 
         <label>
           <Typography>Text color on top of a secondary background</Typography>
           <br/>
-          <input type="text" placeholder="on secondary" value={onSecondary} onChange={(e) => setOnSecondary(e.target.value)} />
+          <SketchPicker color={onSecondary} onChangeComplete={({ hex }) => setOnSecondary(hex)} />
         </label>
         <p />
 
         <label>
           <Typography>Text color on top of a surface background</Typography>
           <br/>
-          <input type="text" placeholder="on surface" value={onSurface} onChange={(e) => setOnSurface(e.target.value)} />
+          <SketchPicker color={onSurface} onChangeComplete={({ hex }) => setOnSurface(hex)} />
         </label>
         <p />
 
         <label>
           <Typography>Text color on top of a error background</Typography>
           <br/>
-          <input type="text" placeholder="on error" value={onError} onChange={(e) => setOnError(e.target.value)} />
+          <SketchPicker color={onError} onChangeComplete={({ hex }) => setOnError(hex)} />
         </label>
       </form>
 

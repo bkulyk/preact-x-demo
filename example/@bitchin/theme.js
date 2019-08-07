@@ -23,6 +23,25 @@ const Theme = ({
       --mdc-theme-on-surface: ${onSurface}; /* Text color on top of a surface background */
       --mdc-theme-on-error: ${onError}; /* Text color on top of a error background */
     }
+
+    body {
+      margin: 0px !important;
+    }
+
+    .mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic,
+    .mdc-drawer .mdc-list-item--activated {
+      color: var(--mdc-theme-secondary);
+    }
+
+    .mdc-theme--secondary.mdc-button--raised:not(:disabled),
+    .mdc-theme--secondary.mdc-button--unelevated:not(:disabled) {
+      background-color: var(--mdc-theme-secondary);
+      color: var(--mdc-theme-on-secondary);
+    }
+
+    .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+      color: var(--mdc-theme-primary);
+    }
     `}
   </style>
 );

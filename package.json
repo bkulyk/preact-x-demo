@@ -1,13 +1,14 @@
 {
   "name": "@bitchin/react-material-web",
-  "version": "0.0.1-prealpha-6.5",
+  "version": "0.0.1-prealpha-7",
   "description": "",
   "author": "",
   "license": "MIT",
-  "repository": "/react-material-web",
+  "repository": "https://github.com/bkulyk/react-material-web",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "sideEffects": false,
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -17,8 +18,9 @@
     "test:watch": "react-scripts test --env=jsdom",
     "build": "mkdir src && cp -r example/@bitchin/* src/ && rollup -c && rm -rf src",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "cd example && npm install && cross-env PUBLIC_PATH=react-material-web npm run build",
+    "deploy": "gh-pages -d example/dist",
+    "gh-pages": "gh-pages"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -35,8 +37,6 @@
     "@material/top-app-bar": "^3.1.0"
   },
   "devDependencies": {
-    "clsx": "^1.0.4",
-    "material-components-web": "^3.1.0",
     "@svgr/rollup": "^2.4.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
@@ -44,6 +44,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "clsx": "^1.0.4",
     "cross-env": "^5.1.4",
     "eslint": "^5.0.1",
     "eslint-config-standard": "^11.0.0",
@@ -54,6 +55,7 @@
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
     "gh-pages": "^1.2.0",
+    "material-components-web": "^3.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^1.1.4",
@@ -62,7 +64,6 @@
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-url": "^1.4.0"
   },
   "files": [
