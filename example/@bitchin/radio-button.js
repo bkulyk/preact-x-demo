@@ -14,7 +14,7 @@ const RadioButton = ({
   style = {},
   label = null,
   id,
-  ...props,
+  ...props
 }) => {
   const fieldRef = useRef();
   const radioRef = useRef();
@@ -26,6 +26,7 @@ const RadioButton = ({
   }, []);
 
   const classNames = clsx(
+    className,
     'mdc-radio',
     { 'mdc-radio--disabled': disabled },
   );
@@ -42,8 +43,8 @@ const RadioButton = ({
           {...props}
         />
         <div className="mdc-radio__background">
-          <div className="mdc-radio__outer-circle"></div>
-          <div className="mdc-radio__inner-circle"></div>
+          <div className="mdc-radio__outer-circle" />
+          <div className="mdc-radio__inner-circle" />
         </div>
       </div>
       {
