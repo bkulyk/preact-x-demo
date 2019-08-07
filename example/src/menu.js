@@ -11,6 +11,7 @@ import ThemePage from './theme-page';
 import ButtonPage from './button-page';
 import CheckboxPage from './checkbox-page';
 import GridPage from './grid-page.js';
+import RadioButtonPage from './radio-button-page';
 
 export default [
   { title: 'Home', path: '/', component: HomePage },
@@ -24,5 +25,6 @@ export default [
   { title: 'Text Fields', path: '/text-field', component: TextFieldPage },
   { title: 'Sliders', path: '/sliders', component: SliderPage },
   { title: 'Switches', path: '/switches', component: SwitchPage },
+  { title: 'Radio Buttons', path: '/radio-buttons', component: RadioButtonPage },
   { title: 'Theme Editor', path: '/theme-editor', component: ThemePage },
 ];
