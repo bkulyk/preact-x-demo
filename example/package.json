@@ -9,6 +9,7 @@
     "prebuild:a": "rm -rf dist/",
     "prebuild:analyze": "rm -rf dist/",
     "build": "webpack --mode production",
+    "postbuild": "cp dist/index.html dist/404.html",
     "build:a": "webpack --mode production --analyze",
     "build:analyze": "webpack --mode production --analyze",
     "start": "webpack-dev-server --mode development --progress --open",

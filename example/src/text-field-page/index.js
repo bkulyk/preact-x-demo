@@ -202,8 +202,6 @@ const TextFieldPage = () => (
         />
       </Eg>
     </Example>
-
-    <br />
   </Fragment>
 );
 

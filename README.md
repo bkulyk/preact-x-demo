@@ -1,4 +1,4 @@
-# react-material-web
+# @bitchin/react-material-web
 
 >
 
@@ -7,13 +7,30 @@
 ## Install
 
 ```bash
-npm install --save react-material-web
+npm install --save @bitchin/react-material-web
+```
+
+### Setup
+
+Some where in your app, you will want to import the fonts (Roboto and Material Icons, both loaded from fonts.googleapis.com). As well as import the Material Components Web css (however you choose).
+
+```jsx
+import React, { Fragment } from 'react';
+import { BaseFonts } from '@bitchin/react-material-web';
+
+const App = () => (
+  <Fragment>
+    <BaseFonts />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/3.1.0/material-components-web.min.css" rel="stylesheet" />
+    {/* whatever other things your app does goes here */}
+  </Fragment>
+);
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 import { Button } from '@bitchin/react-material-web'
 
 const Example = () => {

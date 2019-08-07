@@ -10,6 +10,7 @@ import SwitchPage from './switch-page';
 import ThemePage from './theme-page';
 import ButtonPage from './button-page';
 import CheckboxPage from './checkbox-page';
+import GridPage from './grid-page.js';
 
 export default [
   { title: 'Home', path: '/', component: HomePage },
@@ -19,6 +20,7 @@ export default [
   { title: 'Drawers', path: '/drawers', component: DrawerPage },
   { title: 'Elevation', path: '/elevation', component: ElevationPage },
   { title: 'Expansion Panels', path: '/expansion-panels', component: ExpansionPanelPage },
+  { title: 'Layout Grids', path: '/layout-grids', component: GridPage },
   { title: 'Text Fields', path: '/text-field', component: TextFieldPage },
   { title: 'Sliders', path: '/sliders', component: SliderPage },
   { title: 'Switches', path: '/switches', component: SwitchPage },

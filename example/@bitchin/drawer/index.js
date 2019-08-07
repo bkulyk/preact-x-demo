@@ -33,14 +33,13 @@ const Drawer = ({
   drawerContent,
   appContent,
 }) => {
-  let drawer;
   const drawerRef = useRef();
 
   useEffect(() => {
     if (dismissible || modal) {
       fixNoneSelectedIssue(drawerRef);
 
-      drawer = MDCDrawer.attachTo(drawerRef.current);
+      const drawer = MDCDrawer.attachTo(drawerRef.current);
       drawer.open = open;
       drawer.listen('MDCDrawer:closed', onClose);
       drawer.listen('MDCDrawer:opened', onOpen);

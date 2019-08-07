@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Icon = ({ icon='', className, children, ...props }) => (
+const Icon = ({
+  icon='',
+  className = '',
+  children = '',
+  ...props,
+}) => (
   <i
     className={`material-icons mdc-button__icon ${className}`}
     title={icon || children}
@@ -14,11 +19,7 @@ const Icon = ({ icon='', className, children, ...props }) => (
 Icon.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-};
-
-Icon.defaultProps = {
-  className: '',
-  style: {},
+  icon: PropTypes.string,
 };
 
 export default Icon;
