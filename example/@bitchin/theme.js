@@ -36,6 +36,16 @@ const Theme = ({
     .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
       color: var(--mdc-theme-primary);
     }
+
+    .mdc-select.mdc-select--focused:not(.mdc-select--disabled) .mdc-select__dropdown-icon,
+    .mdc-select.mdc-select--focused:not(.mdc-select--disabled) .mdc-floating-label {
+      color: var(--mdc-theme-primary);
+    }
+
+    .mdc-select.mdc-select--invalid:not(.mdc-select--disabled) .mdc-select__dropdown-icon,
+    .mdc-select.mdc-select--invalid:not(.mdc-select--disabled) .mdc-floating-label {
+      color: var(--mdc-theme-error);
+    }
     `}
   </style>
 );

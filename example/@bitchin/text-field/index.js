@@ -4,7 +4,7 @@ import { string as str, bool, node } from 'prop-types';
 import { MDCTextField } from '@material/textfield';
 import OutlineLabel from './outline-label';
 import RippleLine from './ripple-line';
-import HelperLine from './helper-line';
+import HelperLine from '../helper-line';
 import Input from './input';
 
 const makeIcon = icon => (icon

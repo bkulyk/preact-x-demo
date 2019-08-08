@@ -42,7 +42,6 @@ const DemoPage = ({ history }) => {
         <ListItem>Image List</ListItem>
         <ListItem>Linear Progress Indicator</ListItem>
         <ListItem>Menu</ListItem>
-        <ListItem>Select</ListItem>
         <ListItem>Snackbar</ListItem>
         <ListItem>Tab Bar</ListItem>
       </List>
