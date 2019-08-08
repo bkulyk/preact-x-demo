@@ -25,6 +25,8 @@ export { default as Ripple } from './ripple';
 export { default as Select } from './select';
 export { default as Slider } from './slider';
 export { default as Switch } from './switch';
+export { default as Tab } from './tab';
+export { default as TabBar } from './tab-bar';
 export { default as TextField } from './text-field';
 export { default as Theme } from './theme';
 export { default as Typography } from './typography';
