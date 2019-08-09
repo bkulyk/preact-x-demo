@@ -1,23 +1,24 @@
 import babel from 'rollup-plugin-babel';
-// import commonjs from 'rollup-plugin-commonjs';
+import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
-import url from 'rollup-plugin-url';
-import { terser } from 'rollup-plugin-terser';
-// import svgr from '@svgr/rollup';
+import glob from 'glob';
+import R from 'rambda';
+import { basename } from 'path';
 import pkg from './package.json';
 
+const chunks = R.fromPairs(R.map(
+  path => [R.head(R.split('.', basename(path))), path],
+  glob.sync('src/*'),
+));
+
 const plugins = [
-  terser(),
-  external(),
-  // url(),
-  // svgr(),
-  babel({
-    exclude: 'node_modules/**',
-    plugins: ['external-helpers'],
-  }),
   resolve(),
-  // commonjs(),
+  commonjs({ include: 'node_modules/**' }),
+  external(),
+  babel({
+    runtimeHelpers: true,
+  }),
 ];
 
 export default [
@@ -37,15 +38,16 @@ export default [
     ],
     plugins,
   },
-  // {
-  //   input: {
-  //     index: 'src/index',
-  //     'app-bar': 'src/app-bar',
-  //     'base-fonts': 'src/base-fonts',
-  //   },
-  //   output: {
-  //     dir: 'esm',
-  //     format: 'esm',
-  //   },
-  // },
+  {
+    external: [
+      'react',
+      'react-dom',
+    ],
+    input: chunks,
+    output: {
+      dir: 'esm',
+      format: 'esm',
+    },
+    plugins,
+  },
 ];

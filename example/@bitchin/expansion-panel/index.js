@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { bool, func, node } from 'prop-types';
 import Transition from '../transition';
-import ExpansionSummary from './expansion-summary';
+import Summary from './expansion-summary';
 import {
   panelStyles,
   buttonStyles,
@@ -72,4 +72,5 @@ ExpansionPanel.propTypes = {
   open: bool,
 };
 
+export const ExpansionSummary = Summary;
 export default ExpansionPanel;

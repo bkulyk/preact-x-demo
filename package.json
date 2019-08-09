@@ -1,6 +1,6 @@
 {
   "name": "@bitchin/react-material-web",
-  "version": "0.0.1-alpha-1.1",
+  "version": "0.1.1-prealpha-1.2",
   "description": "",
   "author": "",
   "license": "MIT",
@@ -17,7 +17,7 @@
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build": "mkdir src && cp -r example/@bitchin/* src/ && rollup -c && rm -rf src",
+    "build": "mkdir src && cp -r example/@bitchin/* src/ && cross-env NODE_ENV=production rollup -c && rm -rf src",
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && cross-env PUBLIC_PATH=react-material-web npm run build",
     "deploy": "gh-pages -d example/dist",
@@ -50,15 +50,16 @@
     "@material/top-app-bar": "^3.1.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
     "@svgr/rollup": "^2.4.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-react": "^7.0.0-beta.3",
+    "babel-preset-react-app": "^8.0.0-next.74",
     "clsx": "^1.0.4",
-    "cross-env": "^5.1.4",
+    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-standard": "^11.0.0",
@@ -73,7 +74,9 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^3.1.0",
     "gh-pages": "^1.2.0",
+    "glob": "^7.1.4",
     "material-components-web": "^3.1.0",
+    "rambda": "^2.14.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^1.1.4",
@@ -86,6 +89,7 @@
     "rollup-plugin-url": "^2.2.2"
   },
   "files": [
-    "dist"
+    "dist",
+    "esm"
   ]
 }

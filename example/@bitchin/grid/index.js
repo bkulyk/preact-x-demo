@@ -38,3 +38,5 @@ Grid.propTypes = {
 };
 
 export default Grid;
+export { default as GridCell } from './cell';
+export { default as GridInner } from './inner';
