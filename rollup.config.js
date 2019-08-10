@@ -7,10 +7,19 @@ import R from 'rambda';
 import { basename } from 'path';
 import pkg from './package.json';
 
-const chunks = R.fromPairs(R.map(
+const esmChunks = R.fromPairs(R.map(
   path => [R.head(R.split('.', basename(path))), path],
   glob.sync('src/*'),
 ));
+
+// the structure needs to be a little flatter than with the
+// esm imports because it doesn't seem to follow the index
+// files
+const cjsChunks = R.fromPairs(R.map(
+  path => [R.head(R.split('.', basename(path))), path],
+  glob.sync('src/**/*.js'),
+));
+cjsChunks.index = 'src/index';
 
 const plugins = [
   resolve(),
@@ -22,31 +31,46 @@ const plugins = [
 ];
 
 export default [
+  // {
+  //   input: 'src/index.js',
+  //   output: [
+  //     {
+  //       file: pkg.main,
+  //       format: 'cjs',
+  //       sourcemap: true,
+  //     },
+  //     {
+  //       file: pkg.module,
+  //       format: 'es',
+  //       sourcemap: true,
+  //     },
+  //   ],
+  //   plugins,
+  // },
   {
-    input: 'src/index.js',
+    // esm modules for a la carte imports for host apps will
+    // help keep bundle sizes to a minimum in host apps.
+    external: [
+      'react',
+      'react-dom',
+    ],
+    input: esmChunks,
     output: [
       {
-        file: pkg.main,
-        format: 'cjs',
-        sourcemap: true,
-      },
-      {
-        file: pkg.module,
-        format: 'es',
-        sourcemap: true,
+        dir: 'esm',
+        format: 'esm',
       },
     ],
     plugins,
   },
   {
-    external: [
-      'react',
-      'react-dom',
-    ],
-    input: chunks,
+    // the cjs chunks will be used in tests for host apps as jest
+    // seems to have issues when node_modules use es6 imports.
+    input: cjsChunks,
     output: {
-      dir: 'esm',
-      format: 'esm',
+      dir: 'cjs',
+      format: 'cjs',
+      sourcemap: true,
     },
     plugins,
   },
