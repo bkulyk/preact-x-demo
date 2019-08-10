@@ -31,22 +31,6 @@ const plugins = [
 ];
 
 export default [
-  // {
-  //   input: 'src/index.js',
-  //   output: [
-  //     {
-  //       file: pkg.main,
-  //       format: 'cjs',
-  //       sourcemap: true,
-  //     },
-  //     {
-  //       file: pkg.module,
-  //       format: 'es',
-  //       sourcemap: true,
-  //     },
-  //   ],
-  //   plugins,
-  // },
   {
     // esm modules for a la carte imports for host apps will
     // help keep bundle sizes to a minimum in host apps.
