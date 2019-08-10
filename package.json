@@ -89,7 +89,7 @@
     "rollup-plugin-url": "^2.2.2"
   },
   "files": [
-    "dist",
+    "cjs",
     "esm"
   ]
 }
