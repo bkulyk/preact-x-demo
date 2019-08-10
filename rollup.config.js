@@ -5,7 +5,6 @@ import resolve from 'rollup-plugin-node-resolve';
 import glob from 'glob';
 import R from 'rambda';
 import { basename } from 'path';
-import pkg from './package.json';
 
 const esmChunks = R.fromPairs(R.map(
   path => [R.head(R.split('.', basename(path))), path],
