@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create an element with a class name and a type 1`] = `
+<li
+  className="my-custom-class"
+/>
+`;
+
+exports[`the component should be able set props 1`] = `
+<div
+  className="my-custom-class additional Class"
+  data-something="someData"
+/>
+`;
+
+exports[`the component should be able set props 2`] = `
+<span
+  className="my-custom-span"
+>
+  child data
+</span>
+`;

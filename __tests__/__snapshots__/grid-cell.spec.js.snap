@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="whatever mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--order-2 mdc-layout-grid__cell--align-top"
+  data-text="test"
+/>
+`;
+
+exports[`should render with with phone and fixed width 1`] = `
+<div
+  className="custom mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone mdc-layout-grid--fixed-column-width"
+/>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<i
+  className="material-icons "
+  title="favorite"
+>
+  favorite
+</i>
+`;
+
+exports[`should render correctly with children instead of icon prop 1`] = `
+<i
+  className="material-icons "
+  title="favorite"
+>
+  favorite
+</i>
+`;
+
+exports[`should render correctly with extra props 1`] = `
+<i
+  className="material-icons custom"
+  data-something="something"
+  title="favorite"
+>
+  favorite
+</i>
+`;

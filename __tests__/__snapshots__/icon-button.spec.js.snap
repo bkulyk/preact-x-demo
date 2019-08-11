@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<button
+  class="mdc-button mdc-button--raised"
+  type="button"
+>
+  <span
+    class="mdc-button__label"
+  >
+    <i
+      class="material-icons mdc-button__icon"
+      title="favorite"
+    >
+      favorite
+    </i>
+  </span>
+</button>
+`;

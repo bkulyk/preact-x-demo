@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly, with different props 1`] = `
+<div
+  className="mdc-card__primary-action"
+>
+  <div
+    className="mdc-card__media mdc-card__media--square"
+    style={
+      Object {
+        "backgroundImage": "url(http://example.com/awesome-pic.png)",
+      }
+    }
+  >
+    <div
+      className="mdc-card__media-content"
+    />
+  </div>
+</div>
+`;
+
+exports[`renders correctly, with properties 1`] = `
+<div
+  className="mdc-card__primary-action"
+>
+  <div
+    className="mdc-card__media mdc-card__media--16-9"
+    style={
+      Object {
+        "backgroundImage": "url(http://example.com/awesome-pic.png)",
+      }
+    }
+  >
+    <div
+      className="mdc-card__media-content"
+    >
+      some-title
+    </div>
+  </div>
+</div>
+`;

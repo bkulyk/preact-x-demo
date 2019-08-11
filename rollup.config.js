@@ -43,7 +43,6 @@ export default [
     output: {
       dir: 'cjs',
       format: 'cjs',
-      sourcemap: true,
     },
     plugins,
   },

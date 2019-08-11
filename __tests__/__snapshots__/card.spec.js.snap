@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render with some defaults 1`] = `
+<div
+  className="mdc-card"
+  style={
+    Object {
+      "height": "auto",
+      "width": "350px",
+    }
+  }
+>
+  <div
+    className="mdc-card__primary-action"
+  />
+  <div
+    className="demo-card__primary"
+    style={
+      Object {
+        "padding": "0px 16px",
+      }
+    }
+  >
+    <Typography
+      className="card__title"
+      component="h2"
+      use="headline6"
+    />
+    <Typography
+      className="card__subtitle"
+      component="h3"
+      use="subtitle2"
+    />
+  </div>
+  <Typography
+    className="demo-card__secondary"
+    component="div"
+    style={
+      Object {
+        "padding": "0px 16px 8px 16px",
+      }
+    }
+    use="body2"
+  />
+</div>
+`;
+
+exports[`should accept a bunch of props 1`] = `
+<div
+  className="mdc-card"
+  style={
+    Object {
+      "height": "auto",
+      "width": "350px",
+    }
+  }
+>
+  <div
+    className="mdc-card__primary-action"
+  >
+    -media-placeholder-
+  </div>
+  <div
+    className="demo-card__primary"
+    style={
+      Object {
+        "padding": "0px 16px",
+      }
+    }
+  >
+    <Typography
+      className="card__title"
+      component="h2"
+      use="headline6"
+    >
+      Star Wars IV
+    </Typography>
+    <Typography
+      className="card__subtitle"
+      component="h3"
+      use="subtitle2"
+    >
+      A New Hope
+    </Typography>
+  </div>
+  <Typography
+    className="demo-card__secondary"
+    component="div"
+    style={
+      Object {
+        "padding": "0px 16px 8px 16px",
+      }
+    }
+    use="body2"
+  >
+    -content-placeholder-
+  </Typography>
+  -children-placeholder-
+</div>
+`;

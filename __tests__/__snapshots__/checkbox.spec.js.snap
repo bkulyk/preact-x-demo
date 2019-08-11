@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly with defaults 1`] = `
+<div
+  className="mdc-form-field"
+>
+  <div
+    className="mdc-checkbox"
+  >
+    <input
+      className="mdc-checkbox__native-control"
+      disabled={false}
+      type="checkbox"
+    />
+    <div
+      className="mdc-checkbox__background"
+    >
+      <svg
+        className="mdc-checkbox__checkmark"
+        viewBox="0 0 24 24"
+      >
+        <path
+          className="mdc-checkbox__checkmark-path"
+          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+          fill="none"
+        />
+      </svg>
+      <div
+        className="mdc-checkbox__mixedmark"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render correctly with indeterminate 1`] = `
+<div
+  className="mdc-form-field ind-class"
+>
+  <div
+    className="mdc-checkbox"
+  >
+    <input
+      className="mdc-checkbox__native-control"
+      disabled={false}
+      id="ind-checkbox"
+      type="checkbox"
+    />
+    <div
+      className="mdc-checkbox__background"
+    >
+      <svg
+        className="mdc-checkbox__checkmark"
+        viewBox="0 0 24 24"
+      >
+        <path
+          className="mdc-checkbox__checkmark-path"
+          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+          fill="none"
+        />
+      </svg>
+      <div
+        className="mdc-checkbox__mixedmark"
+      />
+    </div>
+  </div>
+  <label
+    htmlFor="ind-checkbox"
+  >
+    on/off
+  </label>
+</div>
+`;
+
+exports[`render correctly with some props 1`] = `
+<div
+  className="mdc-form-field extra-class"
+>
+  <div
+    className="mdc-checkbox mdc-checkbox--disabled"
+  >
+    <input
+      className="mdc-checkbox__native-control"
+      disabled={true}
+      id="my-checkbox"
+      type="checkbox"
+    />
+    <div
+      className="mdc-checkbox__background"
+    >
+      <svg
+        className="mdc-checkbox__checkmark"
+        viewBox="0 0 24 24"
+      >
+        <path
+          className="mdc-checkbox__checkmark-path"
+          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+          fill="none"
+        />
+      </svg>
+      <div
+        className="mdc-checkbox__mixedmark"
+      />
+    </div>
+  </div>
+  <label
+    htmlFor="my-checkbox"
+  >
+    on/off
+  </label>
+</div>
+`;

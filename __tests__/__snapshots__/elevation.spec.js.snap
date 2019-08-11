@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly, with default z prop 1`] = `
+<div
+  className="mdc-elevation-transition mdc-elevation--z1 mine"
+  title="some-title"
+  url="http://example.com/awesome-pic.png"
+>
+  content
+</div>
+`;
+
+exports[`renders correctly, with z prop 1`] = `
+<div
+  className="mdc-elevation-transition mdc-elevation--z12 mine"
+  title="some-title"
+  url="http://example.com/awesome-pic.png"
+>
+  content
+</div>
+`;
