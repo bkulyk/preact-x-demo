@@ -6,19 +6,10 @@ import glob from 'glob';
 import R from 'rambda';
 import { basename } from 'path';
 
-const esmChunks = R.fromPairs(R.map(
+const chunks = R.fromPairs(R.map(
   path => [R.head(R.split('.', basename(path))), path],
-  glob.sync('src/*'),
+  glob.sync('src/*.js'),
 ));
-
-// the structure needs to be a little flatter than with the
-// esm imports because it doesn't seem to follow the index
-// files
-const cjsChunks = R.fromPairs(R.map(
-  path => [R.head(R.split('.', basename(path))), path],
-  glob.sync('src/**/*.js'),
-));
-cjsChunks.index = 'src/index';
 
 const plugins = [
   resolve(),
@@ -37,7 +28,7 @@ export default [
       'react',
       'react-dom',
     ],
-    input: esmChunks,
+    input: chunks,
     output: [
       {
         dir: 'esm',
@@ -48,8 +39,7 @@ export default [
   },
   {
     // the cjs chunks will be used in tests for host apps as jest
-    // seems to have issues when node_modules use es6 imports.
-    input: cjsChunks,
+    input: chunks,
     output: {
       dir: 'cjs',
       format: 'cjs',

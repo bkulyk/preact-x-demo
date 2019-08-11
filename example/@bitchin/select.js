@@ -14,10 +14,10 @@ import {
 } from 'prop-types';
 import clsx from 'clsx';
 import { MDCSelect } from '@material/select';
-import EnhancedInput from './enhanced';
-import StandardInput from './standard';
-import Outline from '../outline';
-import HelperLine from '../helper-line';
+import EnhancedInput from './select/enhanced';
+import StandardInput from './select/standard';
+import Outline from './outline';
+import HelperLine from './helper-line';
 
 const Select = ({
   id,

@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`disabled button should render correctly 1`] = `
+<Ripple>
+  <button
+    className="mdc-button mdc-button--raised"
+    disabled={true}
+    onClick={[Function]}
+    style={Object {}}
+    type="button"
+  >
+    <span
+      className="mdc-button__label"
+    >
+      Facebook
+    </span>
+  </button>
+</Ripple>
+`;
+
+exports[`link button should render correctly 1`] = `
+<Ripple>
+  <button
+    className="mdc-button"
+    disabled={false}
+    onClick={[Function]}
+    style={Object {}}
+    type="button"
+  >
+    <span
+      className="mdc-button__label"
+    >
+      Facebook
+    </span>
+  </button>
+</Ripple>
+`;
+
+exports[`outlined button should render correctly 1`] = `
+<Ripple>
+  <button
+    className="mdc-button mdc-button--outlined"
+    disabled={false}
+    onClick={[Function]}
+    style={Object {}}
+    type="button"
+  >
+    <span
+      className="mdc-button__label"
+    >
+      Facebook
+    </span>
+  </button>
+</Ripple>
+`;
+
+exports[`renders a secondary button 1`] = `
+<Ripple>
+  <button
+    className="mdc-button mdc-button--raised mdc-theme--secondary-bg mdc-theme--on-secondary mdc-theme--secondary"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "var(--mdc-theme-secondary, #018786)",
+      }
+    }
+    type="button"
+  >
+    <span
+      className="mdc-button__label"
+    >
+      Facebook
+    </span>
+  </button>
+</Ripple>
+`;
+
+exports[`renders correctly 1`] = `
+<Ripple>
+  <button
+    className="mdc-button mdc-button--raised"
+    disabled={false}
+    onClick={[Function]}
+    style={Object {}}
+    type="button"
+  >
+    <span
+      className="mdc-button__label"
+    >
+      Facebook
+    </span>
+  </button>
+</Ripple>
+`;
+
+exports[`should allow click events 1`] = `
+<Ripple>
+  <button
+    className="mdc-button mdc-button--raised"
+    disabled={false}
+    onClick={[Function]}
+    style={Object {}}
+    type="button"
+  >
+    <span
+      className="mdc-button__label"
+    >
+      Facebook
+    </span>
+  </button>
+</Ripple>
+`;

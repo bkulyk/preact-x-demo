@@ -4,7 +4,7 @@ import {
   node,
   object as obj,
 } from 'prop-types';
-import Typography from '../typography';
+import Typography from './typography';
 
 const Card = ({
   title = '',

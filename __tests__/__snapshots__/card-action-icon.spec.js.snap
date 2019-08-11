@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly, it is pretty much just a button 1`] = `
+<Button
+  className="mdc-icon-button mdc-card__action mdc-card__action--icon"
+>
+  <i
+    className="material-icons mdc-icon-button__icon"
+  >
+    View
+  </i>
+</Button>
+`;
+
+exports[`should pass on any props to the button 1`] = `
+<Button
+  className="mdc-icon-button mdc-card__action mdc-card__action--icon something"
+  data-x="x"
+  raised={true}
+>
+  <i
+    className="material-icons mdc-icon-button__icon"
+  >
+    favorite
+  </i>
+</Button>
+`;
+
+exports[`should send click events to the button 1`] = `
+<Button
+  className="mdc-icon-button mdc-card__action mdc-card__action--icon"
+  onClick={[Function]}
+>
+  <i
+    className="material-icons mdc-icon-button__icon"
+  >
+    favorite
+  </i>
+</Button>
+`;

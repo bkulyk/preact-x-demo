@@ -6,23 +6,30 @@ import {
   bool,
   string as str,
   oneOf,
+  shape,
 } from 'prop-types';
 import clsx from 'clsx';
 import Ripple from './ripple';
 
+const secondaryStyleFix = {
+  borderColor: '#018786',
+  borderColor: 'var(--mdc-theme-secondary, #018786)',
+};
+
 const Button = ({
-  type,
-  children,
-  onClick,
-  className,
-  raised,
-  ripple,
-  disabled,
-  outlined,
-  dense,
-  unelevated,
-  secondary,
-  href,
+  type = 'button',
+  children = 'Submit',
+  onClick = () => {},
+  className = '',
+  raised = true,
+  ripple = true,
+  disabled = false,
+  outlined = false,
+  dense = false,
+  unelevated = false,
+  secondary = false,
+  href = null,
+  style = {}
 }) => {
   const classes = clsx(
     'mdc-button',
@@ -39,9 +46,19 @@ const Button = ({
 
   const Wrapper = ripple ? Ripple : Fragment;
 
+  const buttonStyle = {
+    ...style,
+    ...(secondary ? secondaryStyleFix : {}),
+  };
   return (
     <Wrapper>
-      <button className={classes} type={type} onClick={onClick} disabled={disabled}>
+      <button
+        style={buttonStyle}
+        className={classes}
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+      >
         <span className="mdc-button__label">
           {children}
         </span>
@@ -63,21 +80,7 @@ Button.propTypes = {
   unelevated: bool,
   secondary: bool,
   href: str,
-};
-
-Button.defaultProps = {
-  type: 'button',
-  onClick: () => {},
-  children: 'Submit',
-  className: '',
-  raised: true,
-  ripple: true,
-  disabled: false,
-  outlined: false,
-  dense: false,
-  unelevated: false,
-  href: null,
-  secondary: false,
+  style: shape(),
 };
 
 export default Button;

@@ -2,10 +2,10 @@ import React, { useRef, useEffect, cloneElement } from 'react';
 import clsx from 'clsx';
 import { string as str, bool, node } from 'prop-types';
 import { MDCTextField } from '@material/textfield';
-import OutlineLabel from './outline-label';
-import RippleLine from './ripple-line';
-import HelperLine from '../helper-line';
-import Input from './input';
+import OutlineLabel from './text-field/outline-label';
+import RippleLine from './text-field/ripple-line';
+import Input from './text-field/input';
+import HelperLine from './helper-line';
 
 const makeIcon = icon => (icon
   ? cloneElement(icon, { className: 'mdc-text-field__icon' })

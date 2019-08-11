@@ -1,12 +1,16 @@
 import React from 'react';
-import { func, node } from 'prop-types';
-import Button from '../button';
+import { string as str, node } from 'prop-types';
+import Button from './button';
 
 const CardActionIcon = ({
   children,
-  onClick = () => {},
+  className = '',
+  ...props
 }) => (
-  <Button className="mdc-icon-button mdc-card__action mdc-card__action--icon" onClick={onClick}>
+  <Button
+    className={`mdc-icon-button mdc-card__action mdc-card__action--icon ${className}`.trimRight()}
+    {...props}
+  >
     <i className="material-icons mdc-icon-button__icon">
       {children}
     </i>
@@ -15,7 +19,7 @@ const CardActionIcon = ({
 
 CardActionIcon.propTypes = {
   children: node.isRequired,
-  onClick: func,
+  className: str,
 };
 
 export default CardActionIcon;
