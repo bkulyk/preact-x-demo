@@ -8,6 +8,7 @@ import TextFieldPage from './text-field-page';
 import SelectPage from './select-page';
 import SliderPage from './slider-page';
 import SwitchPage from './switch-page';
+import TabBarPage from './tab-bar-page';
 import ThemePage from './theme-page';
 import ButtonPage from './button-page';
 import CheckboxPage from './checkbox-page';
@@ -23,6 +24,7 @@ export default [
   { title: 'Elevation', path: '/elevation', component: ElevationPage },
   { title: 'Expansion Panels', path: '/expansion-panels', component: ExpansionPanelPage },
   { title: 'Layout Grids', path: '/layout-grids', component: GridPage },
+  { title: 'Tab Bars', path: '/tab-bars', component: TabBarPage },
   { title: 'Text Fields', path: '/text-field', component: TextFieldPage },
   { title: 'Select Boxes', path: '/select-boxes', component: SelectPage },
   { title: 'Sliders', path: '/sliders', component: SliderPage },

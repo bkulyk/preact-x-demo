@@ -43,7 +43,6 @@ const DemoPage = ({ history }) => {
         <ListItem>Linear Progress Indicator</ListItem>
         <ListItem>Menu</ListItem>
         <ListItem>Snackbar</ListItem>
-        <ListItem>Tab Bar</ListItem>
       </List>
     </Fragment>
   );
