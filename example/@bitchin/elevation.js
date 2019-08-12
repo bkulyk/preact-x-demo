@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOf, string as str, node } from 'prop-types';
+import { oneOf, string as str } from 'prop-types';
 
 const Elevation = ({
   z = 1,

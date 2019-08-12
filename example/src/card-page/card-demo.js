@@ -9,7 +9,7 @@ import {
   CardActionIcons,
   Typography,
 } from '@bitchin/react-material-web';
-import PageTitle from '../page-title'
+import PageTitle from '../page-title';
 import Example from '../example';
 
 const CardDemo = () => (

@@ -12,7 +12,6 @@ import clsx from 'clsx';
 import Ripple from './ripple';
 
 const secondaryStyleFix = {
-  borderColor: '#018786',
   borderColor: 'var(--mdc-theme-secondary, #018786)',
 };
 
@@ -29,7 +28,7 @@ const Button = ({
   unelevated = false,
   secondary = false,
   href = null,
-  style = {}
+  style = {},
 }) => {
   const classes = clsx(
     'mdc-button',

@@ -1,7 +1,7 @@
 import React from 'react';
 import GridCell from '@bitchin/grid-cell';
 import { shallow } from './enzyme';
-import { it, expect } from './jest'
+import { it, expect } from './jest';
 
 it('should render correctly', () => {
   expect(shallow((

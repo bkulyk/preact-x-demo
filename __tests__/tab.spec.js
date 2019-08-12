@@ -1,7 +1,7 @@
 import React from 'react';
 import Tab from '@bitchin/tab';
 import { shallow } from './enzyme';
-import { it, expect } from './jest'
+import { it, expect } from './jest';
 
 it('should render correctly', () => {
   expect(shallow((

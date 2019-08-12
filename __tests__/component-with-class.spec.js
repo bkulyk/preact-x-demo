@@ -17,7 +17,7 @@ it('the component should be able set props', () => {
   expect(shallow(<Comp data-something="someData" className="additional Class" />)).toMatchSnapshot();
 });
 
-it('the component should be able set props', () => {
+it('the component should have children prop', () => {
   const Comp = componentWithClass('span', 'my-custom-span');
   expect(shallow(<Comp>child data</Comp>)).toMatchSnapshot();
 });

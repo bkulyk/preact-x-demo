@@ -6,7 +6,7 @@ import { it, expect } from './jest';
 it('should render correctly', () => {
   const wrapper = shallow((
     <Transition>
-      {(state) => (
+      {state => (
         <div>{state}</div>
       )}
     </Transition>

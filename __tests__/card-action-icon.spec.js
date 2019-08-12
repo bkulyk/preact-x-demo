@@ -14,6 +14,6 @@ it('should send click events to the button', () => {
 
 it('should pass on any props to the button', () => {
   expect(shallow((
-    <CardActionIcon className='something' data-x="x" raised>favorite</CardActionIcon>
+    <CardActionIcon className="something" data-x="x" raised>favorite</CardActionIcon>
   ))).toMatchSnapshot();
 });

@@ -22,7 +22,7 @@
     "predeploy": "cd example && npm install && cross-env PUBLIC_PATH=react-material-web npm run build",
     "deploy": "gh-pages -d example/dist",
     "gh-pages": "gh-pages",
-    "lint": "eslint example/",
+    "lint": "eslint example/ __tests__",
     "lint:fix": "eslint --fix example/",
     "start": "cd example/ && npm start"
   },
@@ -70,7 +70,7 @@
     "eslint-detailed-reporter": "^0.8.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.14.1",
+    "eslint-plugin-jest": "^22.15.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.0",

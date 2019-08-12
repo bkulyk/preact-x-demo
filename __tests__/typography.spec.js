@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@bitchin/typography';
 import { shallow } from './enzyme';
-import { it, expect } from './jest'
+import { it, expect } from './jest';
 
 it('should render correctly', () => {
   expect(shallow((
@@ -11,7 +11,7 @@ it('should render correctly', () => {
   ))).toMatchSnapshot();
 });
 
-it('should render correctly', () => {
+it('should render correctly with component prop', () => {
   expect(shallow((
     <Typography
       use="headline5"
@@ -22,7 +22,7 @@ it('should render correctly', () => {
   ))).toMatchSnapshot();
 });
 
-it('should render correctly', () => {
+it('should render correctly with many props', () => {
   expect(shallow((
     <Typography
       use="overline"

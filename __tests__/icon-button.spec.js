@@ -4,6 +4,6 @@ import { render } from './enzyme';
 import { it, expect } from './jest';
 
 it('should render correctly', () => {
-  expect(render(<IconButton icon='favorite'>Favorite</IconButton>))
+  expect(render(<IconButton icon="favorite">Favorite</IconButton>))
     .toMatchSnapshot();
 });

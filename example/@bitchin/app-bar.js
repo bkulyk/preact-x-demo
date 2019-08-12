@@ -1,6 +1,6 @@
 /* eslint jsx-a11y/anchor-is-valid: off */
 import React, { useEffect, useRef, Fragment } from 'react';
-import { string as str, func } from 'prop-types';
+import { string as str, func, bool } from 'prop-types';
 import clsx from 'clsx';
 import { MDCTopAppBar } from '@material/top-app-bar';
 
@@ -27,7 +27,7 @@ const AppBar = ({
       'mdc-top-app-bar--fixed': fixed,
       'mdc-top-app-bar--short': short,
       'mdc-top-app-bar--short-collapsed': shortCollapsed,
-    }
+    },
   );
   return (
     <Fragment>
@@ -46,15 +46,6 @@ const AppBar = ({
               </a>
               <span className="mdc-top-app-bar__title" style={{ color: 'var(--mdc-theme-on-primary)' }}>{title}</span>
             </section>
-            {/* {
-              toolbar
-                ? (
-                  <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-                    {toolbar}
-                  </section>
-                )
-                : ''
-            } */}
           </div>
         </header>
       </div>
@@ -66,6 +57,11 @@ const AppBar = ({
 AppBar.propTypes = {
   title: str,
   onNav: func,
+  prominent: bool,
+  dense: bool,
+  fixed: bool,
+  short: bool,
+  shortCollapsed: bool,
 };
 
 export default AppBar;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { default as Card } from '@bitchin/card';
+import Card from '@bitchin/card';
 import { shallow } from './enzyme';
 
 it('render with some defaults', () => {
@@ -13,7 +13,8 @@ it('should accept a bunch of props', () => {
       subtitle="A New Hope"
       media="-media-placeholder-"
       content="-content-placeholder-"
-      children="-children-placeholder-"
-    />
+    >
+      -children-placeholder-
+    </Card>
   ))).toMatchSnapshot();
 });

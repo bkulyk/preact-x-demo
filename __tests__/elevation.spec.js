@@ -21,8 +21,9 @@ it('renders correctly, with z prop', () => {
       title="some-title"
       url="http://example.com/awesome-pic.png"
       className="mine"
-      children="content"
       z="12"
-    />
+    >
+      content
+    </Elevation>
   ))).toMatchSnapshot();
 });
