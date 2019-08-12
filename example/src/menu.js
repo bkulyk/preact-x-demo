@@ -1,5 +1,6 @@
 /* eslint import/no-cycle: off */
 import HomePage from './home-page';
+import AppBarPage from './app-bar-page';
 import CardPage from './card-page';
 import DrawerPage from './drawer-page';
 import ElevationPage from './elevation-page';
@@ -17,6 +18,7 @@ import RadioButtonPage from './radio-button-page';
 
 export default [
   { title: 'Home', path: '/', component: HomePage },
+  { title: 'App Bars', path: '/app-bars', component: AppBarPage },
   { title: 'Buttons', path: '/buttons', component: ButtonPage },
   { title: 'Cards', path: '/cards', component: CardPage },
   { title: 'Checkboxes', path: '/checkboxes', component: CheckboxPage },
