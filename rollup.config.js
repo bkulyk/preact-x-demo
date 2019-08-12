@@ -1,34 +1,49 @@
-import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
-import external from 'rollup-plugin-peer-deps-external'
+import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
+import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
-import url from 'rollup-plugin-url';
-import svgr from '@svgr/rollup';
-import pkg from './package.json';
+import glob from 'glob';
+import R from 'rambda';
+import { basename } from 'path';
 
-export default {
-  input: 'src/index.js',
-  output: [
-    {
-      file: pkg.main,
+const chunks = R.fromPairs(R.map(
+  path => [R.head(R.split('.', basename(path))), path],
+  glob.sync('src/*.js'),
+));
+
+const plugins = [
+  resolve(),
+  commonjs({ include: 'node_modules/**' }),
+  external(),
+  babel({
+    runtimeHelpers: true,
+  }),
+];
+
+export default [
+  {
+    // esm modules for a la carte imports for host apps will
+    // help keep bundle sizes to a minimum in host apps.
+    external: [
+      'react',
+      'react-dom',
+    ],
+    input: chunks,
+    output: [
+      {
+        dir: 'esm',
+        format: 'esm',
+      },
+    ],
+    plugins,
+  },
+  {
+    // the cjs chunks will be used in tests for host apps as jest
+    input: chunks,
+    output: {
+      dir: 'cjs',
       format: 'cjs',
-      sourcemap: true,
     },
-    {
-      file: pkg.module,
-      format: 'es',
-      sourcemap: true,
-    }
-  ],
-  plugins: [
-    external(),
-    url(),
-    svgr(),
-    babel({
-      exclude: 'node_modules/**',
-      plugins: ['external-helpers'],
-    }),
-    resolve(),
-    commonjs(),
-  ]
-}
+    plugins,
+  },
+];

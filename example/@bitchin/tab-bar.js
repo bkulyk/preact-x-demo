@@ -11,13 +11,13 @@ const TabBar = ({
   const [tabBar, setTabBar] = useState();
 
   useEffect(() => {
-    const t = new MDCTabBar(ref.current);
-    t.listen('MDCTabBar:activated', ({ detail }) => onChange(detail));
+    const mdcTabBar = new MDCTabBar(ref.current);
+    mdcTabBar.listen('MDCTabBar:activated', ({ detail }) => onChange(detail));
     if (activeIndex !== null) {
-      t.activateTab(activeIndex);
+      mdcTabBar.activateTab(activeIndex);
     }
 
-    setTabBar(t);
+    setTabBar(mdcTabBar);
   }, []);
 
   useEffect(() => {

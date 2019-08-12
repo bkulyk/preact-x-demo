@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should be able to render a different component 1`] = `
+<div
+  className="mdc-list custom"
+  data-something="something"
+>
+  some-children
+</div>
+`;
+
+exports[`should render correctly 1`] = `
+<ul
+  className="mdc-list"
+>
+  some-children
+</ul>
+`;

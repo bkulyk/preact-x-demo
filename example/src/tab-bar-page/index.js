@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Typography, TabBar, Tab } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const makeArray = x => Array(x).fill(0, 0, x);
 const makeKey = i => `tab-${i}`;
@@ -9,7 +10,7 @@ const TabBarPage = () => {
   const [currentTab, setCurrentTab] = useState(1);
   return (
     <Fragment>
-      <Typography use="headline4" component="h2">Tab Bar</Typography>
+      <PageTitle>Tab Bar</PageTitle>
 
       <Typography use="headline5" component="h3">Tabs with icons next to labels</Typography>
       <Example>

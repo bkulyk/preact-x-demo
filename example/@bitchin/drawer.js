@@ -7,7 +7,7 @@ import {
 } from 'prop-types';
 import clsx from 'clsx';
 import { MDCDrawer } from '@material/drawer';
-import Header from './header';
+import Header from './drawer/header';
 
 const fixNoneSelectedIssue = (drawerRef) => {
   const activated = drawerRef.current.getElementsByClassName('mdc-list-item--activated').length;

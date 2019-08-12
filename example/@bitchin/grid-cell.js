@@ -9,9 +9,9 @@ import {
 
 const Cell = ({
   span = 1,
-  desktop = false,
-  tablet = false,
-  phone = false,
+  desktop = null,
+  tablet = null,
+  phone = null,
   order = null,
   className = '',
   align = 'top',
@@ -22,12 +22,12 @@ const Cell = ({
     className,
     'mdc-layout-grid__cell',
     {
-      [`mdc-layout-grid__cell--span-${span}`]: span,
-      [`mdc-layout-grid__cell--span-${desktop}`]: desktop,
-      [`mdc-layout-grid__cell--span-${tablet}`]: tablet,
-      [`mdc-layout-grid__cell--span-${phone}`]: phone,
+      [`mdc-layout-grid__cell--span-${span}`]: (desktop || tablet || phone ? null : span),
       [`mdc-layout-grid__cell--order-${order}`]: order,
       [`mdc-layout-grid__cell--align-${align}`]: align,
+      [`mdc-layout-grid__cell--span-${desktop}-desktop`]: desktop,
+      [`mdc-layout-grid__cell--span-${tablet}-tablet`]: tablet,
+      [`mdc-layout-grid__cell--span-${phone}-phone`]: phone,
       'mdc-layout-grid--fixed-column-width': fixedWidth,
     },
   ]);
@@ -39,9 +39,9 @@ const Cell = ({
 Cell.propTypes = {
   align: oneOf(['top', 'middle', 'bottom']),
   span: num,
-  desktop: bool,
-  tablet: bool,
-  phone: bool,
+  desktop: num,
+  tablet: num,
+  phone: num,
   order: num,
   className: str,
   fixedWidth: bool,

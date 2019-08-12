@@ -2,10 +2,10 @@ import React, { useRef, useEffect, cloneElement } from 'react';
 import clsx from 'clsx';
 import { string as str, bool, node } from 'prop-types';
 import { MDCTextField } from '@material/textfield';
-import OutlineLabel from './outline-label';
-import RippleLine from './ripple-line';
-import HelperLine from '../helper-line';
-import Input from './input';
+import OutlineLabel from './text-field/outline-label';
+import RippleLine from './text-field/ripple-line';
+import Input from './text-field/input';
+import HelperLine from './helper-line';
 
 const makeIcon = icon => (icon
   ? cloneElement(icon, { className: 'mdc-text-field__icon' })
@@ -29,8 +29,7 @@ const TextField = ({
   const ref = useRef();
 
   useEffect(() => {
-    /* eslint no-new: off */
-    new MDCTextField(ref.current);
+    MDCTextField.attachTo(ref.current);
   }, []);
 
   const classNames = clsx(
@@ -52,27 +51,15 @@ const TextField = ({
       <div className={classNames} {...props} ref={ref}>
         {makeIcon(leadingIcon)}
         {makeIcon(trailingIcon)}
-        {
-          !children
-            ? (<Input {...props} textarea={textarea} label={label} />)
-            : children
-        }
-        {
-          label && !outlined && !fullWidth
-            ? (<label className="mdc-floating-label" htmlFor={id}>{label}</label>)
-            : ''
-        }
+        {children || (<Input {...props} textarea={textarea} label={label} />)}
+        {label && !outlined && !fullWidth && (<label className="mdc-floating-label" htmlFor={id}>{label}</label>)}
         {
           outlined
             ? <OutlineLabel id={id}>{label}</OutlineLabel>
             : <RippleLine>{label}</RippleLine>
         }
       </div>
-      {
-        help
-          ? (<HelperLine>{help}</HelperLine>)
-          : ''
-      }
+      {help && (<HelperLine>{help}</HelperLine>)}
     </div>
   );
 };

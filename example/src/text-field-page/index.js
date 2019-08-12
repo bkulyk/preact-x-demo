@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { node } from 'prop-types';
 import { Typography, TextField, Icon } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const Eg = ({ children }) => (<div style={{ margin: '10px 0px' }}>{children}</div>);
 Eg.propTypes = {
@@ -10,7 +11,7 @@ Eg.propTypes = {
 
 const TextFieldPage = () => (
   <Fragment>
-    <Typography use="headline4" component="h2">Form Controls</Typography>
+    <PageTitle>Form Controls</PageTitle>
 
     <Typography use="headline5" component="h3">Filled Text Input</Typography>
     <Example>

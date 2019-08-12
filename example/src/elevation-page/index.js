@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Typography, Elevation } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const style = {
   textAlign: 'center',
@@ -17,7 +18,7 @@ const ElevationPage = () => {
 
   return (
     <Fragment>
-      <Typography use="headline4" component="h2">Elevation</Typography>
+      <PageTitle>Elevation</PageTitle>
 
       <Typography use="headline5" component="h3">25 levels of depth</Typography>
       <Example>

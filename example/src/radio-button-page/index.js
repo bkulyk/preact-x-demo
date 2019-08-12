@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Typography, RadioButton } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const Eg = ({ ...props }) => (
   <span style={{ marginRight: '15px' }} {...props} />
@@ -8,7 +9,7 @@ const Eg = ({ ...props }) => (
 
 const SliderPage = () => (
   <Fragment>
-    <Typography use="headline4" component="h2">Radio Buttons</Typography>
+    <PageTitle>Radio Buttons</PageTitle>
 
     <Typography use="headline5" component="h3">Simple</Typography>
     <Example>

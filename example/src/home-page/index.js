@@ -9,6 +9,7 @@ import {
 import { withRouter } from 'react-router-dom';
 import { history as historyType } from 'react-router-prop-types';
 import menu from '../menu';
+import PageTitle from '../page-title';
 
 const DemoPage = ({ history }) => {
   const handleNav = (path) => {
@@ -17,10 +18,10 @@ const DemoPage = ({ history }) => {
 
   return (
     <Fragment>
-      <Typography use="headline4">
+      <PageTitle>
         <i>@Bitchin</i>
         /React Material Web
-      </Typography>
+      </PageTitle>
 
       <Typography use="headline5" component="h3">Components Available</Typography>
       <List>

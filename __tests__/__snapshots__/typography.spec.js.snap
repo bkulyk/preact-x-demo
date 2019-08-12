@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<span
+  className="mdc-typography-base mdc-typography--body1"
+>
+  some text
+</span>
+`;
+
+exports[`should render correctly with component prop 1`] = `
+<p
+  className="mdc-typography-base mdc-typography--headline5"
+>
+  some text
+</p>
+`;
+
+exports[`should render correctly with many props 1`] = `
+<div
+  className="custom mdc-typography-base mdc-typography--overline mdc-typography-overflow-ellipsis"
+  data-something="something"
+>
+  some text
+</div>
+`;

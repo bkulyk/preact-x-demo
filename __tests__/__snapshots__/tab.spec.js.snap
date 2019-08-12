@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<button
+  aria-selected="true"
+  className="mdc-tab"
+  role="tab"
+  tabIndex="0"
+  type="button"
+>
+  <span
+    className="mdc-tab__content"
+  >
+    <span
+      className="mdc-tab__text-label"
+    >
+      Nearby
+    </span>
+  </span>
+  <span
+    className="mdc-tab-indicator"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+  <span
+    className="mdc-tab__ripple"
+  />
+</button>
+`;
+
+exports[`should render correctly when active 1`] = `
+<button
+  aria-selected="true"
+  className="mdc-tab mdc-tab--active"
+  role="tab"
+  tabIndex="0"
+  type="button"
+>
+  <span
+    className="mdc-tab__content"
+  >
+    <span
+      aria-hidden="true"
+      className="mdc-tab__icon material-icons"
+    >
+      favorite
+    </span>
+    <span
+      className="mdc-tab__text-label"
+    >
+      Favorite
+    </span>
+  </span>
+  <span
+    className="mdc-tab-indicator mdc-tab-indicator--active"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+  <span
+    className="mdc-tab__ripple"
+  />
+</button>
+`;
+
+exports[`should render correctly when icon and label are stacked 1`] = `
+<button
+  aria-selected="true"
+  className="mdc-tab mdc-tab--stacked mdc-tab--active"
+  role="tab"
+  tabIndex="0"
+  type="button"
+>
+  <span
+    className="mdc-tab__content"
+  >
+    <span
+      aria-hidden="true"
+      className="mdc-tab__icon material-icons"
+    >
+      favorite
+    </span>
+    <span
+      className="mdc-tab__text-label"
+    >
+      Favorite
+    </span>
+  </span>
+  <span
+    className="mdc-tab-indicator mdc-tab-indicator--active"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+  <span
+    className="mdc-tab__ripple"
+  />
+</button>
+`;

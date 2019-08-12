@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="mdc-layout-grid__inner"
+>
+  Something
+</div>
+`;
+
+exports[`should render correctly with props 1`] = `
+<div
+  className="mdc-layout-grid__inner something"
+  data-something="test"
+>
+  Something
+</div>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render be able to render a different component 1`] = `
+<dd
+  className="mdc-list-item"
+/>
+`;
+
+exports[`should render be able to render with props 1`] = `
+<li
+  className="mdc-list-item pilot"
+  data-alliance="Rebel"
+>
+  Han Solo
+</li>
+`;
+
+exports[`should render correctly 1`] = `
+<li
+  className="mdc-list-item"
+/>
+`;

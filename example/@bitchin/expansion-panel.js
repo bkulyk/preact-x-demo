@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { bool, func, node } from 'prop-types';
-import Transition from '../transition';
-import ExpansionSummary from './expansion-summary';
+import Transition from './transition';
+import ExpansionSummary from './expansion-panel/expansion-summary';
 import {
   panelStyles,
   buttonStyles,
   summaryStyles,
   detailsStyles,
-} from './style';
+} from './expansion-panel/style';
 
 const ExpansionPanel = ({
   onChange = () => {},

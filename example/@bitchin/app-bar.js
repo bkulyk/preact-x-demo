@@ -1,11 +1,17 @@
 /* eslint jsx-a11y/anchor-is-valid: off */
 import React, { useEffect, useRef, Fragment } from 'react';
-import { string as str, func } from 'prop-types';
+import { string as str, func, bool } from 'prop-types';
+import clsx from 'clsx';
 import { MDCTopAppBar } from '@material/top-app-bar';
 
 const AppBar = ({
   title = '',
   onNav = () => {},
+  prominent = false,
+  dense = false,
+  fixed = false,
+  short = false,
+  shortCollapsed = false,
 }) => {
   const appBarRef = useRef();
 
@@ -13,10 +19,20 @@ const AppBar = ({
     MDCTopAppBar.attachTo(appBarRef.current);
   });
 
+  const classNames = clsx(
+    'mdc-top-app-bar app-bar',
+    {
+      'mdc-top-app-bar--prominent': prominent,
+      'mdc-top-app-bar--dense': dense,
+      'mdc-top-app-bar--fixed': fixed,
+      'mdc-top-app-bar--short': short,
+      'mdc-top-app-bar--short-collapsed': shortCollapsed,
+    },
+  );
   return (
     <Fragment>
       <div className="mdc-drawer-app-content">
-        <header className="mdc-top-app-bar app-bar" id="app-bar" ref={appBarRef}>
+        <header className={classNames} id="app-bar" ref={appBarRef}>
           <div className="mdc-top-app-bar__row">
             <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
               <a
@@ -33,7 +49,7 @@ const AppBar = ({
           </div>
         </header>
       </div>
-      <div style={{ height: '64px' }} />
+      <div className="mdc-top-app-bar--fixed-adjust" />
     </Fragment>
   );
 };
@@ -41,6 +57,11 @@ const AppBar = ({
 AppBar.propTypes = {
   title: str,
   onNav: func,
+  prominent: bool,
+  dense: bool,
+  fixed: bool,
+  short: bool,
+  shortCollapsed: bool,
 };
 
 export default AppBar;

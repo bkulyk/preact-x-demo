@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Typography, ExpansionPanel } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const SampleContent = () => (
   <div>
@@ -19,7 +20,7 @@ const ExpansionPanelPage = () => {
 
   return (
     <Fragment>
-      <Typography use="headline4" component="h2">Expansion Panels</Typography>
+      <PageTitle>Expansion Panels</PageTitle>
 
       <Typography use="headline5" component="h3">Simple Panel</Typography>
       <Example>

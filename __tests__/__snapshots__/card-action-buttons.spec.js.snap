@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly, it is pretty much just a div 1`] = `
+<div
+  className="mdc-card__action-buttons custom"
+  x-data="my-data"
+>
+  ...
+</div>
+`;

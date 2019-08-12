@@ -2,14 +2,12 @@ import React from 'react';
 import clsx from 'clsx';
 import {
   oneOf,
-  node,
   bool,
   string as str,
 } from 'prop-types';
 
 const Grid = ({
   align = 'center',
-  children,
   fixedColumnWidth = false,
   className = '',
   ...props
@@ -24,16 +22,13 @@ const Grid = ({
   );
 
   return (
-    <div className={classNames} {...props}>
-      {children}
-    </div>
+    <div className={classNames} {...props} />
   );
 };
 
 Grid.propTypes = {
   align: oneOf(['center', 'left', 'right']),
   fixedColumnWidth: bool,
-  children: node.isRequired,
   className: str,
 };
 

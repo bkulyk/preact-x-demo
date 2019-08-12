@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Typography, Select, Button } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const Eg = ({ ...props }) => (
   <span style={{ marginRight: '15px' }} {...props} />
@@ -22,7 +23,7 @@ const SelectPage = () => {
 
   return (
     <Fragment>
-      <Typography use="headline4" component="h2">Select Boxes</Typography>
+      <PageTitle>Select Boxes</PageTitle>
 
       <Typography use="headline5" component="h3">Simple</Typography>
       <Example>
