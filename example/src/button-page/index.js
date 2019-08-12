@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import { Typography } from '@bitchin/react-material-web';
 import ButtonDemo from './button-demo';
+import PageTitle from '../page-title';
 
 const ButtonPage = () => (
   <Fragment>
-    <Typography use="headline4">Buttons</Typography>
+    <PageTitle>Buttons</PageTitle>
     <ButtonDemo />
   </Fragment>
 );

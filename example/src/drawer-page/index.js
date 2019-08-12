@@ -7,6 +7,7 @@ import {
   Drawer,
 } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const DrawerSampleContent = () => (
   <List component="div">
@@ -21,7 +22,7 @@ const DrawerPage = () => {
 
   return (
     <Fragment>
-      <Typography use="headline4" component="h2">Drawers</Typography>
+      <PageTitle>Drawers</PageTitle>
 
       <Typography use="headline5" component="h3">Static Drawer</Typography>
       <Example>

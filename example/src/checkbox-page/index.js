@@ -1,13 +1,14 @@
 import React, { Fragment, useState } from 'react';
 import { Typography, Checkbox } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const CheckboxPage = () => {
   const [on, setOn] = useState(false);
 
   return (
     <Fragment>
-      <Typography component="h2" use="headline4">Checkboxes</Typography>
+      <PageTitle>Checkboxes</PageTitle>
 
       <Typography component="h3" use="headline5">Simple</Typography>
       <Example>

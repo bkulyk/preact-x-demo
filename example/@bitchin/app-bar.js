@@ -46,7 +46,7 @@ const AppBar = ({
               </a>
               <span className="mdc-top-app-bar__title" style={{ color: 'var(--mdc-theme-on-primary)' }}>{title}</span>
             </section>
-            {
+            {/* {
               toolbar
                 ? (
                   <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
@@ -54,11 +54,11 @@ const AppBar = ({
                   </section>
                 )
                 : ''
-            }
+            } */}
           </div>
         </header>
       </div>
-      <div style={{ height: '64px' }} />
+      <div className="mdc-top-app-bar--fixed-adjust" />
     </Fragment>
   );
 };

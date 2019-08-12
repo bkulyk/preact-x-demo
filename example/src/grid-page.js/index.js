@@ -6,6 +6,7 @@ import {
   GridInner,
 } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const cellStyle = {
   backgroundColor: 'white',
@@ -28,7 +29,7 @@ const align = ['top', 'middle', 'bottom'];
 
 const GridPage = () => (
   <Fragment>
-    <Typography use="headline4" component="h2">Layout Grids</Typography>
+    <PageTitle>Layout Grids</PageTitle>
 
     <section>
       <Typography component="p">

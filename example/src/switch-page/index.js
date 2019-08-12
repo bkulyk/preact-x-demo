@@ -1,13 +1,14 @@
 import React, { Fragment, useState } from 'react';
 import { Typography, Switch } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const SwitchPage = () => {
   const [toggled, setToggled] = useState(false);
 
   return (
     <Fragment>
-      <Typography use="headline4" component="h2">Switches</Typography>
+      <PageTitle>Switches</PageTitle>
 
       <Typography use="headline5" component="h3">Basic Switch</Typography>
       <Example>

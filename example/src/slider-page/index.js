@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Typography, Slider } from '@bitchin/react-material-web';
 import Example from '../example';
+import PageTitle from '../page-title';
 
 const SliderPage = () => {
   const [continuousVal, setContinuousVal] = useState(10.25);
@@ -8,7 +9,7 @@ const SliderPage = () => {
 
   return (
     <Fragment>
-      <Typography use="headline4" component="h2">Sliders</Typography>
+      <PageTitle>Sliders</PageTitle>
 
       <Typography use="headline5" component="h3">Continuous Slider</Typography>
       <Example style={{ padding: '32px 32px 16px 16px' }}>
