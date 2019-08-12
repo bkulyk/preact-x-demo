@@ -15,6 +15,7 @@ import Example from '../example';
 const CardDemo = () => (
   <Fragment>
     <PageTitle>Cards</PageTitle>
+
     <Typography component="h3" use="headline5">Simple</Typography>
     <Example>
       <Card

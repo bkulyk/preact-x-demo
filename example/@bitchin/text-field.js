@@ -51,27 +51,15 @@ const TextField = ({
       <div className={classNames} {...props} ref={ref}>
         {makeIcon(leadingIcon)}
         {makeIcon(trailingIcon)}
-        {
-          !children
-            ? (<Input {...props} textarea={textarea} label={label} />)
-            : children
-        }
-        {
-          label && !outlined && !fullWidth
-            ? (<label className="mdc-floating-label" htmlFor={id}>{label}</label>)
-            : ''
-        }
+        {children || (<Input {...props} textarea={textarea} label={label} />)}
+        {label && !outlined && !fullWidth && (<label className="mdc-floating-label" htmlFor={id}>{label}</label>)}
         {
           outlined
             ? <OutlineLabel id={id}>{label}</OutlineLabel>
             : <RippleLine>{label}</RippleLine>
         }
       </div>
-      {
-        help
-          ? (<HelperLine>{help}</HelperLine>)
-          : ''
-      }
+      {help && (<HelperLine>{help}</HelperLine>)}
     </div>
   );
 };
