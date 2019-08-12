@@ -29,8 +29,7 @@ const TextField = ({
   const ref = useRef();
 
   useEffect(() => {
-    /* eslint no-new: off */
-    new MDCTextField(ref.current);
+    MDCTextField.attachTo(ref.current);
   }, []);
 
   const classNames = clsx(

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="mdc-notched-outline"
+>
+  <div
+    className="mdc-notched-outline__leading"
+  />
+  <div
+    className="mdc-notched-outline__notch"
+  >
+    children
+  </div>
+  <div
+    className="mdc-notched-outline__trailing"
+  />
+</div>
+`;
