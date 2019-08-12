@@ -13,7 +13,8 @@
     "build:a": "webpack --mode production --analyze",
     "build:analyze": "webpack --mode production --analyze",
     "start": "webpack-dev-server --mode development --progress --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "cd .. && npm run lint"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "@material/form-field": "^3.1.0",
     "@material/radio": "^3.1.0",
     "@material/ripple": "^3.1.0",
+    "@material/select": "^3.1.0",
     "@material/slider": "^3.1.0",
     "@material/switch": "^3.1.0",
     "@material/textfield": "^3.1.0",

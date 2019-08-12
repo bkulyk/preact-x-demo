@@ -5,6 +5,7 @@ import DrawerPage from './drawer-page';
 import ElevationPage from './elevation-page';
 import ExpansionPanelPage from './expansion-panel-page';
 import TextFieldPage from './text-field-page';
+import SelectPage from './select-page';
 import SliderPage from './slider-page';
 import SwitchPage from './switch-page';
 import ThemePage from './theme-page';
@@ -23,6 +24,7 @@ export default [
   { title: 'Expansion Panels', path: '/expansion-panels', component: ExpansionPanelPage },
   { title: 'Layout Grids', path: '/layout-grids', component: GridPage },
   { title: 'Text Fields', path: '/text-field', component: TextFieldPage },
+  { title: 'Select Boxes', path: '/select-boxes', component: SelectPage },
   { title: 'Sliders', path: '/sliders', component: SliderPage },
   { title: 'Switches', path: '/switches', component: SwitchPage },
   { title: 'Radio Buttons', path: '/radio-buttons', component: RadioButtonPage },

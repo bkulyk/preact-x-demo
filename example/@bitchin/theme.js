@@ -1,5 +1,5 @@
 import React from 'react';
-import { string as stringType } from 'prop-types';
+import { string as str } from 'prop-types';
 
 const Theme = ({
   primary,
@@ -36,19 +36,29 @@ const Theme = ({
     .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
       color: var(--mdc-theme-primary);
     }
+
+    .mdc-select.mdc-select--focused:not(.mdc-select--disabled) .mdc-select__dropdown-icon,
+    .mdc-select.mdc-select--focused:not(.mdc-select--disabled) .mdc-floating-label {
+      color: var(--mdc-theme-primary);
+    }
+
+    .mdc-select.mdc-select--invalid:not(.mdc-select--disabled) .mdc-select__dropdown-icon,
+    .mdc-select.mdc-select--invalid:not(.mdc-select--disabled) .mdc-floating-label {
+      color: var(--mdc-theme-error);
+    }
     `}
   </style>
 );
 
 Theme.propTypes = {
-  primary: stringType.isRequired,
-  secondary: stringType.isRequired,
-  background: stringType.isRequired,
-  surface: stringType.isRequired,
-  onPrimary: stringType.isRequired,
-  onSecondary: stringType.isRequired,
-  onSurface: stringType.isRequired,
-  onError: stringType.isRequired,
+  primary: str.isRequired,
+  secondary: str.isRequired,
+  background: str.isRequired,
+  surface: str.isRequired,
+  onPrimary: str.isRequired,
+  onSecondary: str.isRequired,
+  onSurface: str.isRequired,
+  onError: str.isRequired,
 };
 
 export default Theme;

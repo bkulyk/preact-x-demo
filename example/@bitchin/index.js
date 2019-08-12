@@ -22,6 +22,7 @@ export { default as ListItem } from './list-item';
 export { default as NavLink } from './nav-link';
 export { default as RadioButton } from './radio-button';
 export { default as Ripple } from './ripple';
+export { default as Select } from './select';
 export { default as Slider } from './slider';
 export { default as Switch } from './switch';
 export { default as TextField } from './text-field';
