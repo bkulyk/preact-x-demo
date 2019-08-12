@@ -1,17 +1,17 @@
 export const panelStyles = {
   default: {
     transition: 'margin 0.15s ease-in-out',
-    margin: '0px 0px',
+    margin: '0px 0px 1px',
     backgroundColor: 'white',
   },
   disabled: {
     transition: 'margin 0.15s ease-in-out',
-    margin: '0px 0px',
+    margin: '0px 0px 1px',
     backgroundColor: 'rgba(0, 0, 0, 0.08)',
     color: 'rgba(0, 0, 0, 0.47)',
   },
-  entered: { margin: '0px 0px' },
-  exited: { margin: '16px 0px' },
+  entered: { margin: '0px 0px 1px' },
+  exited: { margin: '16px 0px 16px' },
 };
 
 export const buttonStyles = {
@@ -31,6 +31,7 @@ export const summaryStyles = {
     transition: 'padding 0.15s ease-in-out',
     padding: '10px 10px',
     position: 'relative',
+    cursor: 'pointer',
   },
   entered: { padding: '10px 16px' },
   exited: { padding: '26px 16px' },
