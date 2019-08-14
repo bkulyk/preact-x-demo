@@ -1,19 +1,24 @@
 import React from 'react';
 import { string as str } from 'prop-types';
-import Button from './button';
-import ButtonIcon from './button-icon';
 
 const IconButton = ({
   icon,
+  className = '',
   ...props
 }) => (
-  <Button {...props}>
-    <ButtonIcon icon={icon} />
-  </Button>
+  <button
+    className={`mdc-icon-button material-icons mdc-top-app-bar__action-item ${className}`.trimRight()}
+    aria-label={icon}
+    {...props}
+    type="button"
+  >
+    {icon}
+  </button>
 );
 
 IconButton.propTypes = {
   icon: str.isRequired,
+  className: str,
 };
 
 export default IconButton;

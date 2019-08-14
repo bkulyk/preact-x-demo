@@ -134,6 +134,8 @@ module.exports = (_env, argv) => ({
     new HtmlWebpackPlugin({ filename: 'app-bar-simple/index.html' }),
     new HtmlWebpackPlugin({ filename: 'app-bar-short/index.html' }),
     new HtmlWebpackPlugin({ filename: 'app-bar-short-collapsed/index.html' }),
+    new HtmlWebpackPlugin({ filename: 'app-bar-dense/index.html' }),
+    new HtmlWebpackPlugin({ filename: 'app-bar-prominent/index.html' }),
     new CompressionPlugin(),
   ],
   ...optimization(argv),

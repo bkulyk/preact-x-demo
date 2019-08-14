@@ -12,6 +12,16 @@ const AppBarPage = () => (
     </section>
 
     <section>
+      <SectionTitle>Dense</SectionTitle>
+      <Demo path="app-bar-dense" title="Dense" />
+    </section>
+
+    <section>
+      <SectionTitle>Prominent</SectionTitle>
+      <Demo path="app-bar-prominent" title="Prominent" />
+    </section>
+
+    <section>
       <SectionTitle>Short</SectionTitle>
       <Demo path="app-bar-short" title="Short" />
     </section>
