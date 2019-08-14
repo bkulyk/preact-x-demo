@@ -13,7 +13,7 @@ exports[`the component should be able set props 1`] = `
 />
 `;
 
-exports[`the component should be able set props 2`] = `
+exports[`the component should have children prop 1`] = `
 <span
   className="my-custom-span"
 >

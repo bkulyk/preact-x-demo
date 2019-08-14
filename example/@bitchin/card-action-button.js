@@ -4,9 +4,9 @@ import Button from './button';
 
 const CardActionButton = ({ className = '', ...props }) => (
   <Button
-  raised={false}
-  className={`mdc-card__action--button ${className}`.trimRight()}
-  {...props}
+    raised={false}
+    className={`mdc-card__action--button ${className}`.trimRight()}
+    {...props}
   />
 );
 

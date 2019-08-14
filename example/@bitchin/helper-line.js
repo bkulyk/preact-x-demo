@@ -1,4 +1,5 @@
 import React from 'react';
+import { string as str } from 'prop-types';
 
 const HelperLine = ({ className = '', ...props }) => (
   <div className="mdc-text-field-helper-line">
@@ -8,5 +9,9 @@ const HelperLine = ({ className = '', ...props }) => (
     />
   </div>
 );
+
+HelperLine.propTypes = {
+  className: str,
+};
 
 export default HelperLine;

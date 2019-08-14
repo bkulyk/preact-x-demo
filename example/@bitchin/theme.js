@@ -1,5 +1,5 @@
 import React from 'react';
-import { string as stringType } from 'prop-types';
+import { string as str } from 'prop-types';
 
 const Theme = ({
   primary,
@@ -51,14 +51,14 @@ const Theme = ({
 );
 
 Theme.propTypes = {
-  primary: stringType.isRequired,
-  secondary: stringType.isRequired,
-  background: stringType.isRequired,
-  surface: stringType.isRequired,
-  onPrimary: stringType.isRequired,
-  onSecondary: stringType.isRequired,
-  onSurface: stringType.isRequired,
-  onError: stringType.isRequired,
+  primary: str.isRequired,
+  secondary: str.isRequired,
+  background: str.isRequired,
+  surface: str.isRequired,
+  onPrimary: str.isRequired,
+  onSecondary: str.isRequired,
+  onSurface: str.isRequired,
+  onError: str.isRequired,
 };
 
 export default Theme;

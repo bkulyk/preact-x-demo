@@ -8,7 +8,7 @@ const Icon = ({
   ...props
 }) => (
   <i
-    className={`material-icons ${className}`}
+    className={`material-icons ${className}`.trimRight()}
     title={icon || children}
     {...props}
   >

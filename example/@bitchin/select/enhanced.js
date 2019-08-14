@@ -8,7 +8,7 @@ import {
 import fixOptions from './fix-options';
 
 const Enhanced = ({
-  options,
+  options = [],
   value,
 }) => {
   const optionsObj = fixOptions(options);

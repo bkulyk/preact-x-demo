@@ -8,7 +8,7 @@ import {
 import fixOptions from './fix-options';
 
 const Standard = ({
-  options,
+  options = [],
   ...props
 }) => {
   const optionsObj = fixOptions(options);

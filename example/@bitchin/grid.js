@@ -22,8 +22,7 @@ const Grid = ({
   );
 
   return (
-    <div className={classNames} {...props}>
-    </div>
+    <div className={classNames} {...props} />
   );
 };
 

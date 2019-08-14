@@ -1,5 +1,10 @@
 import React from 'react';
-import { string as str, node } from 'prop-types';
+import {
+  string as str,
+  node,
+  oneOfType,
+  func,
+} from 'prop-types';
 
 const List = ({
   className = '',
@@ -15,6 +20,7 @@ const List = ({
 List.propTypes = {
   children: node,
   className: str,
+  component: oneOfType([str, func]),
 };
 
 export default List;

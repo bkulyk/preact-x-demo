@@ -1,5 +1,5 @@
 import React from 'react';
-import { default as Checkbox } from '@bitchin/checkbox';
+import Checkbox from '@bitchin/checkbox';
 import { shallow } from './enzyme';
 
 it('render correctly with defaults', () => {

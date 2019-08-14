@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow } from './enzyme';
 import Button from '@bitchin/button';
 import sinon from 'sinon';
+import { shallow } from './enzyme';
 
 it('renders correctly', () => {
   expect(shallow(<Button>Facebook</Button>))

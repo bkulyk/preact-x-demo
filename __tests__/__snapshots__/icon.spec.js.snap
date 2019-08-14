@@ -2,7 +2,7 @@
 
 exports[`should render correctly 1`] = `
 <i
-  className="material-icons "
+  className="material-icons"
   title="favorite"
 >
   favorite
@@ -11,7 +11,7 @@ exports[`should render correctly 1`] = `
 
 exports[`should render correctly with children instead of icon prop 1`] = `
 <i
-  className="material-icons "
+  className="material-icons"
   title="favorite"
 >
   favorite
