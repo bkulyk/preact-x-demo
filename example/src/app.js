@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { baseName } from './config';
-import AppBarDemo from './app-bar-page/app-bar-demo';
+import AppBarSimple from './app-bar-page/simple';
+import AppBarShort from './app-bar-page/short';
+import AppBarShortCollapsed from './app-bar-page/short-collapsed';
 import menu from './menu';
 import pageWrapper from './page-wrapper';
 
@@ -15,7 +17,9 @@ const App = () => (
         key={path}
       />
     ))}
-    <Route path="/app-bar-demo" component={AppBarDemo} />
+    <Route path="/app-bar-simple" component={AppBarSimple} />
+    <Route path="/app-bar-short" component={AppBarShort} />
+    <Route path="/app-bar-short-collapsed" component={AppBarShortCollapsed} />
   </Router>
 );
 
