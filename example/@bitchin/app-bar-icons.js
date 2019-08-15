@@ -6,11 +6,7 @@ import {
   oneOfType,
 } from 'prop-types';
 
-const toArray = elements => (
-  Array.isArray(elements)
-    ? elements
-    : [elements]
-);
+const toArray = elements => [].concat(elements);
 
 const AppBarIcons = ({
   className = '',
