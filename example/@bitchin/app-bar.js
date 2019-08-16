@@ -1,6 +1,11 @@
 /* eslint jsx-a11y/anchor-is-valid: off */
 import React, { useEffect, useRef, Fragment } from 'react';
-import { string as str, func, bool } from 'prop-types';
+import {
+  string as str,
+  func,
+  bool,
+  node,
+} from 'prop-types';
 import clsx from 'clsx';
 import { MDCTopAppBar } from '@material/top-app-bar';
 
@@ -12,6 +17,7 @@ const AppBar = ({
   fixed = false,
   short = false,
   shortCollapsed = false,
+  children = null,
 }) => {
   const appBarRef = useRef();
 
@@ -27,29 +33,36 @@ const AppBar = ({
       'mdc-top-app-bar--fixed': fixed,
       'mdc-top-app-bar--short': short,
       'mdc-top-app-bar--short-collapsed': shortCollapsed,
+      'mdc-top-app-bar--short-has-action-item': short && children,
     },
   );
+  const adjustClassName = clsx({
+    'mdc-top-app-bar--fixed-adjust': !dense && !fixed && !prominent,
+    'mdc-top-app-bar--dense-fixed-adjust': dense && !prominent,
+    'mdc-top-app-bar--prominent-fixed-adjust': prominent && !dense,
+    'mdc-top-app-bar--dense-prominent-fixed-adjust': dense && prominent,
+  });
+
   return (
     <Fragment>
       <div className="mdc-drawer-app-content">
         <header className={classNames} id="app-bar" ref={appBarRef}>
           <div className="mdc-top-app-bar__row">
             <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-              <a
-                role="button"
+              <button
                 onClick={onNav}
-                href="#"
-                className="demo-menu material-icons mdc-top-app-bar__navigation-icon"
-                style={{ textDecoration: 'none' }}
+                type="button"
+                className="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
               >
                 menu
-              </a>
+              </button>
               <span className="mdc-top-app-bar__title" style={{ color: 'var(--mdc-theme-on-primary)' }}>{title}</span>
             </section>
+            { children }
           </div>
         </header>
       </div>
-      <div className="mdc-top-app-bar--fixed-adjust" />
+      <div className={adjustClassName} />
     </Fragment>
   );
 };
@@ -62,6 +75,7 @@ AppBar.propTypes = {
   fixed: bool,
   short: bool,
   shortCollapsed: bool,
+  children: node,
 };
 
 export default AppBar;

@@ -3,7 +3,7 @@ import { Button, ButtonIcon, Typography } from '@bitchin/react-material-web';
 import Example from '../example';
 
 const Eg = ({ ...props }) => (
-  <span style={{ marginRight: '20px' }} {...props} />
+  <div style={{ margin: '10px 20px 10px', display: 'inline-block' }} {...props} />
 );
 
 const ButtonDemo = () => (

@@ -1,29 +1,29 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import AppBarDemo from './app-bar';
-import ThemeDemo from './theme-demo';
 import { baseName } from './config';
+import AppBarSimple from './app-bar-page/simple';
+import AppBarShort from './app-bar-page/short';
+import AppBarDense from './app-bar-page/dense';
+import AppBarShortCollapsed from './app-bar-page/short-collapsed';
+import AppBarProminent from './app-bar-page/prominent';
 import menu from './menu';
-
-const Loading = () => (<span>Loading ...</span>);
+import pageWrapper from './page-wrapper';
 
 const App = () => (
   <Router basename={baseName}>
-    <ThemeDemo />
-    <AppBarDemo />
-
-    <main style={{ backgroundColor: 'var(--mdc-theme-background)', padding: '16px' }}>
-      <Suspense fallback={Loading}>
-        {menu.map(({ component, path }) => (
-          <Route
-            path={path}
-            component={component}
-            exact={path === '/'}
-            key={path}
-          />
-        ))}
-      </Suspense>
-    </main>
+    {menu.map(({ component, path }) => (
+      <Route
+        path={path}
+        component={pageWrapper(component)}
+        exact={path === '/'}
+        key={path}
+      />
+    ))}
+    <Route path="/app-bar-simple" component={AppBarSimple} />
+    <Route path="/app-bar-short" component={AppBarShort} />
+    <Route path="/app-bar-dense" component={AppBarDense} />
+    <Route path="/app-bar-short-collapsed" component={AppBarShortCollapsed} />
+    <Route path="/app-bar-prominent" component={AppBarProminent} />
   </Router>
 );
 

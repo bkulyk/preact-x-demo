@@ -1,4 +1,5 @@
 export { default as AppBar } from './app-bar';
+export { default as AppBarIcons } from './app-bar-icons';
 export { default as BaseFonts } from './base-fonts';
 export { default as Button } from './button';
 export { default as ButtonIcon } from './button-icon';
@@ -12,6 +13,7 @@ export { default as CardMedia } from './card-media';
 export { default as Checkbox } from './checkbox';
 export { default as Elevation } from './elevation';
 export { default as Icon } from './icon';
+export { default as IconButton } from './icon-button';
 export { default as Drawer } from './drawer';
 export { default as ExpansionPanel } from './expansion-panel';
 export { default as Grid } from './grid';
