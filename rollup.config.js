@@ -2,6 +2,7 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
+import { terser } from "rollup-plugin-terser";
 import glob from 'glob';
 import R from 'rambda';
 import { basename } from 'path';
@@ -18,6 +19,7 @@ const plugins = [
   babel({
     runtimeHelpers: true,
   }),
+  terser(),
 ];
 
 export default [

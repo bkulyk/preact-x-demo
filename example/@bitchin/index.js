@@ -14,6 +14,8 @@ export { default as Checkbox } from './checkbox';
 export { default as Elevation } from './elevation';
 export { default as Icon } from './icon';
 export { default as IconButton } from './icon-button';
+export { default as ImageList } from './image-list';
+export { default as ImageListItem } from './image-list-item';
 export { default as Drawer } from './drawer';
 export { default as ExpansionPanel } from './expansion-panel';
 export { default as Grid } from './grid';

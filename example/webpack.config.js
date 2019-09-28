@@ -129,6 +129,7 @@ module.exports = (_env, argv) => ({
     new DotEnvPlugin({ systemvars: true }),
     new CopyWebpackPlugin([
       { from: 'node_modules/material-components-web/dist/material-components-web.min.css', to: '' },
+      { from: 'public', to: '' },
     ]),
     new HtmlWebpackPlugin({ title: '@Bitchin/React Material Web' }),
     new HtmlWebpackPlugin({ filename: 'app-bar-simple/index.html' }),
