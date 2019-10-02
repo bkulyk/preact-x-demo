@@ -13,7 +13,8 @@ import TabBarPage from './tab-bar-page';
 import ThemePage from './theme-page';
 import ButtonPage from './button-page';
 import CheckboxPage from './checkbox-page';
-import GridPage from './grid-page.js';
+import GridPage from './grid-page';
+import ImageListPage from './image-list-page';
 import RadioButtonPage from './radio-button-page';
 
 export default [
@@ -25,6 +26,7 @@ export default [
   { title: 'Drawers', path: '/drawers', component: DrawerPage },
   { title: 'Elevation', path: '/elevation', component: ElevationPage },
   { title: 'Expansion Panels', path: '/expansion-panels', component: ExpansionPanelPage },
+  { title: 'Image Lists', path: '/image-lists', component: ImageListPage },
   { title: 'Layout Grids', path: '/layout-grids', component: GridPage },
   { title: 'Tab Bars', path: '/tab-bars', component: TabBarPage },
   { title: 'Text Fields', path: '/text-field', component: TextFieldPage },
