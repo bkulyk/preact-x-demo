@@ -9,11 +9,11 @@
       }
     ],
     ["@babel/react"],
-    ["react-app"],
+    ["react-app"]
   ],
   "plugins": [
     "@babel/proposal-object-rest-spread",
     "transform-react-jsx",
-    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-proposal-function-bind"
   ]
 }
