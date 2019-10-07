@@ -38,7 +38,6 @@ const DemoPage = ({ history }) => {
       <List>
         <ListItem>Chips</ListItem>
         <ListItem>Data Table</ListItem>
-        <ListItem>Dialog</ListItem>
         <ListItem>Floating Action Button</ListItem>
         <ListItem>Linear Progress Indicator</ListItem>
         <ListItem>Menu</ListItem>

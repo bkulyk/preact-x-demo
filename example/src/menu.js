@@ -2,6 +2,7 @@
 import HomePage from './home-page';
 import AppBarPage from './app-bar-page';
 import CardPage from './card-page';
+import DialogPage from './dialog-page';
 import DrawerPage from './drawer-page';
 import ElevationPage from './elevation-page';
 import ExpansionPanelPage from './expansion-panel-page';
@@ -24,6 +25,7 @@ export default [
   { title: 'Cards', path: '/cards', component: CardPage },
   { title: 'Checkboxes', path: '/checkboxes', component: CheckboxPage },
   { title: 'Drawers', path: '/drawers', component: DrawerPage },
+  { title: 'Dialog', path: '/dialog', component: DialogPage },
   { title: 'Elevation', path: '/elevation', component: ElevationPage },
   { title: 'Expansion Panels', path: '/expansion-panels', component: ExpansionPanelPage },
   { title: 'Image Lists', path: '/image-lists', component: ImageListPage },

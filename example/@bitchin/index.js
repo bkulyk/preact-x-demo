@@ -11,6 +11,7 @@ export { default as CardActionIcons } from './card-action-icons';
 export { default as CardActions } from './card-actions';
 export { default as CardMedia } from './card-media';
 export { default as Checkbox } from './checkbox';
+export { default as Dialog } from './dialog';
 export { default as Elevation } from './elevation';
 export { default as Icon } from './icon';
 export { default as IconButton } from './icon-button';
