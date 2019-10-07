@@ -29,6 +29,7 @@ const Button = ({
   secondary = false,
   href = null,
   style = {},
+  ...props
 }) => {
   const classes = clsx(
     'mdc-button',
@@ -57,6 +58,7 @@ const Button = ({
         type={type}
         onClick={onClick}
         disabled={disabled}
+        {...props}
       >
         <span className="mdc-button__label">
           {children}

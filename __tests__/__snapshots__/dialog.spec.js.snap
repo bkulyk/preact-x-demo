@@ -1,0 +1,359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with a custom body 1`] = `
+<div
+  aria-describedby="my-dialog-content"
+  aria-labelledby="my-dialog-title"
+  aria-modal="true"
+  className="mdc-dialog"
+  role="alertdialog"
+>
+  <div
+    className="mdc-dialog__container"
+  >
+    <div
+      className="mdc-dialog__surface"
+    >
+      <h2
+        className="mdc-dialog__title"
+        id="my-dialog-title"
+      >
+        simple body
+      </h2>
+      <div
+        className="mdc-dialog__content"
+        id="my-dialog-content"
+      >
+        <em>
+          lorem ipsum dolor sit
+        </em>
+      </div>
+      <footer
+        className="mdc-dialog__actions"
+      >
+        <DialogActions
+          actions={
+            Object {
+              "ok": "OK",
+            }
+          }
+          defaultAction={null}
+        />
+      </footer>
+    </div>
+  </div>
+  <div
+    className="mdc-dialog__scrim"
+  />
+</div>
+`;
+
+exports[`renders correctly with a custom title 1`] = `
+<div
+  aria-describedby="my-dialog-content"
+  aria-labelledby="my-dialog-title"
+  aria-modal="true"
+  className="mdc-dialog"
+  role="alertdialog"
+>
+  <div
+    className="mdc-dialog__container"
+  >
+    <div
+      className="mdc-dialog__surface"
+    >
+      <h2
+        className="mdc-dialog__title"
+        id="my-dialog-title"
+      >
+        <strong>
+          strong body
+        </strong>
+      </h2>
+      <div
+        className="mdc-dialog__content"
+        id="my-dialog-content"
+      />
+      <footer
+        className="mdc-dialog__actions"
+      >
+        <DialogActions
+          actions={
+            Object {
+              "ok": "OK",
+            }
+          }
+          defaultAction={null}
+        />
+      </footer>
+    </div>
+  </div>
+  <div
+    className="mdc-dialog__scrim"
+  />
+</div>
+`;
+
+exports[`renders correctly with a simple body 1`] = `
+<div
+  aria-describedby="my-dialog-content"
+  aria-labelledby="my-dialog-title"
+  aria-modal="true"
+  className="mdc-dialog"
+  role="alertdialog"
+>
+  <div
+    className="mdc-dialog__container"
+  >
+    <div
+      className="mdc-dialog__surface"
+    >
+      <h2
+        className="mdc-dialog__title"
+        id="my-dialog-title"
+      >
+        simple body
+      </h2>
+      <div
+        className="mdc-dialog__content"
+        id="my-dialog-content"
+      >
+        lorem ipsum dolor sit
+      </div>
+      <footer
+        className="mdc-dialog__actions"
+      >
+        <DialogActions
+          actions={
+            Object {
+              "ok": "OK",
+            }
+          }
+          defaultAction={null}
+        />
+      </footer>
+    </div>
+  </div>
+  <div
+    className="mdc-dialog__scrim"
+  />
+</div>
+`;
+
+exports[`renders correctly with array actions 1`] = `
+<div
+  aria-describedby="my-dialog-content"
+  aria-labelledby="my-dialog-title"
+  aria-modal="true"
+  className="mdc-dialog"
+  role="alertdialog"
+>
+  <div
+    className="mdc-dialog__container"
+  >
+    <div
+      className="mdc-dialog__surface"
+    >
+      <h2
+        className="mdc-dialog__title"
+        id="my-dialog-title"
+      >
+        test dialog
+      </h2>
+      <div
+        className="mdc-dialog__content"
+        id="my-dialog-content"
+      />
+      <footer
+        className="mdc-dialog__actions"
+      >
+        <DialogActions
+          actions={
+            Array [
+              "cancel",
+              "ok",
+            ]
+          }
+          defaultAction={null}
+        />
+      </footer>
+    </div>
+  </div>
+  <div
+    className="mdc-dialog__scrim"
+  />
+</div>
+`;
+
+exports[`renders correctly with component actions 1`] = `
+<div
+  aria-describedby="my-dialog-content"
+  aria-labelledby="my-dialog-title"
+  aria-modal="true"
+  className="mdc-dialog"
+  role="alertdialog"
+>
+  <div
+    className="mdc-dialog__container"
+  >
+    <div
+      className="mdc-dialog__surface"
+    >
+      <h2
+        className="mdc-dialog__title"
+        id="my-dialog-title"
+      >
+        test dialog
+      </h2>
+      <div
+        className="mdc-dialog__content"
+        id="my-dialog-content"
+      />
+      <footer
+        className="mdc-dialog__actions"
+      >
+        <div>
+          actions would go here
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div
+    className="mdc-dialog__scrim"
+  />
+</div>
+`;
+
+exports[`renders correctly with defaults 1`] = `
+<div
+  aria-describedby="my-dialog-content"
+  aria-labelledby="my-dialog-title"
+  aria-modal="true"
+  className="mdc-dialog"
+  role="alertdialog"
+>
+  <div
+    className="mdc-dialog__container"
+  >
+    <div
+      className="mdc-dialog__surface"
+    >
+      <h2
+        className="mdc-dialog__title"
+        id="my-dialog-title"
+      >
+        test dialog
+      </h2>
+      <div
+        className="mdc-dialog__content"
+        id="my-dialog-content"
+      />
+      <footer
+        className="mdc-dialog__actions"
+      >
+        <DialogActions
+          actions={
+            Object {
+              "ok": "OK",
+            }
+          }
+          defaultAction={null}
+        />
+      </footer>
+    </div>
+  </div>
+  <div
+    className="mdc-dialog__scrim"
+  />
+</div>
+`;
+
+exports[`renders correctly with hashmap actions 1`] = `
+<div
+  aria-describedby="my-dialog-content"
+  aria-labelledby="my-dialog-title"
+  aria-modal="true"
+  className="mdc-dialog"
+  role="alertdialog"
+>
+  <div
+    className="mdc-dialog__container"
+  >
+    <div
+      className="mdc-dialog__surface"
+    >
+      <h2
+        className="mdc-dialog__title"
+        id="my-dialog-title"
+      >
+        test dialog
+      </h2>
+      <div
+        className="mdc-dialog__content"
+        id="my-dialog-content"
+      />
+      <footer
+        className="mdc-dialog__actions"
+      >
+        <DialogActions
+          actions={
+            Object {
+              "cancel": "Cancel",
+              "ok": "OK",
+            }
+          }
+          defaultAction={null}
+        />
+      </footer>
+    </div>
+  </div>
+  <div
+    className="mdc-dialog__scrim"
+  />
+</div>
+`;
+
+exports[`renders correctly with hashmap actions and a default action 1`] = `
+<div
+  aria-describedby="my-dialog-content"
+  aria-labelledby="my-dialog-title"
+  aria-modal="true"
+  className="mdc-dialog"
+  role="alertdialog"
+>
+  <div
+    className="mdc-dialog__container"
+  >
+    <div
+      className="mdc-dialog__surface"
+    >
+      <h2
+        className="mdc-dialog__title"
+        id="my-dialog-title"
+      >
+        test dialog
+      </h2>
+      <div
+        className="mdc-dialog__content"
+        id="my-dialog-content"
+      />
+      <footer
+        className="mdc-dialog__actions"
+      >
+        <DialogActions
+          actions={
+            Object {
+              "cancel": "Cancel",
+              "ok": "OK",
+            }
+          }
+          defaultAction="ok"
+        />
+      </footer>
+    </div>
+  </div>
+  <div
+    className="mdc-dialog__scrim"
+  />
+</div>
+`;

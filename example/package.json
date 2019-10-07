@@ -21,8 +21,10 @@
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "@material/checkbox": "^3.1.0",
+    "@material/dialog": "^3.2.0",
     "@material/drawer": "^3.1.0",
     "@material/form-field": "^3.1.0",
+    "@material/list": "^3.2.0",
     "@material/radio": "^3.1.0",
     "@material/ripple": "^3.1.0",
     "@material/select": "^3.1.0",

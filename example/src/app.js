@@ -24,6 +24,9 @@ const App = () => (
     <Route path="/app-bar-dense" component={AppBarDense} />
     <Route path="/app-bar-short-collapsed" component={AppBarShortCollapsed} />
     <Route path="/app-bar-prominent" component={AppBarProminent} />
+    <style type="text/css">
+      {'body { background-color: var(--mdc-theme-background)} }'}
+    </style>
   </Router>
 );
 

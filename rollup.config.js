@@ -2,7 +2,8 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
-import { terser } from "rollup-plugin-terser";
+import { terser } from 'rollup-plugin-terser';
+import del from 'rollup-plugin-delete';
 import glob from 'glob';
 import R from 'rambda';
 import { basename } from 'path';
@@ -37,7 +38,10 @@ export default [
         format: 'esm',
       },
     ],
-    plugins,
+    plugins: [
+      del({ targets: 'esm' }),
+      ...plugins,
+    ],
   },
   {
     // the cjs chunks will be used in tests for host apps as jest
@@ -46,6 +50,9 @@ export default [
       dir: 'cjs',
       format: 'cjs',
     },
-    plugins,
+    plugins: [
+      del({ targets: 'cjs' }),
+      ...plugins,
+    ],
   },
 ];
