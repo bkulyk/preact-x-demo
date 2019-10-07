@@ -1,6 +1,6 @@
 {
   "name": "@bitchin/react-material-web",
-  "version": "0.1.5-alpha",
+  "version": "0.1.6-alpha",
   "description": "",
   "author": "",
   "license": "MIT",
@@ -15,6 +15,7 @@
     "npm": ">=5"
   },
   "scripts": {
+    "pretest": "npm run build",
     "test": "jest",
     "test:watch": "react-scripts test --env=jsdom",
     "build": "mkdir src && cp -r example/@bitchin/* src/ && cross-env NODE_ENV=production rollup -c && rm -rf src",
@@ -86,6 +87,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^1.1.4",
+    "react-test-renderer": "^16.10.2",
     "rollup": "^1.19.4",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.2",

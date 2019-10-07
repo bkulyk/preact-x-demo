@@ -80,7 +80,7 @@ const DialogPage = () => {
               setOpen2(false);
               setSelected(action);
             }}
-            title={(<em>Pick the best Darth!</em>)}
+            title={(<em>Fancy Example!</em>)}
             body={(
               <p>
                 There is a

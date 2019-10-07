@@ -2,18 +2,10 @@
 
 exports[`should render correctly 1`] = `
 <button
-  class="mdc-button mdc-button--raised"
+  aria-label="favorite"
+  class="mdc-icon-button material-icons mdc-top-app-bar__action-item"
   type="button"
 >
-  <span
-    class="mdc-button__label"
-  >
-    <i
-      class="material-icons mdc-button__icon"
-      title="favorite"
-    >
-      favorite
-    </i>
-  </span>
+  favorite
 </button>
 `;
